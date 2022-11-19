@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0-ios</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>true</ImplicitUsings>
+		<SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<CreatePackage>false</CreatePackage>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<CreatePackage>false</CreatePackage>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="NativeDependencies\**" />
+		<NativeReference Include="NativeDependencies\FBSDKCoreKit_Basics.xcframework">
+			<Kind>Framework</Kind>
+			<SmartLink>False</SmartLink>
+			<LinkerFlags>-ObjC</LinkerFlags>
+		</NativeReference>
+		<NativeReference Include="NativeDependencies\FBAEMKit.xcframework">
+			<Kind>Framework</Kind>
+			<SmartLink>False</SmartLink>
+			<LinkerFlags>-ObjC</LinkerFlags>
+		</NativeReference>
+		<NativeReference Include="NativeDependencies\FBSDKCoreKit.xcframework">
+			<Kind>Framework</Kind>
+			<SmartLink>False</SmartLink>
+			<LinkerFlags>-ObjC</LinkerFlags>
+			<WeakFrameworks>Accelerate Accounts Social Security QuartzCore CoreGraphics UIKit Foundation AudioToolbox WebKit</WeakFrameworks>
+		</NativeReference>
+	</ItemGroup>
+</Project>
