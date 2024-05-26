@@ -1,0 +1,21 @@
+repositories
+{
+    google()
+    mavenCentral()
+}
+
+configurations
+{
+    implementation
+}
+
+dependencies
+{
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+}
+
+task update(type: Copy)
+{
+    into "NativeDependencies"
+    from configurations.implementation
+}
