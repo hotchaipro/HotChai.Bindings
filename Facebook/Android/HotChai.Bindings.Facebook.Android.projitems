@@ -13,4 +13,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Bindings\Xamarin.Facebook.FacebookSdk.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Bindings\__NamespaceMapping__.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidLibrary Include="NativeDependencies\facebook-core-17.0.0.aar" Bind="false">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Include="NativeDependencies\facebook-common-17.0.0.aar" Bind="false">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Include="NativeDependencies\cardview-1.0.0.aar" Bind="false">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidLibrary>
+  </ItemGroup>
 </Project>
