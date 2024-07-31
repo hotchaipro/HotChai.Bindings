@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e248954f-88fa-4bcc-b074-10c20741bfa7</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HotChai.Bindings.GameAnalytics.Android</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.Android.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.Consts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.Events.EGASdkErrorAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.Events.EGASdkErrorArea.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.Events.EGASdkErrorCategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.Events.EGASdkErrorParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.Events.GAEvents.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.Events.SdkErrorTask.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GAAdAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GAAdError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GAAdType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GAErrorSeverity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GameAnalytics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GameAnalyticsJNI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GAPlatform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GAProgressionStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GAResourceFlowType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.GooglePlayServicesClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Gameanalytics.Sdk.IRemoteConfigsListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
+  </ItemGroup>
+</Project>
