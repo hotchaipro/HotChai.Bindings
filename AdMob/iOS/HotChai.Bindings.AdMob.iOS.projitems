@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b486f8ec-b5c0-4944-a568-2e11a3616912</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HotChai.Bindings.AdMob.iOS</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds.Mediation\MediatedUnifiedNativeAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdapterStatus.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdChoicesView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdLoader.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdLoaderDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdLoaderOptions.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdMetadataDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdMetadataProvider.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdNetworkExtras.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdNetworkResponseInfo.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdReward.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdSizeCons.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdSizeDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AdValue.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AppEventDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AppOpenAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AudioVideoManager.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\AudioVideoManagerDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\BannerView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\BannerViewDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomEventBanner.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomEventBannerDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomEventExtras.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomEventInterstitial.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomEventInterstitialDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomEventNativeAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomEventNativeAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomEventRequest.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomNativeAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\CustomNativeAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\DebugOptionsViewController.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\DebugOptionsViewControllerDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\DisplayAdMeasurement.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\DynamicHeightSearchRequest.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\Extras.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\FullScreenContentDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\FullScreenPresentingAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\InitializationStatus.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\InterstitialAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\MaxAdContentRatingConstants.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\MediaContent.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\MediaView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\MobileAds.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\MultipleAdsAdLoaderOptions.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\MuteThisAdReason.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAdAssetIdentifiers.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAdImage.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAdImageAdLoaderOptions.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAdMediaAdLoaderOptions.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAdUnconfirmedClickDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAdView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeAdViewAdOptions.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\NativeMuteThisAdLoaderOptions.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\Request.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\RequestConfiguration.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\ResponseInfo.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\RewardedAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\RewardedAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\RewardedInterstitialAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\SearchBannerView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\ServerSideVerificationOptions.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\SwipeableBannerViewDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\UnifiedNativeAdLoaderDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\VideoController.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\VideoControllerDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google.MobileAds\VideoOptions.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ObjCRuntime\Libraries.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ObjCRuntime\Messaging.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ObjCRuntime\Trampolines.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SupportDelegates.g.cs" />
+  </ItemGroup>
+</Project>
