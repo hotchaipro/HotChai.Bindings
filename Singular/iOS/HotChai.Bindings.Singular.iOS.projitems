@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>36360305-4c93-4997-8830-af9cda854993</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HotChai.Bindings.Singular.iOS</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\Messaging.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\Singular.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\SingularAdData.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\SingularConfig.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\SingularLinkParams.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\Trampolines.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\SupportDelegates.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\Events.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bindings\Attributes.g.cs" />
+  </ItemGroup>
+</Project>
