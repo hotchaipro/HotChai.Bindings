@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e20235e1-09a8-4f25-ac6b-3304cff5f4db</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>IronSourceSDK</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IronSource.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterAdFullscreenProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterAdInteractionDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterAdRewardedDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterAdViewDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterBannerProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterBaseProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterConfig.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterConsentProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterDebugProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterMetaDataProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterNativeAdData.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterNativeAdViewBinder.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterNativeAdViewBinderProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdapterSettingsProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdData.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdInfo.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdUnit.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAdUnitAdapterProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISAppStoreErrorDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBannerAdapterDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBannerAdapterProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBannerAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBannerSize.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBannerView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseAdAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseAdapter_.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseAdInteractionAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseAdUnitAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseBanner.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseBannerAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseInterstitial.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseInterstitialAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseNativeAdAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseNetworkAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseRewardedVideo.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBaseRewardedVideoAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBiddingDataAdapterProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISBiddingDataDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISConcurrentMutableDictionary.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISConcurrentMutableSet.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISConfigurations.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISConsentViewDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISContainerParams.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISDataKeys.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISDemandOnlyBannerDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISDemandOnlyBannerView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISDemandOnlyInterstitialDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISDemandOnlyRewardedVideoDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISError.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISEventsReporting.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISImpressionData.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISImpressionDataDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISInitializationDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISIntegrationHelper.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISInterstitialAdapterDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISInterstitialAdapterProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISInterstitialAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISIronSourceAdapter.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISLog.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISLogDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISLoggerManager.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISMediationGlobalDataWriterFacade.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISMetaData.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISMetaDataUtils.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNAppStoreVCRootViewDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdAdapterDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdAdapterProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdDataImage.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdDataProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdInteractionDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdLoadDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdProperties.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdViewBinderProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNativeAdViewHolder.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNControllerManagerSwiftFacade.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNControllerMessageListener.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNetworkInitCallbackProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNetworkInitializationDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNEvent.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNEventTrackerInterface.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISNEventTrackerWrapper.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISPlacementInfo.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISReleaseMemoryAdapterProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISRewardedVideoAdapterDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISRewardedVideoAdapterProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISRewardedVideoAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISSegment.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISSegmentDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISSetAPSDataProtocol.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISSupersonicAdsConfiguration.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISWaterfallConfiguration.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISWaterfallConfigurationBuilder.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayBannerDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayInterstitialDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayMediaView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayNativeAd.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayNativeAdBuilder.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayNativeAdDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayRewardedVideoBaseDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayRewardedVideoDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LevelPlayRewardedVideoManualDelegate.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Messaging.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SupersonicLogManager.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIView_ISNativeView.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StructsAndEnums.cs" />
+  </ItemGroup>
+</Project>
