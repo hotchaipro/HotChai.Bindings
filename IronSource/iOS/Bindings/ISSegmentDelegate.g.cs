@@ -69,16 +69,16 @@ namespace IronSourceSdk {
 		public void DidReceiveSegement (string segment)
 		{
 			if (segment is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (segment));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (segment));
 			var nssegment = CFString.CreateNative (segment);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didReceiveSegement:"), nssegment);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didReceiveSegement:"), nssegment);
 			CFString.ReleaseNative (nssegment);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISSegmentDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISSegmentDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISSegmentDelegate : NSObject, IISSegmentDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -87,7 +87,7 @@ namespace IronSourceSdk {
 		protected ISSegmentDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISBaseAdAdapter () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -71,14 +71,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISBaseAdAdapter (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISBaseAdAdapter (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("initWithAdUnit:adapterConfig:")]
@@ -88,11 +88,11 @@ namespace IronSourceSdk {
 		{
 			var adUnit__handle__ = adUnit!.GetNonNullHandle (nameof (adUnit));
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initWithAdUnit:adapterConfig:"), adUnit__handle__, adapterConfig__handle__), "initWithAdUnit:adapterConfig:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initWithAdUnit:adapterConfig:"), adUnit__handle__, adapterConfig__handle__), "initWithAdUnit:adapterConfig:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithAdUnit:adapterConfig:"), adUnit__handle__, adapterConfig__handle__), "initWithAdUnit:adapterConfig:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithAdUnit:adapterConfig:"), adUnit__handle__, adapterConfig__handle__), "initWithAdUnit:adapterConfig:");
 			}
 		}
 		[Export ("initWithAdUnit:adapterConfig:adUnitObjectId:")]
@@ -103,11 +103,11 @@ namespace IronSourceSdk {
 			var adUnit__handle__ = adUnit!.GetNonNullHandle (nameof (adUnit));
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
 			var adUnitObjectId__handle__ = adUnitObjectId.GetHandle ();
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initWithAdUnit:adapterConfig:adUnitObjectId:"), adUnit__handle__, adapterConfig__handle__, adUnitObjectId__handle__), "initWithAdUnit:adapterConfig:adUnitObjectId:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initWithAdUnit:adapterConfig:adUnitObjectId:"), adUnit__handle__, adapterConfig__handle__, adUnitObjectId__handle__), "initWithAdUnit:adapterConfig:adUnitObjectId:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithAdUnit:adapterConfig:adUnitObjectId:"), adUnit__handle__, adapterConfig__handle__, adUnitObjectId__handle__), "initWithAdUnit:adapterConfig:adUnitObjectId:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithAdUnit:adapterConfig:adUnitObjectId:"), adUnit__handle__, adapterConfig__handle__, adUnitObjectId__handle__), "initWithAdUnit:adapterConfig:adUnitObjectId:");
 			}
 		}
 		[Export ("releaseMemory")]
@@ -115,9 +115,9 @@ namespace IronSourceSdk {
 		public virtual void ReleaseMemory ()
 		{
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("releaseMemory"));
+				ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("releaseMemory"));
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("releaseMemory"));
+				ApiDefinitions.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("releaseMemory"));
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -128,9 +128,9 @@ namespace IronSourceSdk {
 			get {
 				ISAdUnit? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<ISAdUnit> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adUnit")))!;
+					ret =  Runtime.GetNSObject<ISAdUnit> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adUnit")))!;
 				} else {
-					ret =  Runtime.GetNSObject<ISAdUnit> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adUnit")))!;
+					ret =  Runtime.GetNSObject<ISAdUnit> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adUnit")))!;
 				}
 				MarkDirty ();
 				__mt_AdUnit_var = ret;
@@ -140,9 +140,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value!.GetNonNullHandle (nameof (value));
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdUnit:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdUnit:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdUnit:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdUnit:"), value__handle__);
 				}
 				MarkDirty ();
 				__mt_AdUnit_var = value;
@@ -154,9 +154,9 @@ namespace IronSourceSdk {
 			get {
 				NSUuid? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSUuid> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adUnitObjectId")))!;
+					ret =  Runtime.GetNSObject<NSUuid> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adUnitObjectId")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSUuid> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adUnitObjectId")))!;
+					ret =  Runtime.GetNSObject<NSUuid> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adUnitObjectId")))!;
 				}
 				return ret!;
 			}
@@ -167,9 +167,9 @@ namespace IronSourceSdk {
 			get {
 				ISAdapterConfig? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<ISAdapterConfig> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adapterConfig")))!;
+					ret =  Runtime.GetNSObject<ISAdapterConfig> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adapterConfig")))!;
 				} else {
-					ret =  Runtime.GetNSObject<ISAdapterConfig> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adapterConfig")))!;
+					ret =  Runtime.GetNSObject<ISAdapterConfig> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adapterConfig")))!;
 				}
 				return ret!;
 			}
@@ -180,9 +180,9 @@ namespace IronSourceSdk {
 			get {
 				ISAdapterBaseProtocol? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetINativeObject<ISAdapterBaseProtocol> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("getNetworkAdapter")), false)!;
+					ret =  Runtime.GetINativeObject<ISAdapterBaseProtocol> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("getNetworkAdapter")), false)!;
 				} else {
-					ret =  Runtime.GetINativeObject<ISAdapterBaseProtocol> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("getNetworkAdapter")), false)!;
+					ret =  Runtime.GetINativeObject<ISAdapterBaseProtocol> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("getNetworkAdapter")), false)!;
 				}
 				return ret!;
 			}

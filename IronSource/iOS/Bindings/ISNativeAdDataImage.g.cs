@@ -58,14 +58,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISNativeAdDataImage (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISNativeAdDataImage (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("initWithImage:url:")]
@@ -75,11 +75,11 @@ namespace IronSourceSdk {
 		{
 			var image__handle__ = image.GetHandle ();
 			var url__handle__ = url.GetHandle ();
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initWithImage:url:"), image__handle__, url__handle__), "initWithImage:url:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initWithImage:url:"), image__handle__, url__handle__), "initWithImage:url:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithImage:url:"), image__handle__, url__handle__), "initWithImage:url:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithImage:url:"), image__handle__, url__handle__), "initWithImage:url:");
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -88,9 +88,9 @@ namespace IronSourceSdk {
 			get {
 				global::UIKit.UIImage? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<global::UIKit.UIImage> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("image")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UIImage> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("image")))!;
 				} else {
-					ret =  Runtime.GetNSObject<global::UIKit.UIImage> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("image")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UIImage> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("image")))!;
 				}
 				return ret!;
 			}
@@ -101,9 +101,9 @@ namespace IronSourceSdk {
 			get {
 				NSUrl? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSUrl> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("url")))!;
+					ret =  Runtime.GetNSObject<NSUrl> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("url")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSUrl> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("url")))!;
+					ret =  Runtime.GetNSObject<NSUrl> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("url")))!;
 				}
 				return ret!;
 			}

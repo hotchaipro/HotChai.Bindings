@@ -58,14 +58,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISPlacementInfo (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISPlacementInfo (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("initWithPlacement:reward:rewardAmount:")]
@@ -75,17 +75,17 @@ namespace IronSourceSdk {
 			: base (NSObjectFlag.Empty)
 		{
 			if (placementName is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (placementName));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (placementName));
 			if (rewardName is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (rewardName));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (rewardName));
 			var rewardAmount__handle__ = rewardAmount!.GetNonNullHandle (nameof (rewardAmount));
 			var nsplacementName = CFString.CreateNative (placementName);
 			var nsrewardName = CFString.CreateNative (rewardName);
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initWithPlacement:reward:rewardAmount:"), nsplacementName, nsrewardName, rewardAmount__handle__), "initWithPlacement:reward:rewardAmount:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initWithPlacement:reward:rewardAmount:"), nsplacementName, nsrewardName, rewardAmount__handle__), "initWithPlacement:reward:rewardAmount:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithPlacement:reward:rewardAmount:"), nsplacementName, nsrewardName, rewardAmount__handle__), "initWithPlacement:reward:rewardAmount:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithPlacement:reward:rewardAmount:"), nsplacementName, nsrewardName, rewardAmount__handle__), "initWithPlacement:reward:rewardAmount:");
 			}
 			CFString.ReleaseNative (nsplacementName);
 			CFString.ReleaseNative (nsrewardName);
@@ -95,9 +95,9 @@ namespace IronSourceSdk {
 			[Export ("placementName")]
 			get {
 				if (IsDirectBinding) {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("placementName")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("placementName")))!;
 				} else {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("placementName")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("placementName")))!;
 				}
 			}
 		}
@@ -107,9 +107,9 @@ namespace IronSourceSdk {
 			get {
 				NSNumber? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSNumber> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("rewardAmount")))!;
+					ret =  Runtime.GetNSObject<NSNumber> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("rewardAmount")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSNumber> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("rewardAmount")))!;
+					ret =  Runtime.GetNSObject<NSNumber> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("rewardAmount")))!;
 				}
 				return ret!;
 			}
@@ -119,9 +119,9 @@ namespace IronSourceSdk {
 			[Export ("rewardName")]
 			get {
 				if (IsDirectBinding) {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("rewardName")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("rewardName")))!;
 				} else {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("rewardName")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("rewardName")))!;
 				}
 			}
 		}

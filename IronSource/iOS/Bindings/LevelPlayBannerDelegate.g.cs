@@ -95,48 +95,48 @@ namespace IronSourceSdk {
 		{
 			var bannerView__handle__ = bannerView!.GetNonNullHandle (nameof (bannerView));
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didLoad:withAdInfo:"), bannerView__handle__, adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didLoad:withAdInfo:"), bannerView__handle__, adInfo__handle__);
 		}
 		[Export ("didFailToLoadWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidFailToLoadWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didFailToLoadWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didFailToLoadWithError:"), error__handle__);
 		}
 		[Export ("didClickWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidClickWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didClickWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didClickWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("didLeaveApplicationWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidLeaveApplicationWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didLeaveApplicationWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didLeaveApplicationWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("didPresentScreenWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidPresentScreenWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didPresentScreenWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didPresentScreenWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("didDismissScreenWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidDismissScreenWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didDismissScreenWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didDismissScreenWithAdInfo:"), adInfo__handle__);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_LevelPlayBannerDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_LevelPlayBannerDelegate", false)]
 	[Model]
 	public unsafe abstract partial class LevelPlayBannerDelegate : NSObject, ILevelPlayBannerDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -145,7 +145,7 @@ namespace IronSourceSdk {
 		protected LevelPlayBannerDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

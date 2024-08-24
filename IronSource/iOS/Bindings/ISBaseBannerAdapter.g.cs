@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISBaseBannerAdapter () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -71,14 +71,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISBaseBannerAdapter (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISBaseBannerAdapter (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("collectBannerBiddingDataWithAdapterConfig:adData:delegate:")]
@@ -89,9 +89,9 @@ namespace IronSourceSdk {
 			var adData__handle__ = adData!.GetNonNullHandle (nameof (adData));
 			var @delegate__handle__ = @delegate!.GetNonNullHandle (nameof (@delegate));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("collectBannerBiddingDataWithAdapterConfig:adData:delegate:"), adapterConfig__handle__, adData__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("collectBannerBiddingDataWithAdapterConfig:adData:delegate:"), adapterConfig__handle__, adData__handle__, @delegate__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("collectBannerBiddingDataWithAdapterConfig:adData:delegate:"), adapterConfig__handle__, adData__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("collectBannerBiddingDataWithAdapterConfig:adData:delegate:"), adapterConfig__handle__, adData__handle__, @delegate__handle__);
 			}
 		}
 		[Export ("destroyBannerWithAdapterConfig:")]
@@ -100,9 +100,9 @@ namespace IronSourceSdk {
 		{
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("destroyBannerWithAdapterConfig:"), adapterConfig__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("destroyBannerWithAdapterConfig:"), adapterConfig__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("destroyBannerWithAdapterConfig:"), adapterConfig__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("destroyBannerWithAdapterConfig:"), adapterConfig__handle__);
 			}
 		}
 		[Export ("getAdaptiveHeightWithWidth:")]
@@ -110,9 +110,9 @@ namespace IronSourceSdk {
 		public virtual nfloat GetAdaptiveHeightWithWidth (nfloat width)
 		{
 			if (IsDirectBinding) {
-				return global::IronSourceSdk.ApiDefinitions.Messaging.nfloat_objc_msgSend_nfloat (this.Handle, Selector.GetHandle ("getAdaptiveHeightWithWidth:"), width);
+				return ApiDefinitions.Messaging.nfloat_objc_msgSend_nfloat (this.Handle, Selector.GetHandle ("getAdaptiveHeightWithWidth:"), width);
 			} else {
-				return global::IronSourceSdk.ApiDefinitions.Messaging.nfloat_objc_msgSendSuper_nfloat (this.SuperHandle, Selector.GetHandle ("getAdaptiveHeightWithWidth:"), width);
+				return ApiDefinitions.Messaging.nfloat_objc_msgSendSuper_nfloat (this.SuperHandle, Selector.GetHandle ("getAdaptiveHeightWithWidth:"), width);
 			}
 		}
 		[Export ("getBannerBiddingDataWithAdapterConfig:adData:")]
@@ -122,9 +122,9 @@ namespace IronSourceSdk {
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
 			var adData__handle__ = adData!.GetNonNullHandle (nameof (adData));
 			if (IsDirectBinding) {
-				return  Runtime.GetNSObject<NSDictionary> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("getBannerBiddingDataWithAdapterConfig:adData:"), adapterConfig__handle__, adData__handle__))!;
+				return  Runtime.GetNSObject<NSDictionary> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("getBannerBiddingDataWithAdapterConfig:adData:"), adapterConfig__handle__, adData__handle__))!;
 			} else {
-				return  Runtime.GetNSObject<NSDictionary> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("getBannerBiddingDataWithAdapterConfig:adData:"), adapterConfig__handle__, adData__handle__))!;
+				return  Runtime.GetNSObject<NSDictionary> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("getBannerBiddingDataWithAdapterConfig:adData:"), adapterConfig__handle__, adData__handle__))!;
 			}
 		}
 		[Export ("initBannerForBiddingWithUserId:adapterConfig:delegate:")]
@@ -132,14 +132,14 @@ namespace IronSourceSdk {
 		public virtual void InitBannerForBiddingWithUserId (string userId, ISAdapterConfig adapterConfig, ISBannerAdapterDelegate @delegate)
 		{
 			if (userId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (userId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (userId));
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
 			var @delegate__handle__ = @delegate!.GetNonNullHandle (nameof (@delegate));
 			var nsuserId = CFString.CreateNative (userId);
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initBannerForBiddingWithUserId:adapterConfig:delegate:"), nsuserId, adapterConfig__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initBannerForBiddingWithUserId:adapterConfig:delegate:"), nsuserId, adapterConfig__handle__, @delegate__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initBannerForBiddingWithUserId:adapterConfig:delegate:"), nsuserId, adapterConfig__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initBannerForBiddingWithUserId:adapterConfig:delegate:"), nsuserId, adapterConfig__handle__, @delegate__handle__);
 			}
 			CFString.ReleaseNative (nsuserId);
 		}
@@ -148,14 +148,14 @@ namespace IronSourceSdk {
 		public virtual void InitBannerWithUserId (string userId, ISAdapterConfig adapterConfig, ISBannerAdapterDelegate @delegate)
 		{
 			if (userId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (userId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (userId));
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
 			var @delegate__handle__ = @delegate!.GetNonNullHandle (nameof (@delegate));
 			var nsuserId = CFString.CreateNative (userId);
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initBannerWithUserId:adapterConfig:delegate:"), nsuserId, adapterConfig__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initBannerWithUserId:adapterConfig:delegate:"), nsuserId, adapterConfig__handle__, @delegate__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initBannerWithUserId:adapterConfig:delegate:"), nsuserId, adapterConfig__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initBannerWithUserId:adapterConfig:delegate:"), nsuserId, adapterConfig__handle__, @delegate__handle__);
 			}
 			CFString.ReleaseNative (nsuserId);
 		}
@@ -166,15 +166,15 @@ namespace IronSourceSdk {
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
 			var adData__handle__ = adData!.GetNonNullHandle (nameof (adData));
 			if (serverData is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (serverData));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (serverData));
 			var viewController__handle__ = viewController!.GetNonNullHandle (nameof (viewController));
 			var size__handle__ = size!.GetNonNullHandle (nameof (size));
 			var @delegate__handle__ = @delegate!.GetNonNullHandle (nameof (@delegate));
 			var nsserverData = CFString.CreateNative (serverData);
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("loadBannerForBiddingWithAdapterConfig:adData:serverData:viewController:size:delegate:"), adapterConfig__handle__, adData__handle__, nsserverData, viewController__handle__, size__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("loadBannerForBiddingWithAdapterConfig:adData:serverData:viewController:size:delegate:"), adapterConfig__handle__, adData__handle__, nsserverData, viewController__handle__, size__handle__, @delegate__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("loadBannerForBiddingWithAdapterConfig:adData:serverData:viewController:size:delegate:"), adapterConfig__handle__, adData__handle__, nsserverData, viewController__handle__, size__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("loadBannerForBiddingWithAdapterConfig:adData:serverData:viewController:size:delegate:"), adapterConfig__handle__, adData__handle__, nsserverData, viewController__handle__, size__handle__, @delegate__handle__);
 			}
 			CFString.ReleaseNative (nsserverData);
 		}
@@ -188,9 +188,9 @@ namespace IronSourceSdk {
 			var size__handle__ = size!.GetNonNullHandle (nameof (size));
 			var @delegate__handle__ = @delegate!.GetNonNullHandle (nameof (@delegate));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("loadBannerWithAdapterConfig:adData:viewController:size:delegate:"), adapterConfig__handle__, adData__handle__, viewController__handle__, size__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("loadBannerWithAdapterConfig:adData:viewController:size:delegate:"), adapterConfig__handle__, adData__handle__, viewController__handle__, size__handle__, @delegate__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("loadBannerWithAdapterConfig:adData:viewController:size:delegate:"), adapterConfig__handle__, adData__handle__, viewController__handle__, size__handle__, @delegate__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("loadBannerWithAdapterConfig:adData:viewController:size:delegate:"), adapterConfig__handle__, adData__handle__, viewController__handle__, size__handle__, @delegate__handle__);
 			}
 		}
 		[Export ("onNetworkInitCallbackFailed:")]
@@ -198,12 +198,12 @@ namespace IronSourceSdk {
 		public new virtual void OnNetworkInitCallbackFailed (string errorMessage)
 		{
 			if (errorMessage is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (errorMessage));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (errorMessage));
 			var nserrorMessage = CFString.CreateNative (errorMessage);
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("onNetworkInitCallbackFailed:"), nserrorMessage);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("onNetworkInitCallbackFailed:"), nserrorMessage);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("onNetworkInitCallbackFailed:"), nserrorMessage);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("onNetworkInitCallbackFailed:"), nserrorMessage);
 			}
 			CFString.ReleaseNative (nserrorMessage);
 		}
@@ -212,9 +212,9 @@ namespace IronSourceSdk {
 		public new virtual void OnNetworkInitCallbackSuccess ()
 		{
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("onNetworkInitCallbackSuccess"));
+				ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("onNetworkInitCallbackSuccess"));
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("onNetworkInitCallbackSuccess"));
+				ApiDefinitions.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("onNetworkInitCallbackSuccess"));
 			}
 		}
 		[Export ("releaseMemoryWithAdapterConfig:")]
@@ -223,9 +223,9 @@ namespace IronSourceSdk {
 		{
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("releaseMemoryWithAdapterConfig:"), adapterConfig__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("releaseMemoryWithAdapterConfig:"), adapterConfig__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("releaseMemoryWithAdapterConfig:"), adapterConfig__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("releaseMemoryWithAdapterConfig:"), adapterConfig__handle__);
 			}
 		}
 	} /* class ISBaseBannerAdapter */

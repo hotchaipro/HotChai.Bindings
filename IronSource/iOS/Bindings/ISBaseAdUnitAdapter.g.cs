@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISBaseAdUnitAdapter () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -71,14 +71,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISBaseAdUnitAdapter (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISBaseAdUnitAdapter (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("getMissingParamErrorStringWithKey:")]
@@ -86,13 +86,13 @@ namespace IronSourceSdk {
 		public virtual string GetMissingParamErrorStringWithKey (string key)
 		{
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			var nskey = CFString.CreateNative (key);
 			string? ret;
 			if (IsDirectBinding) {
-				ret = CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("getMissingParamErrorStringWithKey:"), nskey))!;
+				ret = CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("getMissingParamErrorStringWithKey:"), nskey))!;
 			} else {
-				ret = CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("getMissingParamErrorStringWithKey:"), nskey))!;
+				ret = CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("getMissingParamErrorStringWithKey:"), nskey))!;
 			}
 			CFString.ReleaseNative (nskey);
 			return ret!;
@@ -103,13 +103,13 @@ namespace IronSourceSdk {
 		{
 			var adapterConfig__handle__ = adapterConfig!.GetNonNullHandle (nameof (adapterConfig));
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			var nskey = CFString.CreateNative (key);
 			string? ret;
 			if (IsDirectBinding) {
-				ret = CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("getStringValueFromAdapterConfig:forKey:"), adapterConfig__handle__, nskey))!;
+				ret = CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("getStringValueFromAdapterConfig:forKey:"), adapterConfig__handle__, nskey))!;
 			} else {
-				ret = CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("getStringValueFromAdapterConfig:forKey:"), adapterConfig__handle__, nskey))!;
+				ret = CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("getStringValueFromAdapterConfig:forKey:"), adapterConfig__handle__, nskey))!;
 			}
 			CFString.ReleaseNative (nskey);
 			return ret!;
@@ -119,12 +119,12 @@ namespace IronSourceSdk {
 		public virtual void OnNetworkInitCallbackFailed (string errorMessage)
 		{
 			if (errorMessage is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (errorMessage));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (errorMessage));
 			var nserrorMessage = CFString.CreateNative (errorMessage);
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("onNetworkInitCallbackFailed:"), nserrorMessage);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("onNetworkInitCallbackFailed:"), nserrorMessage);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("onNetworkInitCallbackFailed:"), nserrorMessage);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("onNetworkInitCallbackFailed:"), nserrorMessage);
 			}
 			CFString.ReleaseNative (nserrorMessage);
 		}
@@ -133,9 +133,9 @@ namespace IronSourceSdk {
 		public virtual void OnNetworkInitCallbackSuccess ()
 		{
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("onNetworkInitCallbackSuccess"));
+				ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("onNetworkInitCallbackSuccess"));
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("onNetworkInitCallbackSuccess"));
+				ApiDefinitions.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("onNetworkInitCallbackSuccess"));
 			}
 		}
 	} /* class ISBaseAdUnitAdapter */

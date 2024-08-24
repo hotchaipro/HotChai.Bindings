@@ -94,9 +94,9 @@ namespace IronSourceSdk {
 		public void ConsentViewDidLoadSuccess (string consentViewType)
 		{
 			if (consentViewType is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
 			var nsconsentViewType = CFString.CreateNative (consentViewType);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidLoadSuccess:"), nsconsentViewType);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidLoadSuccess:"), nsconsentViewType);
 			CFString.ReleaseNative (nsconsentViewType);
 		}
 		[Export ("consentViewDidFailToLoadWithError:consentViewType:")]
@@ -105,9 +105,9 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (consentViewType is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
 			var nsconsentViewType = CFString.CreateNative (consentViewType);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidFailToLoadWithError:consentViewType:"), error__handle__, nsconsentViewType);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidFailToLoadWithError:consentViewType:"), error__handle__, nsconsentViewType);
 			CFString.ReleaseNative (nsconsentViewType);
 		}
 		[Export ("consentViewDidShowSuccess:")]
@@ -115,9 +115,9 @@ namespace IronSourceSdk {
 		public void ConsentViewDidShowSuccess (string consentViewType)
 		{
 			if (consentViewType is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
 			var nsconsentViewType = CFString.CreateNative (consentViewType);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidShowSuccess:"), nsconsentViewType);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidShowSuccess:"), nsconsentViewType);
 			CFString.ReleaseNative (nsconsentViewType);
 		}
 		[Export ("consentViewDidFailToShowWithError:consentViewType:")]
@@ -126,9 +126,9 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (consentViewType is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
 			var nsconsentViewType = CFString.CreateNative (consentViewType);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidFailToShowWithError:consentViewType:"), error__handle__, nsconsentViewType);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidFailToShowWithError:consentViewType:"), error__handle__, nsconsentViewType);
 			CFString.ReleaseNative (nsconsentViewType);
 		}
 		[Export ("consentViewDidAccept:")]
@@ -136,9 +136,9 @@ namespace IronSourceSdk {
 		public void ConsentViewDidAccept (string consentViewType)
 		{
 			if (consentViewType is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
 			var nsconsentViewType = CFString.CreateNative (consentViewType);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidAccept:"), nsconsentViewType);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidAccept:"), nsconsentViewType);
 			CFString.ReleaseNative (nsconsentViewType);
 		}
 		[Export ("consentViewDidDismiss:")]
@@ -146,16 +146,16 @@ namespace IronSourceSdk {
 		public void ConsentViewDidDismiss (string consentViewType)
 		{
 			if (consentViewType is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (consentViewType));
 			var nsconsentViewType = CFString.CreateNative (consentViewType);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidDismiss:"), nsconsentViewType);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("consentViewDidDismiss:"), nsconsentViewType);
 			CFString.ReleaseNative (nsconsentViewType);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISConsentViewDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISConsentViewDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISConsentViewDelegate : NSObject, IISConsentViewDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -164,7 +164,7 @@ namespace IronSourceSdk {
 		protected ISConsentViewDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

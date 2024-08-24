@@ -113,71 +113,71 @@ namespace IronSourceSdk {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerInitSuccess ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerInitSuccess"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerInitSuccess"));
 		}
 		[Export ("adapterBannerInitFailedWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerInitFailedWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterBannerInitFailedWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterBannerInitFailedWithError:"), error__handle__);
 		}
 		[Export ("adapterBannerDidLoad:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerDidLoad (global::UIKit.UIView bannerView)
 		{
 			var bannerView__handle__ = bannerView!.GetNonNullHandle (nameof (bannerView));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterBannerDidLoad:"), bannerView__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterBannerDidLoad:"), bannerView__handle__);
 		}
 		[Export ("adapterBannerDidFailToLoadWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerDidFailToLoadWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterBannerDidFailToLoadWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterBannerDidFailToLoadWithError:"), error__handle__);
 		}
 		[Export ("adapterBannerDidClick")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerDidClick ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerDidClick"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerDidClick"));
 		}
 		[Export ("adapterBannerWillPresentScreen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerWillPresentScreen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerWillPresentScreen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerWillPresentScreen"));
 		}
 		[Export ("adapterBannerDidDismissScreen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerDidDismissScreen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerDidDismissScreen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerDidDismissScreen"));
 		}
 		[Export ("adapterBannerWillLeaveApplication")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerWillLeaveApplication ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerWillLeaveApplication"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerWillLeaveApplication"));
 		}
 		[Export ("adapterBannerDidShow")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerDidShow ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerDidShow"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterBannerDidShow"));
 		}
 		[Export ("adapterBannerDidFailToShowWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterBannerDidFailToShowWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterBannerDidFailToShowWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterBannerDidFailToShowWithError:"), error__handle__);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISBannerAdapterDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISBannerAdapterDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISBannerAdapterDelegate : NSObject, IISBannerAdapterDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -186,7 +186,7 @@ namespace IronSourceSdk {
 		protected ISBannerAdapterDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

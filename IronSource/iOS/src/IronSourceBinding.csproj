@@ -13,11 +13,10 @@
 
   <ItemGroup>
     <NativeReference Include="Pods\IronSourceSDK\IronSource\IronSource.xcframework">
-      <Kind>Static</Kind>
-      <ForceLoad>true</ForceLoad>
-	  <LinkerFlags>-ObjC -lz -lsqlite3</LinkerFlags>
-      <Frameworks>AdSupport Security StoreKit SystemConfiguration WebKit</Frameworks>
-      <WeakFrameworks>AdServices</WeakFrameworks>
+		<Kind>Framework</Kind>
+		<ForceLoad>true</ForceLoad>
+		<LinkerFlags>-ObjC -lz</LinkerFlags>
+		<Frameworks>AVFoundation AdSupport AudioToolbox CFNetwork CoreGraphics CoreMedia CoreTelephony CoreVideo Foundation MobileCoreServices QuartzCore Security StoreKit SystemConfiguration</Frameworks>
     </NativeReference>
   </ItemGroup>
 </Project>

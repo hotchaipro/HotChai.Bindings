@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISAdapterNativeAdViewBinder () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -71,14 +71,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISAdapterNativeAdViewBinder (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISAdapterNativeAdViewBinder (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("setAdvertiserView:")]
@@ -87,9 +87,9 @@ namespace IronSourceSdk {
 		{
 			var advertiserView__handle__ = advertiserView!.GetNonNullHandle (nameof (advertiserView));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdvertiserView:"), advertiserView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdvertiserView:"), advertiserView__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdvertiserView:"), advertiserView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdvertiserView:"), advertiserView__handle__);
 			}
 		}
 		[Export ("setBodyView:")]
@@ -98,9 +98,9 @@ namespace IronSourceSdk {
 		{
 			var bodyView__handle__ = bodyView!.GetNonNullHandle (nameof (bodyView));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setBodyView:"), bodyView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setBodyView:"), bodyView__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setBodyView:"), bodyView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setBodyView:"), bodyView__handle__);
 			}
 		}
 		[Export ("setCallToActionView:")]
@@ -109,9 +109,9 @@ namespace IronSourceSdk {
 		{
 			var callToActionView__handle__ = callToActionView!.GetNonNullHandle (nameof (callToActionView));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setCallToActionView:"), callToActionView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setCallToActionView:"), callToActionView__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setCallToActionView:"), callToActionView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setCallToActionView:"), callToActionView__handle__);
 			}
 		}
 		[Export ("setIconView:")]
@@ -120,9 +120,9 @@ namespace IronSourceSdk {
 		{
 			var iconView__handle__ = iconView!.GetNonNullHandle (nameof (iconView));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setIconView:"), iconView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setIconView:"), iconView__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setIconView:"), iconView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setIconView:"), iconView__handle__);
 			}
 		}
 		[Export ("setMediaView:")]
@@ -131,9 +131,9 @@ namespace IronSourceSdk {
 		{
 			var mediaView__handle__ = mediaView!.GetNonNullHandle (nameof (mediaView));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setMediaView:"), mediaView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setMediaView:"), mediaView__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setMediaView:"), mediaView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setMediaView:"), mediaView__handle__);
 			}
 		}
 		[Export ("setNativeAdView:")]
@@ -142,9 +142,9 @@ namespace IronSourceSdk {
 		{
 			var nativeAdView__handle__ = nativeAdView.GetHandle ();
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setNativeAdView:"), nativeAdView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setNativeAdView:"), nativeAdView__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setNativeAdView:"), nativeAdView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setNativeAdView:"), nativeAdView__handle__);
 			}
 		}
 		[Export ("setTitleView:")]
@@ -153,9 +153,9 @@ namespace IronSourceSdk {
 		{
 			var titleView__handle__ = titleView!.GetNonNullHandle (nameof (titleView));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setTitleView:"), titleView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setTitleView:"), titleView__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setTitleView:"), titleView__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setTitleView:"), titleView__handle__);
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -164,9 +164,9 @@ namespace IronSourceSdk {
 			get {
 				ISNativeAdViewHolder? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<ISNativeAdViewHolder> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adViewHolder")))!;
+					ret =  Runtime.GetNSObject<ISNativeAdViewHolder> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adViewHolder")))!;
 				} else {
-					ret =  Runtime.GetNSObject<ISNativeAdViewHolder> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adViewHolder")))!;
+					ret =  Runtime.GetNSObject<ISNativeAdViewHolder> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adViewHolder")))!;
 				}
 				return ret!;
 			}
@@ -174,9 +174,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value.GetHandle ();
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdViewHolder:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdViewHolder:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdViewHolder:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdViewHolder:"), value__handle__);
 				}
 			}
 		}
@@ -186,9 +186,9 @@ namespace IronSourceSdk {
 			get {
 				global::UIKit.UIView? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<global::UIKit.UIView> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("networkNativeAdView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UIView> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("networkNativeAdView")))!;
 				} else {
-					ret =  Runtime.GetNSObject<global::UIKit.UIView> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("networkNativeAdView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UIView> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("networkNativeAdView")))!;
 				}
 				return ret!;
 			}
@@ -196,9 +196,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value.GetHandle ();
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setNetworkNativeAdView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setNetworkNativeAdView:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setNetworkNativeAdView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setNetworkNativeAdView:"), value__handle__);
 				}
 			}
 		}

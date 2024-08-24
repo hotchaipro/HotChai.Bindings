@@ -65,66 +65,66 @@ namespace IronSourceSdk {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidLoad ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidLoad"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidLoad"));
 		}
 		[Export ("adDidFailToLoadWithErrorType:errorCode:errorMessage:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidFailToLoadWithErrorType (ISAdapterErrorType errorType, nint errorCode, string? errorMessage)
 		{
 			var nserrorMessage = CFString.CreateNative (errorMessage);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("adDidFailToLoadWithErrorType:errorCode:errorMessage:"), (IntPtr) (long) errorType, errorCode, nserrorMessage);
+			ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("adDidFailToLoadWithErrorType:errorCode:errorMessage:"), (IntPtr) (long) errorType, errorCode, nserrorMessage);
 			CFString.ReleaseNative (nserrorMessage);
 		}
 		[Export ("adDidOpen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidOpen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidOpen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidOpen"));
 		}
 		[Export ("adDidFailToShowWithErrorCode:errorMessage:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidFailToShowWithErrorCode (nint errorCode, string? errorMessage)
 		{
 			var nserrorMessage = CFString.CreateNative (errorMessage);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("adDidFailToShowWithErrorCode:errorMessage:"), errorCode, nserrorMessage);
+			ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("adDidFailToShowWithErrorCode:errorMessage:"), errorCode, nserrorMessage);
 			CFString.ReleaseNative (nserrorMessage);
 		}
 		[Export ("adDidClick")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidClick ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidClick"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidClick"));
 		}
 		[Export ("adDidLoadWithView:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidLoadWithView (global::UIKit.UIView view)
 		{
 			var view__handle__ = view!.GetNonNullHandle (nameof (view));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adDidLoadWithView:"), view__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adDidLoadWithView:"), view__handle__);
 		}
 		[Export ("adWillLeaveApplication")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdWillLeaveApplication ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adWillLeaveApplication"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adWillLeaveApplication"));
 		}
 		[Export ("adWillPresentScreen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdWillPresentScreen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adWillPresentScreen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adWillPresentScreen"));
 		}
 		[Export ("adDidDismissScreen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidDismissScreen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidDismissScreen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidDismissScreen"));
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISBannerAdDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISBannerAdDelegate", false)]
 	[Model]
 	public unsafe partial class ISBannerAdDelegate : NSObject, IISBannerAdDelegate, IISAdapterAdDelegate, IISAdapterAdViewDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -133,7 +133,7 @@ namespace IronSourceSdk {
 		public ISBannerAdDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

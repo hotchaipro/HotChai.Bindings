@@ -113,70 +113,70 @@ namespace IronSourceSdk {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialInitSuccess ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialInitSuccess"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialInitSuccess"));
 		}
 		[Export ("adapterInterstitialInitFailedWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialInitFailedWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterInterstitialInitFailedWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterInterstitialInitFailedWithError:"), error__handle__);
 		}
 		[Export ("adapterInterstitialDidLoad")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialDidLoad ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidLoad"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidLoad"));
 		}
 		[Export ("adapterInterstitialDidFailToLoadWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialDidFailToLoadWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterInterstitialDidFailToLoadWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterInterstitialDidFailToLoadWithError:"), error__handle__);
 		}
 		[Export ("adapterInterstitialDidOpen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialDidOpen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidOpen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidOpen"));
 		}
 		[Export ("adapterInterstitialDidClose")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialDidClose ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidClose"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidClose"));
 		}
 		[Export ("adapterInterstitialDidShow")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialDidShow ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidShow"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidShow"));
 		}
 		[Export ("adapterInterstitialDidFailToShowWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialDidFailToShowWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterInterstitialDidFailToShowWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterInterstitialDidFailToShowWithError:"), error__handle__);
 		}
 		[Export ("adapterInterstitialDidClick")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialDidClick ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidClick"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidClick"));
 		}
 		[Export ("adapterInterstitialDidBecomeVisible")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterInterstitialDidBecomeVisible ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidBecomeVisible"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterInterstitialDidBecomeVisible"));
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISInterstitialAdapterDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISInterstitialAdapterDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISInterstitialAdapterDelegate : NSObject, IISInterstitialAdapterDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -185,7 +185,7 @@ namespace IronSourceSdk {
 		protected ISInterstitialAdapterDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

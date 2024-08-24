@@ -69,16 +69,16 @@ namespace IronSourceSdk {
 		public void Level (string log, ISLogLevel level, LogTag tag)
 		{
 			if (log is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (log));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (log));
 			var nslog = CFString.CreateNative (log);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_int_UInt32 (this.Handle, Selector.GetHandle ("sendLog:level:tag:"), nslog, (int)level, (UInt32)tag);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_int_UInt32 (this.Handle, Selector.GetHandle ("sendLog:level:tag:"), nslog, (int)level, (UInt32)tag);
 			CFString.ReleaseNative (nslog);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISLogDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISLogDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISLogDelegate : NSObject, IISLogDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -87,7 +87,7 @@ namespace IronSourceSdk {
 		protected ISLogDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

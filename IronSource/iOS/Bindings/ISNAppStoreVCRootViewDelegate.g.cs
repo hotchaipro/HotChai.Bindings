@@ -69,16 +69,16 @@ namespace IronSourceSdk {
 		public void DidReceiveOutOfAppStoreTouchWithType (string type)
 		{
 			if (type is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (type));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (type));
 			var nstype = CFString.CreateNative (type);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didReceiveOutOfAppStoreTouchWithType:"), nstype);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didReceiveOutOfAppStoreTouchWithType:"), nstype);
 			CFString.ReleaseNative (nstype);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISNAppStoreVCRootViewDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISNAppStoreVCRootViewDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISNAppStoreVCRootViewDelegate : NSObject, IISNAppStoreVCRootViewDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -87,7 +87,7 @@ namespace IronSourceSdk {
 		protected ISNAppStoreVCRootViewDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

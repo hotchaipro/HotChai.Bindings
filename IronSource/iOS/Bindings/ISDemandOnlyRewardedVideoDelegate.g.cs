@@ -99,9 +99,9 @@ namespace IronSourceSdk {
 		public void RewardedVideoDidLoad (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidLoad:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidLoad:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("rewardedVideoDidFailToLoadWithError:instanceId:")]
@@ -110,9 +110,9 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidFailToLoadWithError:instanceId:"), error__handle__, nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidFailToLoadWithError:instanceId:"), error__handle__, nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("rewardedVideoDidOpen:")]
@@ -120,9 +120,9 @@ namespace IronSourceSdk {
 		public void RewardedVideoDidOpen (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidOpen:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidOpen:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("rewardedVideoDidFailToShowWithError:instanceId:")]
@@ -131,9 +131,9 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidFailToShowWithError:instanceId:"), error__handle__, nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidFailToShowWithError:instanceId:"), error__handle__, nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("rewardedVideoDidClick:")]
@@ -141,9 +141,9 @@ namespace IronSourceSdk {
 		public void RewardedVideoDidClick (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidClick:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidClick:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("rewardedVideoAdRewarded:")]
@@ -151,9 +151,9 @@ namespace IronSourceSdk {
 		public void RewardedVideoAdRewarded (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoAdRewarded:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoAdRewarded:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("rewardedVideoDidClose:")]
@@ -161,16 +161,16 @@ namespace IronSourceSdk {
 		public void RewardedVideoDidClose (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidClose:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("rewardedVideoDidClose:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISDemandOnlyRewardedVideoDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISDemandOnlyRewardedVideoDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISDemandOnlyRewardedVideoDelegate : NSObject, IISDemandOnlyRewardedVideoDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -179,7 +179,7 @@ namespace IronSourceSdk {
 		protected ISDemandOnlyRewardedVideoDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

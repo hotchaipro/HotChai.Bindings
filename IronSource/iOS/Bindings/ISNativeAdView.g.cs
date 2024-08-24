@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISNativeAdView () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -73,11 +73,11 @@ namespace IronSourceSdk {
 		[Export ("initWithCoder:")]
 		public ISNativeAdView (NSCoder coder) : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("initWithCoder:"), coder.Handle), "initWithCoder:");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("initWithCoder:"), coder.Handle), "initWithCoder:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithCoder:"), coder.Handle), "initWithCoder:");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithCoder:"), coder.Handle), "initWithCoder:");
 			}
 		}
 
@@ -85,14 +85,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISNativeAdView (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISNativeAdView (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("registerNativeAdViews:")]
@@ -101,9 +101,9 @@ namespace IronSourceSdk {
 		{
 			var nativeAd__handle__ = nativeAd!.GetNonNullHandle (nameof (nativeAd));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("registerNativeAdViews:"), nativeAd__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("registerNativeAdViews:"), nativeAd__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("registerNativeAdViews:"), nativeAd__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("registerNativeAdViews:"), nativeAd__handle__);
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -114,9 +114,9 @@ namespace IronSourceSdk {
 			get {
 				global::UIKit.UILabel? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adAdvertiserView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adAdvertiserView")))!;
 				} else {
-					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adAdvertiserView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adAdvertiserView")))!;
 				}
 				MarkDirty ();
 				__mt_AdAdvertiserView_var = ret;
@@ -126,9 +126,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value.GetHandle ();
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdAdvertiserView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdAdvertiserView:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdAdvertiserView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdAdvertiserView:"), value__handle__);
 				}
 				MarkDirty ();
 				__mt_AdAdvertiserView_var = value;
@@ -142,9 +142,9 @@ namespace IronSourceSdk {
 			get {
 				global::UIKit.UIImageView? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<global::UIKit.UIImageView> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adAppIcon")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UIImageView> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adAppIcon")))!;
 				} else {
-					ret =  Runtime.GetNSObject<global::UIKit.UIImageView> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adAppIcon")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UIImageView> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adAppIcon")))!;
 				}
 				MarkDirty ();
 				__mt_AdAppIcon_var = ret;
@@ -154,9 +154,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value.GetHandle ();
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdAppIcon:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdAppIcon:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdAppIcon:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdAppIcon:"), value__handle__);
 				}
 				MarkDirty ();
 				__mt_AdAppIcon_var = value;
@@ -170,9 +170,9 @@ namespace IronSourceSdk {
 			get {
 				global::UIKit.UILabel? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adBodyView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adBodyView")))!;
 				} else {
-					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adBodyView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adBodyView")))!;
 				}
 				MarkDirty ();
 				__mt_AdBodyView_var = ret;
@@ -182,9 +182,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value.GetHandle ();
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdBodyView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdBodyView:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdBodyView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdBodyView:"), value__handle__);
 				}
 				MarkDirty ();
 				__mt_AdBodyView_var = value;
@@ -198,9 +198,9 @@ namespace IronSourceSdk {
 			get {
 				global::UIKit.UIButton? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<global::UIKit.UIButton> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adCallToActionView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UIButton> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adCallToActionView")))!;
 				} else {
-					ret =  Runtime.GetNSObject<global::UIKit.UIButton> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adCallToActionView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UIButton> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adCallToActionView")))!;
 				}
 				MarkDirty ();
 				__mt_AdCallToActionView_var = ret;
@@ -210,9 +210,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value.GetHandle ();
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdCallToActionView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdCallToActionView:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdCallToActionView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdCallToActionView:"), value__handle__);
 				}
 				MarkDirty ();
 				__mt_AdCallToActionView_var = value;
@@ -226,9 +226,9 @@ namespace IronSourceSdk {
 			get {
 				LevelPlayMediaView? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<LevelPlayMediaView> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adMediaView")))!;
+					ret =  Runtime.GetNSObject<LevelPlayMediaView> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adMediaView")))!;
 				} else {
-					ret =  Runtime.GetNSObject<LevelPlayMediaView> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adMediaView")))!;
+					ret =  Runtime.GetNSObject<LevelPlayMediaView> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adMediaView")))!;
 				}
 				MarkDirty ();
 				__mt_AdMediaView_var = ret;
@@ -238,9 +238,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value.GetHandle ();
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdMediaView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdMediaView:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdMediaView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdMediaView:"), value__handle__);
 				}
 				MarkDirty ();
 				__mt_AdMediaView_var = value;
@@ -254,9 +254,9 @@ namespace IronSourceSdk {
 			get {
 				global::UIKit.UILabel? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adTitleView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("adTitleView")))!;
 				} else {
-					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adTitleView")))!;
+					ret =  Runtime.GetNSObject<global::UIKit.UILabel> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("adTitleView")))!;
 				}
 				MarkDirty ();
 				__mt_AdTitleView_var = ret;
@@ -266,9 +266,9 @@ namespace IronSourceSdk {
 			set {
 				var value__handle__ = value.GetHandle ();
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdTitleView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdTitleView:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdTitleView:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setAdTitleView:"), value__handle__);
 				}
 				MarkDirty ();
 				__mt_AdTitleView_var = value;
@@ -291,10 +291,10 @@ namespace IronSourceSdk {
 			protected internal ISNativeAdViewAppearance (IntPtr handle) : base (handle) {}
 		}
 		public static new ISNativeAdViewAppearance Appearance {
-			get { return new ISNativeAdViewAppearance (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (class_ptr, ObjCRuntime.Selector.GetHandle ("appearance"))); }
+			get { return new ISNativeAdViewAppearance (ApiDefinitions.Messaging.IntPtr_objc_msgSend (class_ptr, global::ObjCRuntime.Selector.GetHandle ("appearance"))); }
 		}
 		public static new ISNativeAdViewAppearance GetAppearance<T> () where T: ISNativeAdView {
-			return new ISNativeAdViewAppearance (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (Class.GetHandle (typeof (T)), ObjCRuntime.Selector.GetHandle ("appearance")));
+			return new ISNativeAdViewAppearance (ApiDefinitions.Messaging.IntPtr_objc_msgSend (Class.GetHandle (typeof (T)), global::ObjCRuntime.Selector.GetHandle ("appearance")));
 		}
 		public static new ISNativeAdViewAppearance AppearanceWhenContainedIn (params Type [] containers)
 		{

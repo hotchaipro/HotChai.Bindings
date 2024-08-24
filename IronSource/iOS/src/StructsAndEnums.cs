@@ -1,7 +1,23 @@
 using ObjCRuntime;
 
-namespace IronSourceSDK
+namespace IronSourceSdk
 {
+	[Native]
+	public enum ISAAdFormatType : ulong
+	{
+		Interstitial,
+		Rewarded,
+		Banner
+	}
+
+	[Native]
+	public enum ISALogLevel : long
+	{
+		None,
+		Error,
+		Verbose
+	}
+
 	[Native]
 	public enum ISGender : long
 	{
@@ -80,12 +96,13 @@ namespace IronSourceSDK
 		ErrorCodeNoAdsToReload = 519,
 		ErrorNoInternetConnection = 520,
 		ErrorMultipleIronsourceAppKey = 522,
-		ErrorReachedCapLimit = 524,
-		ErrorAdUnitCapped = 525,
+		ErrorPlacementCapped = 524,
+		ErrorAdFormatCapped = 525,
 		ErrorReachedCapLimitPerSession = 526,
 		ErrorUnknownInstanceId = 527,
 		ErrorSendEventsFailure = 528,
 		ErrorPullLocalFailureFailure = 529,
+		ErrorAdUnitCapped = 530,
 		ErrorBnLoadAfterInitFailed = 600,
 		ErrorBnLoadAfterLongInitiation = 601,
 		ErrorBnInitFailedAfterLoad = 602,
@@ -106,6 +123,13 @@ namespace IronSourceSDK
 		ErrorDoBnLoadAlreadyInProgress = 619,
 		ErrorDoBnLoadBeforeInitSuccess = 620,
 		ErrorDoBnInstanceLoadAuctionFailed = 621,
+		ErrorCodeNoAdUnitSpecified = 624,
+		ErrorCodeLoadBeforeInitSuccessCallback = 625,
+		ErrorCodeInvalidAdUnitId = 626,
+		ErrorIsLoadFailedAlreadyCalled = 627,
+		ErrorCodeShowBeforeLoadSuccessCallback = 628,
+		ErrorCodeLoadWhileShow = 629,
+		ErrorCodeShowWhileShow = 630,
 		ErrorNtLoadAfterInitFailed = 700,
 		ErrorNtLoadAfterLongInitiation = 701,
 		ErrorNtInitFailedAfterLoad = 702,
@@ -211,7 +235,32 @@ namespace IronSourceSDK
 		ErrorCodeDestroyException = 5009,
 		ErrorCodeInternalException = 5010,
 		ErrorCodeSmashIsNil = 5012,
-		ErrorCodeSmashInstanceNameIsNil = 5013
+		ErrorCodeSmashInstanceNameIsNil = 5013,
+		ErrorOldInitApiAppKeyNotValid = 2010,
+		ErrorNewInitApiAlreadyCalled = 2020,
+		ErrorOldApiInitInProgress = 2030,
+		ErrorInitAlreadyFinished = 2040,
+		ErrorLegacyInitFailed = 2060,
+		ErrorInitHttpRequestFailed = 2070,
+		ErrorInitInvalidResponse = 2080,
+		ErrorInitDecryptFailed = 2090,
+		ErrorInitNoResponseKey = 2100,
+		ErrorOldInitApiMultipleCalls = 2110,
+		ErrorInitDecompressFailed = 2120,
+		ErrorCappingValidationFailed = 3000,
+		ErrorDeliveryCappingValidationFailed = 3001,
+		ErrorCappingEnabledFalse = 3002,
+		ErrorCappingConfigAdditionFailed = 3003
+	}
+
+	[Native]
+	public enum LPMAdSizeType : long
+	{
+		Banner,
+		Large,
+		MediumRectangle,
+		Custom,
+		LeaderBoard
 	}
 
 	[Native]

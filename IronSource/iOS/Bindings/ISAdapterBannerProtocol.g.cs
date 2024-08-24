@@ -83,21 +83,21 @@ namespace IronSourceSdk {
 			var viewController__handle__ = viewController!.GetNonNullHandle (nameof (viewController));
 			var size__handle__ = size!.GetNonNullHandle (nameof (size));
 			var @delegate__handle__ = @delegate!.GetNonNullHandle (nameof (@delegate));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("loadAdWithAdData:viewController:size:delegate:"), adData__handle__, viewController__handle__, size__handle__, @delegate__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("loadAdWithAdData:viewController:size:delegate:"), adData__handle__, viewController__handle__, size__handle__, @delegate__handle__);
 		}
 		[Export ("destroyAdWithAdData:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DestroyAdWithAdData (ISAdData adData)
 		{
 			var adData__handle__ = adData!.GetNonNullHandle (nameof (adData));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("destroyAdWithAdData:"), adData__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("destroyAdWithAdData:"), adData__handle__);
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public bool IsSupportAdaptiveBanner {
 			[Export ("isSupportAdaptiveBanner")]
 			get {
 				byte ret;
-				ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("isSupportAdaptiveBanner"));
+				ret = ApiDefinitions.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("isSupportAdaptiveBanner"));
 				return ret != 0;
 			}
 		}
@@ -105,7 +105,7 @@ namespace IronSourceSdk {
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISAdapterBannerProtocol", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISAdapterBannerProtocol", false)]
 	[Model]
 	public unsafe abstract partial class ISAdapterBannerProtocol : NSObject, IISAdapterBannerProtocol {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -114,7 +114,7 @@ namespace IronSourceSdk {
 		protected ISAdapterBannerProtocol () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

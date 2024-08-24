@@ -14,17 +14,17 @@ using NativeHandle = System.IntPtr;
 #endif
 namespace IronSourceSdk
 {
-	[Register("ISBannerSize", true)]
+    [Register("ISBannerSize", true)]
 	public unsafe partial class ISBannerSize : NSObject
 	{
-		// #define ISBannerSize_BANNER [[ISBannerSize alloc] initWithDescription: kSizeBanner width:320 height: 50]
-		public static ISBannerSize Banner
-		{
-			get
-			{
-				return new ISBannerSize(@"BANNER", width: 320, height: 50);
-			}
-		}
+        // #define ISBannerSize_BANNER [[ISBannerSize alloc] initWithDescription: kSizeBanner width:320 height: 50]
+        public static ISBannerSize Banner
+        {
+            get
+            {
+                return new ISBannerSize(@"BANNER", width: 320, height: 50);
+            }
+        }
 
         // #define ISBannerSize_LARGE [[ISBannerSize alloc] initWithDescription:kSizeLarge width:320 height:90]
         public static ISBannerSize Large
@@ -35,7 +35,7 @@ namespace IronSourceSdk
             }
         }
 
-		// #define ISBannerSize_RECTANGLE [[ISBannerSize alloc] initWithDescription: kSizeRectangle width:300 height: 250]
+        // #define ISBannerSize_RECTANGLE [[ISBannerSize alloc] initWithDescription: kSizeRectangle width:300 height: 250]
         public static ISBannerSize Rectangle
         {
             get
@@ -53,7 +53,7 @@ namespace IronSourceSdk
             }
         }
 
-		// #define ISBannerSize_SMART [[ISBannerSize alloc] initWithDescription:kSizeSmart width:0 height:0]
+        // #define ISBannerSize_SMART [[ISBannerSize alloc] initWithDescription:kSizeSmart width:0 height:0]
         public static ISBannerSize Smart
         {
             get
@@ -62,8 +62,7 @@ namespace IronSourceSdk
             }
         }
 
-
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+        [BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly NativeHandle class_ptr = Class.GetHandle ("ISBannerSize");
 		public override NativeHandle ClassHandle { get { return class_ptr; } }
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -71,11 +70,11 @@ namespace IronSourceSdk
 		[Export ("init")]
 		public ISBannerSize () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -83,14 +82,14 @@ namespace IronSourceSdk
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISBannerSize (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISBannerSize (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("initWithWidth:andHeight:")]
@@ -98,11 +97,11 @@ namespace IronSourceSdk
 		public ISBannerSize (nint width, nint height)
 			: base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("initWithWidth:andHeight:"), width, height), "initWithWidth:andHeight:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("initWithWidth:andHeight:"), width, height), "initWithWidth:andHeight:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_IntPtr_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithWidth:andHeight:"), width, height), "initWithWidth:andHeight:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_IntPtr_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithWidth:andHeight:"), width, height), "initWithWidth:andHeight:");
 			}
 		}
 		[Export ("initWithDescription:width:height:")]
@@ -111,13 +110,13 @@ namespace IronSourceSdk
 			: base (NSObjectFlag.Empty)
 		{
 			if (description is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (description));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (description));
 			var nsdescription = CFString.CreateNative (description);
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("initWithDescription:width:height:"), nsdescription, width, height), "initWithDescription:width:height:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("initWithDescription:width:height:"), nsdescription, width, height), "initWithDescription:width:height:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_IntPtr_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithDescription:width:height:"), nsdescription, width, height), "initWithDescription:width:height:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle_IntPtr_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithDescription:width:height:"), nsdescription, width, height), "initWithDescription:width:height:");
 			}
 			CFString.ReleaseNative (nsdescription);
 		}
@@ -125,7 +124,7 @@ namespace IronSourceSdk
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static nfloat GetMaximalAdaptiveHeightWithWidth (nfloat width)
 		{
-			return global::IronSourceSdk.ApiDefinitions.Messaging.nfloat_objc_msgSend_nfloat (class_ptr, Selector.GetHandle ("getMaximalAdaptiveHeightWithWidth:"), width);
+			return ApiDefinitions.Messaging.nfloat_objc_msgSend_nfloat (class_ptr, Selector.GetHandle ("getMaximalAdaptiveHeightWithWidth:"), width);
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool Adaptive {
@@ -133,18 +132,18 @@ namespace IronSourceSdk
 			get {
 				byte ret;
 				if (IsDirectBinding) {
-					ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("isAdaptive"));
+					ret = ApiDefinitions.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("isAdaptive"));
 				} else {
-					ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("isAdaptive"));
+					ret = ApiDefinitions.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("isAdaptive"));
 				}
 				return ret != 0;
 			}
 			[Export ("setAdaptive:")]
 			set {
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_bool (this.Handle, Selector.GetHandle ("setAdaptive:"), value ? (byte) 1 : (byte) 0);
+					ApiDefinitions.Messaging.void_objc_msgSend_bool (this.Handle, Selector.GetHandle ("setAdaptive:"), value ? (byte) 1 : (byte) 0);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_bool (this.SuperHandle, Selector.GetHandle ("setAdaptive:"), value ? (byte) 1 : (byte) 0);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_bool (this.SuperHandle, Selector.GetHandle ("setAdaptive:"), value ? (byte) 1 : (byte) 0);
 				}
 			}
 		}
@@ -156,9 +155,9 @@ namespace IronSourceSdk
 			get {
 				ISContainerParams? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<ISContainerParams> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("containerParams")))!;
+					ret =  Runtime.GetNSObject<ISContainerParams> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("containerParams")))!;
 				} else {
-					ret =  Runtime.GetNSObject<ISContainerParams> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("containerParams")))!;
+					ret =  Runtime.GetNSObject<ISContainerParams> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("containerParams")))!;
 				}
 				MarkDirty ();
 				__mt_ContainerParams_var = ret;
@@ -168,9 +167,9 @@ namespace IronSourceSdk
 			set {
 				var value__handle__ = value!.GetNonNullHandle (nameof (value));
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setContainerParams:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setContainerParams:"), value__handle__);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setContainerParams:"), value__handle__);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setContainerParams:"), value__handle__);
 				}
 				MarkDirty ();
 				__mt_ContainerParams_var = value;
@@ -181,9 +180,9 @@ namespace IronSourceSdk
 			[Export ("height")]
 			get {
 				if (IsDirectBinding) {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("height"));
+					return ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("height"));
 				} else {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("height"));
+					return ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("height"));
 				}
 			}
 		}
@@ -193,9 +192,9 @@ namespace IronSourceSdk
 			get {
 				byte ret;
 				if (IsDirectBinding) {
-					ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("isSmart"));
+					ret = ApiDefinitions.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("isSmart"));
 				} else {
-					ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("isSmart"));
+					ret = ApiDefinitions.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("isSmart"));
 				}
 				return ret != 0;
 			}
@@ -205,9 +204,9 @@ namespace IronSourceSdk
 			[Export ("sizeDescription")]
 			get {
 				if (IsDirectBinding) {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("sizeDescription")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("sizeDescription")))!;
 				} else {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("sizeDescription")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("sizeDescription")))!;
 				}
 			}
 		}
@@ -216,9 +215,9 @@ namespace IronSourceSdk
 			[Export ("width")]
 			get {
 				if (IsDirectBinding) {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("width"));
+					return ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("width"));
 				} else {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("width"));
+					return ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("width"));
 				}
 			}
 		}
