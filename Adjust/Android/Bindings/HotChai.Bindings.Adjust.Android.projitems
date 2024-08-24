@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4652dd01-d4cf-4f65-bf1e-09c3f0e8f543</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HotChai.Bindings.Adjust.Android</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.ActivityHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.ActivityKind.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.ActivityPackage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.ActivityState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Adjust.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustAdRevenue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustAttribution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustEventFailure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustEventSuccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustInstance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustLinkResolution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustPlayStoreSubscription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustPreinstallReferrerReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustPurchase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustPurchaseVerificationResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustReferrerReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustSessionFailure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustSessionSuccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustSigner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustTestOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AdjustThirdPartySharing.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AndroidIdUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AttributionHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.AttributionResponseData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.BackoffStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.EventResponseData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.GooglePlayServicesClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IActivityHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IAttributionHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IInstallReferrerReadListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.ILogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.InstallReferrer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.InstallReferrerHuawei.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.InstallReferrerMeta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnAttributionChangedListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnDeeplinkResolvedListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnDeeplinkResponseListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnDeviceIdsRead.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnEventTrackingFailedListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnEventTrackingSucceededListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnPurchaseVerificationFinishedListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnSessionTrackingFailedListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IOnSessionTrackingSucceededListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IPackageHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IPurchaseVerificationHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.IRunActivityHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.ISdkClickHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Logger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.LogLevel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Network.ActivityPackageSender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Network.IActivityPackageSender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Network.IErrorCodes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Network.UrlStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Network.UtilNetworking.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.PackageBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.PackageFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.PackageHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.PreinstallUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.PurchaseVerificationHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.PurchaseVerificationResponseData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.ReferrerDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Reflection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.ResponseData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.AsyncTaskExecutor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.IFutureScheduler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.IThreadExecutor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.IThreadScheduler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.RunnableWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.SingleThreadCachedScheduler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.SingleThreadFutureScheduler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.ThreadFactoryWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.TimerCycle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Scheduler.TimerOnce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.SdkClickHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.SdkClickResponseData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.SessionParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.SessionResponseData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.SharedPreferencesManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.TrackingState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Adjust.Sdk.Util.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
+  </ItemGroup>
+</Project>
