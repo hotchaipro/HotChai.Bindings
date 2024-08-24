@@ -128,88 +128,88 @@ namespace IronSourceSdk {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoHasChangedAvailability (bool available)
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_bool (this.Handle, Selector.GetHandle ("adapterRewardedVideoHasChangedAvailability:"), available ? (byte) 1 : (byte) 0);
+			ApiDefinitions.Messaging.void_objc_msgSend_bool (this.Handle, Selector.GetHandle ("adapterRewardedVideoHasChangedAvailability:"), available ? (byte) 1 : (byte) 0);
 		}
 		[Export ("adapterRewardedVideoDidFailToLoadWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidFailToLoadWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidFailToLoadWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidFailToLoadWithError:"), error__handle__);
 		}
 		[Export ("adapterRewardedVideoDidReceiveReward")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidReceiveReward ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidReceiveReward"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidReceiveReward"));
 		}
 		[Export ("adapterRewardedVideoDidFailToShowWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidFailToShowWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidFailToShowWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidFailToShowWithError:"), error__handle__);
 		}
 		[Export ("adapterRewardedVideoDidOpen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidOpen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidOpen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidOpen"));
 		}
 		[Export ("adapterRewardedVideoDidClose")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidClose ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidClose"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidClose"));
 		}
 		[Export ("adapterRewardedVideoDidLoad")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidLoad ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidLoad"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidLoad"));
 		}
 		[Export ("adapterRewardedVideoDidClick")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidClick ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidClick"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidClick"));
 		}
 		[Export ("adapterRewardedVideoDidStart")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidStart ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidStart"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidStart"));
 		}
 		[Export ("adapterRewardedVideoDidEnd")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidEnd ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidEnd"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidEnd"));
 		}
 		[Export ("adapterRewardedVideoInitSuccess")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoInitSuccess ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoInitSuccess"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoInitSuccess"));
 		}
 		[Export ("adapterRewardedVideoInitFailed:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoInitFailed (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterRewardedVideoInitFailed:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adapterRewardedVideoInitFailed:"), error__handle__);
 		}
 		[Export ("adapterRewardedVideoDidBecomeVisible")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdapterRewardedVideoDidBecomeVisible ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidBecomeVisible"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adapterRewardedVideoDidBecomeVisible"));
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISRewardedVideoAdapterDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISRewardedVideoAdapterDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISRewardedVideoAdapterDelegate : NSObject, IISRewardedVideoAdapterDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -218,7 +218,7 @@ namespace IronSourceSdk {
 		protected ISRewardedVideoAdapterDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

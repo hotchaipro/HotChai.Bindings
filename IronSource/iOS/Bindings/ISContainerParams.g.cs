@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISContainerParams () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -71,14 +71,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISContainerParams (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISContainerParams (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("initWithWidth:height:")]
@@ -86,11 +86,11 @@ namespace IronSourceSdk {
 		public ISContainerParams (nfloat width, nfloat height)
 			: base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_nfloat_nfloat (this.Handle, Selector.GetHandle ("initWithWidth:height:"), width, height), "initWithWidth:height:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_nfloat_nfloat (this.Handle, Selector.GetHandle ("initWithWidth:height:"), width, height), "initWithWidth:height:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_nfloat_nfloat (this.SuperHandle, Selector.GetHandle ("initWithWidth:height:"), width, height), "initWithWidth:height:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_nfloat_nfloat (this.SuperHandle, Selector.GetHandle ("initWithWidth:height:"), width, height), "initWithWidth:height:");
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -98,17 +98,17 @@ namespace IronSourceSdk {
 			[Export ("height")]
 			get {
 				if (IsDirectBinding) {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.nfloat_objc_msgSend (this.Handle, Selector.GetHandle ("height"));
+					return ApiDefinitions.Messaging.nfloat_objc_msgSend (this.Handle, Selector.GetHandle ("height"));
 				} else {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.nfloat_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("height"));
+					return ApiDefinitions.Messaging.nfloat_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("height"));
 				}
 			}
 			[Export ("setHeight:")]
 			set {
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_nfloat (this.Handle, Selector.GetHandle ("setHeight:"), value);
+					ApiDefinitions.Messaging.void_objc_msgSend_nfloat (this.Handle, Selector.GetHandle ("setHeight:"), value);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_nfloat (this.SuperHandle, Selector.GetHandle ("setHeight:"), value);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_nfloat (this.SuperHandle, Selector.GetHandle ("setHeight:"), value);
 				}
 			}
 		}
@@ -117,17 +117,17 @@ namespace IronSourceSdk {
 			[Export ("width")]
 			get {
 				if (IsDirectBinding) {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.nfloat_objc_msgSend (this.Handle, Selector.GetHandle ("width"));
+					return ApiDefinitions.Messaging.nfloat_objc_msgSend (this.Handle, Selector.GetHandle ("width"));
 				} else {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.nfloat_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("width"));
+					return ApiDefinitions.Messaging.nfloat_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("width"));
 				}
 			}
 			[Export ("setWidth:")]
 			set {
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_nfloat (this.Handle, Selector.GetHandle ("setWidth:"), value);
+					ApiDefinitions.Messaging.void_objc_msgSend_nfloat (this.Handle, Selector.GetHandle ("setWidth:"), value);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_nfloat (this.SuperHandle, Selector.GetHandle ("setWidth:"), value);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_nfloat (this.SuperHandle, Selector.GetHandle ("setWidth:"), value);
 				}
 			}
 		}

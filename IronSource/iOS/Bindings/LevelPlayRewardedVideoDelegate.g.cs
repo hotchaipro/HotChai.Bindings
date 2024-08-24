@@ -75,13 +75,13 @@ namespace IronSourceSdk {
 		public void HasAvailableAdWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("hasAvailableAdWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("hasAvailableAdWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("hasNoAvailableAd")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void HasNoAvailableAd ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("hasNoAvailableAd"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("hasNoAvailableAd"));
 		}
 		[Export ("didReceiveRewardForPlacement:withAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -89,7 +89,7 @@ namespace IronSourceSdk {
 		{
 			var placementInfo__handle__ = placementInfo!.GetNonNullHandle (nameof (placementInfo));
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didReceiveRewardForPlacement:withAdInfo:"), placementInfo__handle__, adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didReceiveRewardForPlacement:withAdInfo:"), placementInfo__handle__, adInfo__handle__);
 		}
 		[Export ("didFailToShowWithError:andAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -97,14 +97,14 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didFailToShowWithError:andAdInfo:"), error__handle__, adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didFailToShowWithError:andAdInfo:"), error__handle__, adInfo__handle__);
 		}
 		[Export ("didOpenWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidOpenWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didOpenWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didOpenWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("didClick:withAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -112,20 +112,20 @@ namespace IronSourceSdk {
 		{
 			var placementInfo__handle__ = placementInfo!.GetNonNullHandle (nameof (placementInfo));
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didClick:withAdInfo:"), placementInfo__handle__, adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didClick:withAdInfo:"), placementInfo__handle__, adInfo__handle__);
 		}
 		[Export ("didCloseWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidCloseWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didCloseWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didCloseWithAdInfo:"), adInfo__handle__);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_LevelPlayRewardedVideoDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_LevelPlayRewardedVideoDelegate", false)]
 	[Model]
 	public unsafe abstract partial class LevelPlayRewardedVideoDelegate : NSObject, ILevelPlayRewardedVideoDelegate, ILevelPlayRewardedVideoBaseDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -134,7 +134,7 @@ namespace IronSourceSdk {
 		protected LevelPlayRewardedVideoDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

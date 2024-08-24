@@ -69,13 +69,13 @@ namespace IronSourceSdk {
 		public void ImpressionDataDidSucceed (ISImpressionData impressionData)
 		{
 			var impressionData__handle__ = impressionData!.GetNonNullHandle (nameof (impressionData));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("impressionDataDidSucceed:"), impressionData__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("impressionDataDidSucceed:"), impressionData__handle__);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISImpressionDataDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISImpressionDataDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISImpressionDataDelegate : NSObject, IISImpressionDataDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -84,7 +84,7 @@ namespace IronSourceSdk {
 		protected ISImpressionDataDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

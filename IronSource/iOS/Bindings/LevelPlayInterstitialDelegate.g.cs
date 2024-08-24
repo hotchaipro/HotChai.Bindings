@@ -99,28 +99,28 @@ namespace IronSourceSdk {
 		public void DidLoadWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didLoadWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didLoadWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("didFailToLoadWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidFailToLoadWithError (NSError error)
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didFailToLoadWithError:"), error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didFailToLoadWithError:"), error__handle__);
 		}
 		[Export ("didOpenWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidOpenWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didOpenWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didOpenWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("didShowWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidShowWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didShowWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didShowWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("didFailToShowWithError:andAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -128,27 +128,27 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didFailToShowWithError:andAdInfo:"), error__handle__, adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didFailToShowWithError:andAdInfo:"), error__handle__, adInfo__handle__);
 		}
 		[Export ("didClickWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidClickWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didClickWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didClickWithAdInfo:"), adInfo__handle__);
 		}
 		[Export ("didCloseWithAdInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void DidCloseWithAdInfo (ISAdInfo adInfo)
 		{
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didCloseWithAdInfo:"), adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didCloseWithAdInfo:"), adInfo__handle__);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_LevelPlayInterstitialDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_LevelPlayInterstitialDelegate", false)]
 	[Model]
 	public unsafe abstract partial class LevelPlayInterstitialDelegate : NSObject, ILevelPlayInterstitialDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -157,7 +157,7 @@ namespace IronSourceSdk {
 		protected LevelPlayInterstitialDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

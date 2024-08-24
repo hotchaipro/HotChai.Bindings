@@ -94,9 +94,9 @@ namespace IronSourceSdk {
 		public void InterstitialDidLoad (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidLoad:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidLoad:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("interstitialDidFailToLoadWithError:instanceId:")]
@@ -105,9 +105,9 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidFailToLoadWithError:instanceId:"), error__handle__, nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidFailToLoadWithError:instanceId:"), error__handle__, nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("interstitialDidOpen:")]
@@ -115,9 +115,9 @@ namespace IronSourceSdk {
 		public void InterstitialDidOpen (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidOpen:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidOpen:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("interstitialDidClose:")]
@@ -125,9 +125,9 @@ namespace IronSourceSdk {
 		public void InterstitialDidClose (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidClose:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidClose:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("interstitialDidFailToShowWithError:instanceId:")]
@@ -136,9 +136,9 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidFailToShowWithError:instanceId:"), error__handle__, nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("interstitialDidFailToShowWithError:instanceId:"), error__handle__, nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("didClickInterstitial:")]
@@ -146,16 +146,16 @@ namespace IronSourceSdk {
 		public void DidClickInterstitial (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didClickInterstitial:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didClickInterstitial:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISDemandOnlyInterstitialDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISDemandOnlyInterstitialDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISDemandOnlyInterstitialDelegate : NSObject, IISDemandOnlyInterstitialDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -164,7 +164,7 @@ namespace IronSourceSdk {
 		protected ISDemandOnlyInterstitialDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

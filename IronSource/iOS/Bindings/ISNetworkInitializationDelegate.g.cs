@@ -73,21 +73,21 @@ namespace IronSourceSdk {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void OnInitDidSucceed ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("onInitDidSucceed"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("onInitDidSucceed"));
 		}
 		[Export ("onInitDidFailWithErrorCode:errorMessage:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void OnInitDidFailWithErrorCode (nint errorCode, string? errorMessage)
 		{
 			var nserrorMessage = CFString.CreateNative (errorMessage);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("onInitDidFailWithErrorCode:errorMessage:"), errorCode, nserrorMessage);
+			ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("onInitDidFailWithErrorCode:errorMessage:"), errorCode, nserrorMessage);
 			CFString.ReleaseNative (nserrorMessage);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISNetworkInitializationDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISNetworkInitializationDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISNetworkInitializationDelegate : NSObject, IISNetworkInitializationDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -96,7 +96,7 @@ namespace IronSourceSdk {
 		protected ISNetworkInitializationDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

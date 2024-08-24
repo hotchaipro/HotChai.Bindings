@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISConcurrentMutableSet () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -71,14 +71,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISConcurrentMutableSet (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISConcurrentMutableSet (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("initWithCapacity:")]
@@ -86,11 +86,11 @@ namespace IronSourceSdk {
 		public ISConcurrentMutableSet (nuint numItems)
 			: base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_UIntPtr (this.Handle, Selector.GetHandle ("initWithCapacity:"), numItems), "initWithCapacity:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_UIntPtr (this.Handle, Selector.GetHandle ("initWithCapacity:"), numItems), "initWithCapacity:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_UIntPtr (this.SuperHandle, Selector.GetHandle ("initWithCapacity:"), numItems), "initWithCapacity:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_UIntPtr (this.SuperHandle, Selector.GetHandle ("initWithCapacity:"), numItems), "initWithCapacity:");
 			}
 		}
 		[Export ("initWithCoder:")]
@@ -99,11 +99,11 @@ namespace IronSourceSdk {
 			: base (NSObjectFlag.Empty)
 		{
 			var aDecoder__handle__ = aDecoder!.GetNonNullHandle (nameof (aDecoder));
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("initWithCoder:"), aDecoder__handle__), "initWithCoder:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("initWithCoder:"), aDecoder__handle__), "initWithCoder:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithCoder:"), aDecoder__handle__), "initWithCoder:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithCoder:"), aDecoder__handle__), "initWithCoder:");
 			}
 		}
 		[Export ("initWithSet:")]
@@ -112,11 +112,11 @@ namespace IronSourceSdk {
 			: base (NSObjectFlag.Empty)
 		{
 			var set__handle__ = set!.GetNonNullHandle (nameof (set));
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("initWithSet:"), set__handle__), "initWithSet:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("initWithSet:"), set__handle__), "initWithSet:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithSet:"), set__handle__), "initWithSet:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithSet:"), set__handle__), "initWithSet:");
 			}
 		}
 		[Export ("initWithArray:")]
@@ -125,13 +125,13 @@ namespace IronSourceSdk {
 			: base (NSObjectFlag.Empty)
 		{
 			if (array is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (array));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (array));
 			var nsa_array = NSArray.FromNSObjects (array);
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("initWithArray:"), nsa_array.Handle), "initWithArray:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("initWithArray:"), nsa_array.Handle), "initWithArray:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithArray:"), nsa_array.Handle), "initWithArray:");
+				InitializeHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("initWithArray:"), nsa_array.Handle), "initWithArray:");
 			}
 			nsa_array.Dispose ();
 		}
@@ -141,9 +141,9 @@ namespace IronSourceSdk {
 		{
 			var @object__handle__ = @object!.GetNonNullHandle (nameof (@object));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("addObject:"), @object__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("addObject:"), @object__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("addObject:"), @object__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("addObject:"), @object__handle__);
 			}
 		}
 		[Export ("addObjectsFromArray:")]
@@ -151,12 +151,12 @@ namespace IronSourceSdk {
 		public virtual void AddObjectsFromArray (NSObject[] array)
 		{
 			if (array is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (array));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (array));
 			var nsa_array = NSArray.FromNSObjects (array);
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("addObjectsFromArray:"), nsa_array.Handle);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("addObjectsFromArray:"), nsa_array.Handle);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("addObjectsFromArray:"), nsa_array.Handle);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("addObjectsFromArray:"), nsa_array.Handle);
 			}
 			nsa_array.Dispose ();
 		}
@@ -167,9 +167,9 @@ namespace IronSourceSdk {
 			var @object__handle__ = @object!.GetNonNullHandle (nameof (@object));
 			byte ret;
 			if (IsDirectBinding) {
-				ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("hasObject:"), @object__handle__);
+				ret = ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("hasObject:"), @object__handle__);
 			} else {
-				ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("hasObject:"), @object__handle__);
+				ret = ApiDefinitions.Messaging.bool_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("hasObject:"), @object__handle__);
 			}
 			return ret != 0;
 		}
@@ -179,9 +179,9 @@ namespace IronSourceSdk {
 		{
 			var otherSet__handle__ = otherSet!.GetNonNullHandle (nameof (otherSet));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("intersectSet:"), otherSet__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("intersectSet:"), otherSet__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("intersectSet:"), otherSet__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("intersectSet:"), otherSet__handle__);
 			}
 		}
 		[Export ("minusSet:")]
@@ -190,9 +190,9 @@ namespace IronSourceSdk {
 		{
 			var otherSet__handle__ = otherSet!.GetNonNullHandle (nameof (otherSet));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("minusSet:"), otherSet__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("minusSet:"), otherSet__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("minusSet:"), otherSet__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("minusSet:"), otherSet__handle__);
 			}
 		}
 		[Export ("removeAllObjects")]
@@ -200,9 +200,9 @@ namespace IronSourceSdk {
 		public virtual void RemoveAllObjects ()
 		{
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("removeAllObjects"));
+				ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("removeAllObjects"));
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("removeAllObjects"));
+				ApiDefinitions.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("removeAllObjects"));
 			}
 		}
 		[Export ("removeObject:")]
@@ -211,23 +211,23 @@ namespace IronSourceSdk {
 		{
 			var @object__handle__ = @object!.GetNonNullHandle (nameof (@object));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("removeObject:"), @object__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("removeObject:"), @object__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("removeObject:"), @object__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("removeObject:"), @object__handle__);
 			}
 		}
 		[Export ("set")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static ISConcurrentMutableSet Set ()
 		{
-			return  Runtime.GetNSObject<ISConcurrentMutableSet> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (class_ptr, Selector.GetHandle ("set")))!;
+			return  Runtime.GetNSObject<ISConcurrentMutableSet> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (class_ptr, Selector.GetHandle ("set")))!;
 		}
 		[Export ("setWithSet:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static ISConcurrentMutableSet SetWithSet (NSObject set)
 		{
 			var set__handle__ = set!.GetNonNullHandle (nameof (set));
-			return  Runtime.GetNSObject<ISConcurrentMutableSet> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("setWithSet:"), set__handle__))!;
+			return  Runtime.GetNSObject<ISConcurrentMutableSet> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("setWithSet:"), set__handle__))!;
 		}
 		[Export ("unionSet:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -235,9 +235,9 @@ namespace IronSourceSdk {
 		{
 			var otherSet__handle__ = otherSet!.GetNonNullHandle (nameof (otherSet));
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("unionSet:"), otherSet__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("unionSet:"), otherSet__handle__);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("unionSet:"), otherSet__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("unionSet:"), otherSet__handle__);
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -246,9 +246,9 @@ namespace IronSourceSdk {
 			get {
 				NSObject[]? ret;
 				if (IsDirectBinding) {
-					ret = CFArray.ArrayFromHandle<NSObject>(global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("allObjects")))!;
+					ret = CFArray.ArrayFromHandle<NSObject>(ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("allObjects")))!;
 				} else {
-					ret = CFArray.ArrayFromHandle<NSObject>(global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("allObjects")))!;
+					ret = CFArray.ArrayFromHandle<NSObject>(ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("allObjects")))!;
 				}
 				return ret!;
 			}
@@ -258,9 +258,9 @@ namespace IronSourceSdk {
 			[Export ("count")]
 			get {
 				if (IsDirectBinding) {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.UIntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("count"));
+					return ApiDefinitions.Messaging.UIntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("count"));
 				} else {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.UIntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("count"));
+					return ApiDefinitions.Messaging.UIntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("count"));
 				}
 			}
 		}
@@ -270,9 +270,9 @@ namespace IronSourceSdk {
 			get {
 				NSEnumerator? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSEnumerator> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("objectEnumerator")))!;
+					ret =  Runtime.GetNSObject<NSEnumerator> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("objectEnumerator")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSEnumerator> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("objectEnumerator")))!;
+					ret =  Runtime.GetNSObject<NSEnumerator> (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("objectEnumerator")))!;
 				}
 				return ret!;
 			}

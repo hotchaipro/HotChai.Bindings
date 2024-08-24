@@ -78,60 +78,60 @@ namespace IronSourceSdk {
 		public void SetNativeAdView (global::UIKit.UIView? nativeAdView)
 		{
 			var nativeAdView__handle__ = nativeAdView.GetHandle ();
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setNativeAdView:"), nativeAdView__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setNativeAdView:"), nativeAdView__handle__);
 		}
 		[Export ("setIconView:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void SetIconView (global::UIKit.UIImageView iconView)
 		{
 			var iconView__handle__ = iconView!.GetNonNullHandle (nameof (iconView));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setIconView:"), iconView__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setIconView:"), iconView__handle__);
 		}
 		[Export ("setTitleView:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void SetTitleView (global::UIKit.UILabel titleView)
 		{
 			var titleView__handle__ = titleView!.GetNonNullHandle (nameof (titleView));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setTitleView:"), titleView__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setTitleView:"), titleView__handle__);
 		}
 		[Export ("setAdvertiserView:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void SetAdvertiserView (global::UIKit.UILabel advertiserView)
 		{
 			var advertiserView__handle__ = advertiserView!.GetNonNullHandle (nameof (advertiserView));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdvertiserView:"), advertiserView__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setAdvertiserView:"), advertiserView__handle__);
 		}
 		[Export ("setBodyView:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void SetBodyView (global::UIKit.UILabel bodyView)
 		{
 			var bodyView__handle__ = bodyView!.GetNonNullHandle (nameof (bodyView));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setBodyView:"), bodyView__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setBodyView:"), bodyView__handle__);
 		}
 		[Export ("setMediaView:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void SetMediaView (LevelPlayMediaView mediaView)
 		{
 			var mediaView__handle__ = mediaView!.GetNonNullHandle (nameof (mediaView));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setMediaView:"), mediaView__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setMediaView:"), mediaView__handle__);
 		}
 		[Export ("setCallToActionView:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void SetCallToActionView (global::UIKit.UIButton callToActionView)
 		{
 			var callToActionView__handle__ = callToActionView!.GetNonNullHandle (nameof (callToActionView));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setCallToActionView:"), callToActionView__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setCallToActionView:"), callToActionView__handle__);
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public global::UIKit.UIView? NetworkNativeAdView {
 			[Export ("networkNativeAdView", ArgumentSemantic.Retain)]
 			get {
-				return  Runtime.GetNSObject<global::UIKit.UIView> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("networkNativeAdView")))!;
+				return  Runtime.GetNSObject<global::UIKit.UIView> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("networkNativeAdView")))!;
 			}
 			[Export ("setNetworkNativeAdView:", ArgumentSemantic.Retain)]
 			set {
 				var value__handle__ = value.GetHandle ();
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setNetworkNativeAdView:"), value__handle__);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setNetworkNativeAdView:"), value__handle__);
 			}
 		}
 	}

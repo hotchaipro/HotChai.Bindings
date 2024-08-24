@@ -75,7 +75,7 @@ namespace IronSourceSdk {
 		{
 			var nativeAd__handle__ = nativeAd!.GetNonNullHandle (nameof (nativeAd));
 			var adInfo__handle__ = adInfo!.GetNonNullHandle (nameof (adInfo));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didLoad:withAdInfo:"), nativeAd__handle__, adInfo__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didLoad:withAdInfo:"), nativeAd__handle__, adInfo__handle__);
 		}
 		[Export ("didFailToLoad:withError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -83,42 +83,36 @@ namespace IronSourceSdk {
 		{
 			var nativeAd__handle__ = nativeAd!.GetNonNullHandle (nameof (nativeAd));
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didFailToLoad:withError:"), nativeAd__handle__, error__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("didFailToLoad:withError:"), nativeAd__handle__, error__handle__);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ISNativeAdLoadDelegate", true)]
-	public unsafe partial class ISNativeAdLoadDelegate : NSObject, IISNativeAdLoadDelegate {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		static readonly NativeHandle class_ptr = Class.GetHandle ("ISNativeAdLoadDelegate");
-		public override NativeHandle ClassHandle { get { return class_ptr; } }
+	[Register("ApiDefinitions__IronSourceSdk_ISNativeAdLoadDelegate", false)]
+	[Model]
+	public unsafe abstract partial class ISNativeAdLoadDelegate : NSObject, IISNativeAdLoadDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
-		public ISNativeAdLoadDelegate () : base (NSObjectFlag.Empty)
+		protected ISNativeAdLoadDelegate () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
-			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
-			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
-			}
+			IsDirectBinding = false;
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISNativeAdLoadDelegate (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = false;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISNativeAdLoadDelegate (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = false;
 		}
 
 		[Export ("didFailToLoad:withError:")]

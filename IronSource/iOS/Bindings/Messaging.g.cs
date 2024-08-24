@@ -61,21 +61,53 @@ namespace IronSourceSdk.ApiDefinitions {
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public extern static IntPtr IntPtr_objc_msgSendSuper_IntPtr (IntPtr receiever, IntPtr selector, IntPtr arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static UIntPtr UIntPtr_objc_msgSend (IntPtr receiver, IntPtr selector);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static UIntPtr UIntPtr_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_UIntPtr (IntPtr receiver, IntPtr selector, UIntPtr arg1);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_UIntPtr (IntPtr receiver, IntPtr selector, UIntPtr arg1);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static nfloat nfloat_objc_msgSend (IntPtr receiver, IntPtr selector);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static nfloat nfloat_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSend (IntPtr receiver, IntPtr selector);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static void void_objc_msgSend_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static void void_objc_msgSend_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static void void_objc_msgSendSuper_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_IntPtr (IntPtr receiver, IntPtr selector, IntPtr arg1);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_IntPtr (IntPtr receiver, IntPtr selector, IntPtr arg1);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static byte bool_objc_msgSend (IntPtr receiver, IntPtr selector);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static byte bool_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static nint IntPtr_objc_msgSend_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
@@ -84,10 +116,6 @@ namespace IronSourceSdk.ApiDefinitions {
 		public unsafe extern static byte bool_objc_msgSend_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static byte bool_objc_msgSendSuper_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public unsafe extern static void void_objc_msgSend_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public unsafe extern static void void_objc_msgSendSuper_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static void void_objc_msgSend (IntPtr receiver, IntPtr selector);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
@@ -101,17 +129,9 @@ namespace IronSourceSdk.ApiDefinitions {
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static void void_objc_msgSendSuper_IntPtr_NativeHandle (IntPtr receiver, IntPtr selector, nint arg1, NativeHandle arg2);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public unsafe extern static void void_objc_msgSend_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public unsafe extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static void void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public unsafe extern static byte bool_objc_msgSend (IntPtr receiver, IntPtr selector);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public unsafe extern static byte bool_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static void void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
@@ -137,10 +157,6 @@ namespace IronSourceSdk.ApiDefinitions {
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4, NativeHandle arg5);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static void void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4, NativeHandle arg5, NativeHandle arg6);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4, NativeHandle arg5, NativeHandle arg6);
@@ -153,21 +169,9 @@ namespace IronSourceSdk.ApiDefinitions {
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_NativeHandle_IntPtr_IntPtr (IntPtr receiver, IntPtr selector, NativeHandle arg1, nint arg2, nint arg3);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public unsafe extern static nuint UIntPtr_objc_msgSend (IntPtr receiver, IntPtr selector);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public unsafe extern static nuint UIntPtr_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_UIntPtr (IntPtr receiver, IntPtr selector, nuint arg1);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_UIntPtr (IntPtr receiver, IntPtr selector, nuint arg1);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static void void_objc_msgSend_IntPtr (IntPtr receiver, IntPtr selector, nint arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static void void_objc_msgSendSuper_IntPtr (IntPtr receiver, IntPtr selector, nint arg1);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public unsafe extern static nfloat nfloat_objc_msgSend (IntPtr receiver, IntPtr selector);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public unsafe extern static nfloat nfloat_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static void void_objc_msgSend_nfloat (IntPtr receiver, IntPtr selector, nfloat arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
@@ -232,6 +236,10 @@ namespace IronSourceSdk.ApiDefinitions {
 		public unsafe extern static void void_objc_msgSend_int (IntPtr receiver, IntPtr selector, int arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static void void_objc_msgSendSuper_int (IntPtr receiver, IntPtr selector, int arg1);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_nfloat (IntPtr receiver, IntPtr selector, nfloat arg1);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_nfloat (IntPtr receiver, IntPtr selector, nfloat arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static void void_objc_msgSend_NativeHandle_UIntPtr_UIntPtr (IntPtr receiver, IntPtr selector, NativeHandle arg1, UIntPtr arg2, UIntPtr arg3);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]

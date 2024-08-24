@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public SupersonicLogManager () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -71,14 +71,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected SupersonicLogManager (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal SupersonicLogManager (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("log:withLevel:withTag:")]
@@ -86,12 +86,12 @@ namespace IronSourceSdk {
 		public virtual void Log (string str, ISNLogLevel level, ISNLogTag tag)
 		{
 			if (str is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (str));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (str));
 			var nsstr = CFString.CreateNative (str);
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_UIntPtr_UIntPtr (this.Handle, Selector.GetHandle ("log:withLevel:withTag:"), nsstr, (UIntPtr) (ulong) level, (UIntPtr) (ulong) tag);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_UIntPtr_UIntPtr (this.Handle, Selector.GetHandle ("log:withLevel:withTag:"), nsstr, (UIntPtr) (ulong) level, (UIntPtr) (ulong) tag);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_UIntPtr_UIntPtr (this.SuperHandle, Selector.GetHandle ("log:withLevel:withTag:"), nsstr, (UIntPtr) (ulong) level, (UIntPtr) (ulong) tag);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_UIntPtr_UIntPtr (this.SuperHandle, Selector.GetHandle ("log:withLevel:withTag:"), nsstr, (UIntPtr) (ulong) level, (UIntPtr) (ulong) tag);
 			}
 			CFString.ReleaseNative (nsstr);
 		}
@@ -100,12 +100,12 @@ namespace IronSourceSdk {
 		public virtual void LogWithNetworkPrefix (string logMessage, ISNLogLevel logLevel, ISNLogTag logTag)
 		{
 			if (logMessage is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (logMessage));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (logMessage));
 			var nslogMessage = CFString.CreateNative (logMessage);
 			if (IsDirectBinding) {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_UIntPtr_UIntPtr (this.Handle, Selector.GetHandle ("logWithNetworkPrefix:withLevel:withTag:"), nslogMessage, (UIntPtr) (ulong) logLevel, (UIntPtr) (ulong) logTag);
+				ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_UIntPtr_UIntPtr (this.Handle, Selector.GetHandle ("logWithNetworkPrefix:withLevel:withTag:"), nslogMessage, (UIntPtr) (ulong) logLevel, (UIntPtr) (ulong) logTag);
 			} else {
-				global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_UIntPtr_UIntPtr (this.SuperHandle, Selector.GetHandle ("logWithNetworkPrefix:withLevel:withTag:"), nslogMessage, (UIntPtr) (ulong) logLevel, (UIntPtr) (ulong) logTag);
+				ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle_UIntPtr_UIntPtr (this.SuperHandle, Selector.GetHandle ("logWithNetworkPrefix:withLevel:withTag:"), nslogMessage, (UIntPtr) (ulong) logLevel, (UIntPtr) (ulong) logTag);
 			}
 			CFString.ReleaseNative (nslogMessage);
 		}
@@ -114,17 +114,17 @@ namespace IronSourceSdk {
 			[Export ("requiredDebugMode")]
 			get {
 				if (IsDirectBinding) {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("requiredDebugMode"));
+					return ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("requiredDebugMode"));
 				} else {
-					return global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("requiredDebugMode"));
+					return ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("requiredDebugMode"));
 				}
 			}
 			[Export ("setRequiredDebugMode:")]
 			set {
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setRequiredDebugMode:"), value);
+					ApiDefinitions.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setRequiredDebugMode:"), value);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setRequiredDebugMode:"), value);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setRequiredDebugMode:"), value);
 				}
 			}
 		}
@@ -133,7 +133,7 @@ namespace IronSourceSdk {
 			[Export ("sharedManager")]
 			get {
 				SupersonicLogManager? ret;
-				ret =  Runtime.GetNSObject<SupersonicLogManager> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (class_ptr, Selector.GetHandle ("sharedManager")))!;
+				ret =  Runtime.GetNSObject<SupersonicLogManager> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (class_ptr, Selector.GetHandle ("sharedManager")))!;
 				return ret!;
 			}
 		}

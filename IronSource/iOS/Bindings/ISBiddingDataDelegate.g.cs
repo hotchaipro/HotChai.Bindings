@@ -74,46 +74,52 @@ namespace IronSourceSdk {
 		public void SuccessWithBiddingData (NSDictionary biddingData)
 		{
 			var biddingData__handle__ = biddingData!.GetNonNullHandle (nameof (biddingData));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("successWithBiddingData:"), biddingData__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("successWithBiddingData:"), biddingData__handle__);
 		}
 		[Export ("failureWithError:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void FailureWithError (string error)
 		{
 			if (error is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (error));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (error));
 			var nserror = CFString.CreateNative (error);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("failureWithError:"), nserror);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("failureWithError:"), nserror);
 			CFString.ReleaseNative (nserror);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISBiddingDataDelegate", false)]
-	[Model]
-	public unsafe abstract partial class ISBiddingDataDelegate : NSObject, IISBiddingDataDelegate {
+	[Register("ISBiddingDataDelegate", true)]
+	public unsafe partial class ISBiddingDataDelegate : NSObject, IISBiddingDataDelegate {
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		static readonly NativeHandle class_ptr = Class.GetHandle ("ISBiddingDataDelegate");
+		public override NativeHandle ClassHandle { get { return class_ptr; } }
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
-		protected ISBiddingDataDelegate () : base (NSObjectFlag.Empty)
+		public ISBiddingDataDelegate () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
+			if (IsDirectBinding) {
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			} else {
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			}
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISBiddingDataDelegate (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = false;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISBiddingDataDelegate (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = false;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("failureWithError:")]

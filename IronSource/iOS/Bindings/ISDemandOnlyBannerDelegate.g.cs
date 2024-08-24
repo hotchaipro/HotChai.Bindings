@@ -90,9 +90,9 @@ namespace IronSourceSdk {
 		{
 			var bannerView__handle__ = bannerView!.GetNonNullHandle (nameof (bannerView));
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("bannerDidLoad:instanceId:"), bannerView__handle__, nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("bannerDidLoad:instanceId:"), bannerView__handle__, nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("bannerDidFailToLoadWithError:instanceId:")]
@@ -101,9 +101,9 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("bannerDidFailToLoadWithError:instanceId:"), error__handle__, nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("bannerDidFailToLoadWithError:instanceId:"), error__handle__, nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("bannerDidShow:")]
@@ -111,9 +111,9 @@ namespace IronSourceSdk {
 		public void BannerDidShow (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("bannerDidShow:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("bannerDidShow:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("didClickBanner:")]
@@ -121,9 +121,9 @@ namespace IronSourceSdk {
 		public void DidClickBanner (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didClickBanner:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("didClickBanner:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 		[Export ("bannerWillLeaveApplication:")]
@@ -131,16 +131,16 @@ namespace IronSourceSdk {
 		public void BannerWillLeaveApplication (string instanceId)
 		{
 			if (instanceId is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (instanceId));
 			var nsinstanceId = CFString.CreateNative (instanceId);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("bannerWillLeaveApplication:"), nsinstanceId);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("bannerWillLeaveApplication:"), nsinstanceId);
 			CFString.ReleaseNative (nsinstanceId);
 		}
 	}
 }
 namespace IronSourceSdk {
 	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISDemandOnlyBannerDelegate", false)]
+	[Register("ApiDefinitions__IronSourceSdk_ISDemandOnlyBannerDelegate", false)]
 	[Model]
 	public unsafe abstract partial class ISDemandOnlyBannerDelegate : NSObject, IISDemandOnlyBannerDelegate {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -149,7 +149,7 @@ namespace IronSourceSdk {
 		protected ISDemandOnlyBannerDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+			InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

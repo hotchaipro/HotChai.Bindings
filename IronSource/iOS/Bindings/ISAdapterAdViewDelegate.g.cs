@@ -85,143 +85,59 @@ namespace IronSourceSdk {
 		public void AdDidLoadWithView (global::UIKit.UIView view)
 		{
 			var view__handle__ = view!.GetNonNullHandle (nameof (view));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adDidLoadWithView:"), view__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("adDidLoadWithView:"), view__handle__);
 		}
 		[Export ("adWillLeaveApplication")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdWillLeaveApplication ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adWillLeaveApplication"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adWillLeaveApplication"));
 		}
 		[Export ("adWillPresentScreen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdWillPresentScreen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adWillPresentScreen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adWillPresentScreen"));
 		}
 		[Export ("adDidDismissScreen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidDismissScreen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidDismissScreen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidDismissScreen"));
 		}
 		[Export ("adDidLoad")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidLoad ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidLoad"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidLoad"));
 		}
 		[Export ("adDidFailToLoadWithErrorType:errorCode:errorMessage:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidFailToLoadWithErrorType (ISAdapterErrorType errorType, nint errorCode, string? errorMessage)
 		{
 			var nserrorMessage = CFString.CreateNative (errorMessage);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("adDidFailToLoadWithErrorType:errorCode:errorMessage:"), (IntPtr) (long) errorType, errorCode, nserrorMessage);
+			ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("adDidFailToLoadWithErrorType:errorCode:errorMessage:"), (IntPtr) (long) errorType, errorCode, nserrorMessage);
 			CFString.ReleaseNative (nserrorMessage);
 		}
 		[Export ("adDidOpen")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidOpen ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidOpen"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidOpen"));
 		}
 		[Export ("adDidFailToShowWithErrorCode:errorMessage:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidFailToShowWithErrorCode (nint errorCode, string? errorMessage)
 		{
 			var nserrorMessage = CFString.CreateNative (errorMessage);
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("adDidFailToShowWithErrorCode:errorMessage:"), errorCode, nserrorMessage);
+			ApiDefinitions.Messaging.void_objc_msgSend_IntPtr_NativeHandle (this.Handle, Selector.GetHandle ("adDidFailToShowWithErrorCode:errorMessage:"), errorCode, nserrorMessage);
 			CFString.ReleaseNative (nserrorMessage);
 		}
 		[Export ("adDidClick")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void AdDidClick ()
 		{
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidClick"));
+			ApiDefinitions.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("adDidClick"));
 		}
 	}
-}
-namespace IronSourceSdk {
-	[Protocol()]
-	[Register("ApiDefinitions__IronSourceSDK_ISAdapterAdViewDelegate", false)]
-	[Model]
-	public unsafe abstract partial class ISAdapterAdViewDelegate : NSObject, IISAdapterAdViewDelegate, IISAdapterAdDelegate {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		[EditorBrowsable (EditorBrowsableState.Advanced)]
-		[Export ("init")]
-		protected ISAdapterAdViewDelegate () : base (NSObjectFlag.Empty)
-		{
-			IsDirectBinding = false;
-			InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
-		}
-
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		[EditorBrowsable (EditorBrowsableState.Advanced)]
-		protected ISAdapterAdViewDelegate (NSObjectFlag t) : base (t)
-		{
-			IsDirectBinding = false;
-		}
-
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		[EditorBrowsable (EditorBrowsableState.Advanced)]
-		protected internal ISAdapterAdViewDelegate (NativeHandle handle) : base (handle)
-		{
-			IsDirectBinding = false;
-		}
-
-		[Export ("adDidClick")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdDidClick ()
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		[Export ("adDidDismissScreen")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdDidDismissScreen ()
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		[Export ("adDidFailToLoadWithErrorType:errorCode:errorMessage:")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdDidFailToLoadWithErrorType (ISAdapterErrorType errorType, nint errorCode, string? errorMessage)
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		[Export ("adDidFailToShowWithErrorCode:errorMessage:")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdDidFailToShowWithErrorCode (nint errorCode, string? errorMessage)
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		[Export ("adDidLoad")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdDidLoad ()
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		[Export ("adDidLoadWithView:")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdDidLoadWithView (global::UIKit.UIView view)
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		[Export ("adDidOpen")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdDidOpen ()
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		[Export ("adWillLeaveApplication")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdWillLeaveApplication ()
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		[Export ("adWillPresentScreen")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void AdWillPresentScreen ()
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-	} /* class ISAdapterAdViewDelegate */
 }

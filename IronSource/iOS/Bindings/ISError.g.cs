@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISError () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -73,11 +73,11 @@ namespace IronSourceSdk {
 		[Export ("initWithCoder:")]
 		public ISError (NSCoder coder) : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("initWithCoder:"), coder.Handle), "initWithCoder:");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("initWithCoder:"), coder.Handle), "initWithCoder:");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithCoder:"), coder.Handle), "initWithCoder:");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithCoder:"), coder.Handle), "initWithCoder:");
 			}
 		}
 
@@ -85,14 +85,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISError (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISError (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("appendError:withPrefix:")]
@@ -101,10 +101,10 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (prefix is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (prefix));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (prefix));
 			var nsprefix = CFString.CreateNative (prefix);
 			NSError? ret;
-			ret =  Runtime.GetNSObject<NSError> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("appendError:withPrefix:"), error__handle__, nsprefix))!;
+			ret =  Runtime.GetNSObject<NSError> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("appendError:withPrefix:"), error__handle__, nsprefix))!;
 			CFString.ReleaseNative (nsprefix);
 			return ret!;
 		}
@@ -114,10 +114,10 @@ namespace IronSourceSdk {
 		{
 			var error__handle__ = error!.GetNonNullHandle (nameof (error));
 			if (suffix is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (suffix));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (suffix));
 			var nssuffix = CFString.CreateNative (suffix);
 			NSError? ret;
-			ret =  Runtime.GetNSObject<NSError> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("appendError:withSuffix:"), error__handle__, nssuffix))!;
+			ret =  Runtime.GetNSObject<NSError> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("appendError:withSuffix:"), error__handle__, nssuffix))!;
 			CFString.ReleaseNative (nssuffix);
 			return ret!;
 		}
@@ -125,17 +125,17 @@ namespace IronSourceSdk {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSError CreateError (ISErrorCode errorCode)
 		{
-			return  Runtime.GetNSObject<NSError> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_UIntPtr (class_ptr, Selector.GetHandle ("createError:"), (UIntPtr) (ulong) errorCode))!;
+			return  Runtime.GetNSObject<NSError> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_UIntPtr (class_ptr, Selector.GetHandle ("createError:"), (UIntPtr) (ulong) errorCode))!;
 		}
 		[Export ("createError:withParams:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSError CreateError (ISErrorCode errorCode, NSObject[] @params)
 		{
 			if (@params is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@params));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@params));
 			var nsa_params = NSArray.FromNSObjects (@params);
 			NSError? ret;
-			ret =  Runtime.GetNSObject<NSError> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_UIntPtr_NativeHandle (class_ptr, Selector.GetHandle ("createError:withParams:"), (UIntPtr) (ulong) errorCode, nsa_params.Handle))!;
+			ret =  Runtime.GetNSObject<NSError> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_UIntPtr_NativeHandle (class_ptr, Selector.GetHandle ("createError:withParams:"), (UIntPtr) (ulong) errorCode, nsa_params.Handle))!;
 			nsa_params.Dispose ();
 			return ret!;
 		}
@@ -144,10 +144,10 @@ namespace IronSourceSdk {
 		public static NSError CreateError (ISErrorCode errorCode, string message)
 		{
 			if (message is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (message));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (message));
 			var nsmessage = CFString.CreateNative (message);
 			NSError? ret;
-			ret =  Runtime.GetNSObject<NSError> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_UIntPtr_NativeHandle (class_ptr, Selector.GetHandle ("createError:withMessage:"), (UIntPtr) (ulong) errorCode, nsmessage))!;
+			ret =  Runtime.GetNSObject<NSError> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_UIntPtr_NativeHandle (class_ptr, Selector.GetHandle ("createError:withMessage:"), (UIntPtr) (ulong) errorCode, nsmessage))!;
 			CFString.ReleaseNative (nsmessage);
 			return ret!;
 		}
@@ -156,13 +156,13 @@ namespace IronSourceSdk {
 		public static NSError CreateErrorWithDomain (string domain, ISErrorCode code, string message)
 		{
 			if (domain is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (domain));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (domain));
 			if (message is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (message));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (message));
 			var nsdomain = CFString.CreateNative (domain);
 			var nsmessage = CFString.CreateNative (message);
 			NSError? ret;
-			ret =  Runtime.GetNSObject<NSError> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_UIntPtr_NativeHandle (class_ptr, Selector.GetHandle ("createErrorWithDomain:code:message:"), nsdomain, (UIntPtr) (ulong) code, nsmessage))!;
+			ret =  Runtime.GetNSObject<NSError> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_UIntPtr_NativeHandle (class_ptr, Selector.GetHandle ("createErrorWithDomain:code:message:"), nsdomain, (UIntPtr) (ulong) code, nsmessage))!;
 			CFString.ReleaseNative (nsdomain);
 			CFString.ReleaseNative (nsmessage);
 			return ret!;
@@ -172,7 +172,7 @@ namespace IronSourceSdk {
 		public static ISErrorCode GetCode (ISErrorCode errorCode)
 		{
 			ISErrorCode ret;
-			ret = (IronSourceSdk.ISErrorCode) (ulong) global::IronSourceSdk.ApiDefinitions.Messaging.UIntPtr_objc_msgSend_UIntPtr (class_ptr, Selector.GetHandle ("getCode:"), (UIntPtr) (ulong) errorCode);
+			ret = (IronSourceSdk.ISErrorCode) (ulong) ApiDefinitions.Messaging.UIntPtr_objc_msgSend_UIntPtr (class_ptr, Selector.GetHandle ("getCode:"), (UIntPtr) (ulong) errorCode);
 			return ret!;
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -180,20 +180,20 @@ namespace IronSourceSdk {
 			[Export ("prefix", ArgumentSemantic.Retain)]
 			get {
 				if (IsDirectBinding) {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("prefix")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("prefix")))!;
 				} else {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("prefix")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("prefix")))!;
 				}
 			}
 			[Export ("setPrefix:", ArgumentSemantic.Retain)]
 			set {
 				if (value is null)
-					ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+					global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
 				var nsvalue = CFString.CreateNative (value);
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setPrefix:"), nsvalue);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setPrefix:"), nsvalue);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setPrefix:"), nsvalue);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setPrefix:"), nsvalue);
 				}
 				CFString.ReleaseNative (nsvalue);
 			}
@@ -203,20 +203,20 @@ namespace IronSourceSdk {
 			[Export ("suffix", ArgumentSemantic.Retain)]
 			get {
 				if (IsDirectBinding) {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("suffix")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("suffix")))!;
 				} else {
-					return CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("suffix")))!;
+					return CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("suffix")))!;
 				}
 			}
 			[Export ("setSuffix:", ArgumentSemantic.Retain)]
 			set {
 				if (value is null)
-					ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+					global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
 				var nsvalue = CFString.CreateNative (value);
 				if (IsDirectBinding) {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setSuffix:"), nsvalue);
+					ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setSuffix:"), nsvalue);
 				} else {
-					global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setSuffix:"), nsvalue);
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setSuffix:"), nsvalue);
 				}
 				CFString.ReleaseNative (nsvalue);
 			}

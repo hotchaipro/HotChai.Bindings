@@ -48,52 +48,59 @@ using MetalPerformanceShadersGraph;
 #if !NET
 using NativeHandle = System.IntPtr;
 #endif
-namespace IronSourceSDK {
-	[Register("ISNSupersonicAdsPublisherSwiftFacade", true)]
-	public unsafe partial class ISNSupersonicAdsPublisherSwiftFacade : NSObject {
+namespace IronSourceSdk {
+	[Register("LPMConfiguration", true)]
+	public unsafe partial class LPMConfiguration : NSObject {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		static readonly NativeHandle class_ptr = Class.GetHandle ("ISNSupersonicAdsPublisherSwiftFacade");
+		static readonly NativeHandle class_ptr = Class.GetHandle ("LPMConfiguration");
 		public override NativeHandle ClassHandle { get { return class_ptr; } }
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
-		public ISNSupersonicAdsPublisherSwiftFacade () : base (NSObjectFlag.Empty)
+		public LPMConfiguration () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
-		protected ISNSupersonicAdsPublisherSwiftFacade (NSObjectFlag t) : base (t)
+		protected LPMConfiguration (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
-		protected internal ISNSupersonicAdsPublisherSwiftFacade (NativeHandle handle) : base (handle)
+		protected internal LPMConfiguration (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
-		[Export ("setControllerConfig:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void SetControllerConfig (string config)
-		{
-			if (config is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (config));
-			var nsconfig = CFString.CreateNative (config);
-			if (IsDirectBinding) {
-				global::ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setControllerConfig:"), nsconfig);
-			} else {
-				global::ApiDefinitions.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setControllerConfig:"), nsconfig);
+		public virtual bool IsAdQualityEnabled {
+			[Export ("isAdQualityEnabled")]
+			get {
+				byte ret;
+				if (IsDirectBinding) {
+					ret = ApiDefinitions.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("isAdQualityEnabled"));
+				} else {
+					ret = ApiDefinitions.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("isAdQualityEnabled"));
+				}
+				return ret != 0;
 			}
-			CFString.ReleaseNative (nsconfig);
+			[Export ("setIsAdQualityEnabled:")]
+			set {
+				if (IsDirectBinding) {
+					ApiDefinitions.Messaging.void_objc_msgSend_bool (this.Handle, Selector.GetHandle ("setIsAdQualityEnabled:"), value ? (byte) 1 : (byte) 0);
+				} else {
+					ApiDefinitions.Messaging.void_objc_msgSendSuper_bool (this.SuperHandle, Selector.GetHandle ("setIsAdQualityEnabled:"), value ? (byte) 1 : (byte) 0);
+				}
+			}
 		}
-	} /* class ISNSupersonicAdsPublisherSwiftFacade */
+	} /* class LPMConfiguration */
 }

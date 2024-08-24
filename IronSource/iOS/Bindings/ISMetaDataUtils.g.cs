@@ -59,11 +59,11 @@ namespace IronSourceSdk {
 		[Export ("init")]
 		public ISMetaDataUtils () : base (NSObjectFlag.Empty)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSend (this.Handle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			} else {
-				InitializeHandle (global::IronSourceSdk.ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
+				InitializeHandle (ApiDefinitions.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 			}
 		}
 
@@ -71,14 +71,14 @@ namespace IronSourceSdk {
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected ISMetaDataUtils (NSObjectFlag t) : base (t)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal ISMetaDataUtils (NativeHandle handle) : base (handle)
 		{
-			IsDirectBinding = GetType ().Assembly == global::IronSourceSdk.ApiDefinitions.Messaging.this_assembly;
+			IsDirectBinding = GetType ().Assembly == ApiDefinitions.Messaging.this_assembly;
 		}
 
 		[Export ("formatMetaDataKey:andValues:")]
@@ -86,11 +86,11 @@ namespace IronSourceSdk {
 		public static ISMetaData FormatMetaDataKey (string key, NSMutableArray values)
 		{
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			var values__handle__ = values!.GetNonNullHandle (nameof (values));
 			var nskey = CFString.CreateNative (key);
 			ISMetaData? ret;
-			ret =  Runtime.GetNSObject<ISMetaData> (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("formatMetaDataKey:andValues:"), nskey, values__handle__))!;
+			ret =  Runtime.GetNSObject<ISMetaData> (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("formatMetaDataKey:andValues:"), nskey, values__handle__))!;
 			CFString.ReleaseNative (nskey);
 			return ret!;
 		}
@@ -99,10 +99,10 @@ namespace IronSourceSdk {
 		public static string FormatValue (string value, ISMetaDataValueTypes valueType)
 		{
 			if (value is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
 			var nsvalue = CFString.CreateNative (value);
 			string? ret;
-			ret = CFString.FromHandle (global::IronSourceSdk.ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_UIntPtr (class_ptr, Selector.GetHandle ("formatValue:forType:"), nsvalue, (UIntPtr) (ulong) valueType))!;
+			ret = CFString.FromHandle (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle_UIntPtr (class_ptr, Selector.GetHandle ("formatValue:forType:"), nsvalue, (UIntPtr) (ulong) valueType))!;
 			CFString.ReleaseNative (nsvalue);
 			return ret!;
 		}
@@ -111,10 +111,10 @@ namespace IronSourceSdk {
 		public static bool GetMetaDataBooleanValue (string value)
 		{
 			if (value is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
 			var nsvalue = CFString.CreateNative (value);
 			byte ret;
-			ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("getMetaDataBooleanValue:"), nsvalue);
+			ret = ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("getMetaDataBooleanValue:"), nsvalue);
 			CFString.ReleaseNative (nsvalue);
 			return ret != 0;
 		}
@@ -123,10 +123,10 @@ namespace IronSourceSdk {
 		public static ISMetaDataValueTypes GetValueTypeForKey (string key)
 		{
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			var nskey = CFString.CreateNative (key);
 			ISMetaDataValueTypes ret;
-			ret = (IronSourceSdk.ISMetaDataValueTypes) (ulong) global::IronSourceSdk.ApiDefinitions.Messaging.UIntPtr_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("getValueTypeForKey:"), nskey);
+			ret = (IronSourceSdk.ISMetaDataValueTypes) (ulong) ApiDefinitions.Messaging.UIntPtr_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("getValueTypeForKey:"), nskey);
 			CFString.ReleaseNative (nskey);
 			return ret!;
 		}
@@ -135,10 +135,10 @@ namespace IronSourceSdk {
 		public static bool IsKnownKey (string key)
 		{
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			var nskey = CFString.CreateNative (key);
 			byte ret;
-			ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("isKnownKey:"), nskey);
+			ret = ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("isKnownKey:"), nskey);
 			CFString.ReleaseNative (nskey);
 			return ret != 0;
 		}
@@ -147,10 +147,10 @@ namespace IronSourceSdk {
 		public static bool IsMediationOnlyKey (string key)
 		{
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			var nskey = CFString.CreateNative (key);
 			byte ret;
-			ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("isMediationOnlyKey:"), nskey);
+			ret = ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("isMediationOnlyKey:"), nskey);
 			CFString.ReleaseNative (nskey);
 			return ret != 0;
 		}
@@ -159,11 +159,11 @@ namespace IronSourceSdk {
 		public static bool IsMetaDataKeyValid (string key, out string error)
 		{
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			NativeHandle errorValue = IntPtr.Zero;
 			var nskey = CFString.CreateNative (key);
 			byte ret;
-			ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle_ref_NativeHandle (class_ptr, Selector.GetHandle ("isMetaDataKeyValid:error:"), nskey, &errorValue);
+			ret = ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle_ref_NativeHandle (class_ptr, Selector.GetHandle ("isMetaDataKeyValid:error:"), nskey, &errorValue);
 			CFString.ReleaseNative (nskey);
 			error = CFString.FromHandle (errorValue)!;
 			return ret != 0;
@@ -175,7 +175,7 @@ namespace IronSourceSdk {
 			var values__handle__ = values!.GetNonNullHandle (nameof (values));
 			NativeHandle errorValue = IntPtr.Zero;
 			byte ret;
-			ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle_ref_NativeHandle (class_ptr, Selector.GetHandle ("isMetaDataValuesValid:error:"), values__handle__, &errorValue);
+			ret = ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle_ref_NativeHandle (class_ptr, Selector.GetHandle ("isMetaDataValuesValid:error:"), values__handle__, &errorValue);
 			error = CFString.FromHandle (errorValue)!;
 			return ret != 0;
 		}
@@ -184,13 +184,13 @@ namespace IronSourceSdk {
 		public static bool IsValidCCPAMetaDataWithKey (string key, string value)
 		{
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			if (value is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
 			var nskey = CFString.CreateNative (key);
 			var nsvalue = CFString.CreateNative (value);
 			byte ret;
-			ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("isValidCCPAMetaDataWithKey:andValue:"), nskey, nsvalue);
+			ret = ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("isValidCCPAMetaDataWithKey:andValue:"), nskey, nsvalue);
 			CFString.ReleaseNative (nskey);
 			CFString.ReleaseNative (nsvalue);
 			return ret != 0;
@@ -200,16 +200,16 @@ namespace IronSourceSdk {
 		public static bool IsValidMetaDataWithKey (string key, string flag, string value)
 		{
 			if (key is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
 			if (flag is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (flag));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (flag));
 			if (value is null)
-				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
 			var nskey = CFString.CreateNative (key);
 			var nsflag = CFString.CreateNative (flag);
 			var nsvalue = CFString.CreateNative (value);
 			byte ret;
-			ret = global::IronSourceSdk.ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("isValidMetaDataWithKey:flag:andValue:"), nskey, nsflag, nsvalue);
+			ret = ApiDefinitions.Messaging.bool_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("isValidMetaDataWithKey:flag:andValue:"), nskey, nsflag, nsvalue);
 			CFString.ReleaseNative (nskey);
 			CFString.ReleaseNative (nsflag);
 			CFString.ReleaseNative (nsvalue);

@@ -57,7 +57,7 @@ namespace IronSourceSdk {
 		public static void AddSubviewAndAdjust (this global::UIKit.UIView This, global::UIKit.UIView view)
 		{
 			var view__handle__ = view!.GetNonNullHandle (nameof (view));
-			global::IronSourceSdk.ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("addSubviewAndAdjust:"), view__handle__);
+			ApiDefinitions.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("addSubviewAndAdjust:"), view__handle__);
 		}
 	} /* class UIView_ISNativeView */
 }
