@@ -12,12 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <NativeReference Include="Pods\GoogleUserMessagingPlatform/Frameworks/Release/UserMessagingPlatform.xcframework">
-		<Kind>Framework</Kind>
-		<SmartLink>False</SmartLink>
-		<ForceLoad>True</ForceLoad>
-		<LinkerFlags>-ObjC</LinkerFlags>
+    <NativeReference Include="Pods\IronSourceSDK\IronSource\IronSource.xcframework">
+      <Kind>Static</Kind>
+      <ForceLoad>true</ForceLoad>
+	  <LinkerFlags>-ObjC -lz -lsqlite3</LinkerFlags>
+      <Frameworks>AdSupport Security StoreKit SystemConfiguration WebKit</Frameworks>
+      <WeakFrameworks>AdServices</WeakFrameworks>
     </NativeReference>
   </ItemGroup>
-
 </Project>
