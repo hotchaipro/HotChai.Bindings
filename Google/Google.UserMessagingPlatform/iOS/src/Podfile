@@ -1,0 +1,9 @@
+platform :ios, '11.0'
+
+install! 'cocoapods', :integrate_targets => false
+
+use_frameworks! :linkage => :dynamic
+
+target 'AdMobAdapters' do
+    pod 'GoogleUserMessagingPlatform'
+end

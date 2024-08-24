@@ -1,0 +1,16 @@
+PODS:
+  - GoogleUserMessagingPlatform (2.1.0)
+
+DEPENDENCIES:
+  - GoogleUserMessagingPlatform
+
+SPEC REPOS:
+  trunk:
+    - GoogleUserMessagingPlatform
+
+SPEC CHECKSUMS:
+  GoogleUserMessagingPlatform: dce302b8f1b84d6e945812ee7a15c3f65a102cbf
+
+PODFILE CHECKSUM: 7c9c11795ef4f5ccb9d77855b08fc6516b697e85
+
+COCOAPODS: 1.15.2
