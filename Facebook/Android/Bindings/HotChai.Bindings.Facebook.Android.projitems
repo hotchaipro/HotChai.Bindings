@@ -9,8 +9,8 @@
     <Import_RootNamespace>HotChai.Bindings.Facebook.Android</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Bindings\Xamarin.Facebook.LoggingBehavior.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Bindings\Xamarin.Facebook.FacebookSdk.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Bindings\__NamespaceMapping__.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Xamarin.Facebook.LoggingBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Xamarin.Facebook.FacebookSdk.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
   </ItemGroup>
 </Project>
