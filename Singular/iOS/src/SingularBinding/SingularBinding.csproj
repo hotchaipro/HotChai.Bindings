@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="Pods\Singular-SDK\Singular.xcframework">
+      <Kind>Static</Kind>
+      <ForceLoad>true</ForceLoad>
+	  <LinkerFlags>-ObjC -lz -lsqlite3</LinkerFlags>
+      <Frameworks>AdSupport Security StoreKit SystemConfiguration WebKit</Frameworks>
+      <WeakFrameworks>AdServices</WeakFrameworks>
+    </NativeReference>
+  </ItemGroup>
+</Project>
