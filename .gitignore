@@ -354,3 +354,6 @@ MigrationBackup/
 
 # Gradle
 .gradle/
+
+# CocoaPods
+Pods/
