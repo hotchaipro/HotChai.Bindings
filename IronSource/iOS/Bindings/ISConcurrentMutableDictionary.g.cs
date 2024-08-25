@@ -244,7 +244,7 @@ namespace IronSourceSdk {
 		}
 		[Export ("setObject:forKey:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void SetObject (NSObject @object, NSCopying key)
+		public virtual void SetObject (NSObject @object, INSCopying key)
 		{
 			var @object__handle__ = @object!.GetNonNullHandle (nameof (@object));
 			var key__handle__ = key!.GetNonNullHandle (nameof (key));
