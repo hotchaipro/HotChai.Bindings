@@ -100,13 +100,13 @@ namespace IronSourceSdk {
 		[Export ("copyWithZone:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[Preserve (Conditional = true)]
-		public virtual NSObject Copy (NSZone zone)
+		public virtual NSObject Copy (NSZone? zone)
 		{
 			var zone__handle__ = zone!.GetNonNullHandle (nameof (zone));
 			if (IsDirectBinding) {
-				return Runtime.GetNSObject (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("copyWithZone:"), zone.Handle))!;
+				return Runtime.GetNSObject (ApiDefinitions.Messaging.NativeHandle_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("copyWithZone:"), zone!.Handle))!;
 			} else {
-				return Runtime.GetNSObject (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("copyWithZone:"), zone.Handle))!;
+				return Runtime.GetNSObject (ApiDefinitions.Messaging.NativeHandle_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("copyWithZone:"), zone!.Handle))!;
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
