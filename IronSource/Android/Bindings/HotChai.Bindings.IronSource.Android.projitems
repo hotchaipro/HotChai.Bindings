@@ -36,6 +36,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Com.IronSource.MediationSdk.Sdk.ILevelPlayRewardedVideoManualListener.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.IronSource.MediationSdk.Sdk.ISegmentListener.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.IronSource.MediationSdk.WaterfallConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ironsource.Sdk.Utils.SDKUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
   </ItemGroup>
 </Project>
