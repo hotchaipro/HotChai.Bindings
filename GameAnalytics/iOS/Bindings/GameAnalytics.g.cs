@@ -187,7 +187,7 @@ namespace GameAnalyticsSdk
 		}
 		[Export ("addBusinessEventWithCurrency:amount:itemType:itemId:cartType:receipt:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void AddBusinessEvent (string currency, nint amount, string itemType, string itemId, string cartType, string receipt)
+		public static void AddBusinessEvent (string currency, nint amount, string itemType, string itemId, string cartType, string? receipt)
 		{
 			if (currency is null)
 				global::ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (currency));
