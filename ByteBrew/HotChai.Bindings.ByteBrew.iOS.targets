@@ -8,10 +8,20 @@
     </NativeReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.Messaging.g.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.NativeiOSPlugin.g.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.StructsAndEnums.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.SupportDelegates.g.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.Trampolines.g.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.Messaging.g.cs">
+      <Link>HotChai.Bindings\ByteBrew\%(Filename)%(Extension)</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.NativeiOSPlugin.g.cs">
+      <Link>HotChai.Bindings\ByteBrew\%(Filename)%(Extension)</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.StructsAndEnums.cs">
+      <Link>HotChai.Bindings\ByteBrew\%(Filename)%(Extension)</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.SupportDelegates.g.cs">
+      <Link>HotChai.Bindings\ByteBrew\%(Filename)%(Extension)</Link>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)iOS\Bindings\ByteBrew.Trampolines.g.cs">
+      <Link>HotChai.Bindings\ByteBrew\%(Filename)%(Extension)</Link>
+    </Compile>
   </ItemGroup>
 </Project>
