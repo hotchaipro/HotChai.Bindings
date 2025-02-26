@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="ByteBrew.xcframework">
+      <Kind>Static</Kind>
+      <ForceLoad>true</ForceLoad>
+	  <LinkerFlags>-ObjC</LinkerFlags>
+      <Frameworks>Foundation</Frameworks>
+    </NativeReference>
+  </ItemGroup>
+</Project>
