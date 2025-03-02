@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android34</TargetFramework>
+    <SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <IsTrimmable>false</IsTrimmable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Kotlin.StdLib.Common" Version="2.0.21.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidLibrary Remove="NativeDependencies\annotations-13.0.jar" />
+    <AndroidLibrary Remove="NativeDependencies\kotlin-stdlib-1.8.22.jar" />
+    <AndroidLibrary Remove="NativeDependencies\kotlin-stdlib-common-1.8.22.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="NativeDependencies\annotations-13.0.jar" />
+    <None Remove="NativeDependencies\kotlin-stdlib-1.8.22.jar" />
+    <None Remove="NativeDependencies\kotlin-stdlib-common-1.8.22.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidNamespaceReplacement Include="ironsource" Replacement="IronSource" />
+    <AndroidNamespaceReplacement Include="ironsourceads" Replacement="IronSourceAds" />
+    <AndroidNamespaceReplacement Include="unity3d" Replacement="Unity3D" />
+    <AndroidNamespaceReplacement Include="mediationsdk" Replacement="MediationSdk" />
+    <AndroidNamespaceReplacement Include="adunit" Replacement="AdUnit" />
+    <AndroidNamespaceReplacement Include="adquality" Replacement="AdQuality" />
+  </ItemGroup>
+</Project>

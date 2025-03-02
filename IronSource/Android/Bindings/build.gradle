@@ -1,0 +1,23 @@
+repositories
+{
+    google()
+    mavenCentral()
+    maven { url 'https://android-sdk.is.com/' }
+}
+
+configurations
+{
+    implementation
+}
+
+dependencies
+{
+    // IronSource
+    implementation 'com.unity3d.ads-mediation:mediation-sdk:+'
+}
+
+task update(type: Copy)
+{
+    into "NativeDependencies"
+    from configurations.implementation
+}
