@@ -9,17 +9,25 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Kotlin.StdLib.Common" Version="2.0.21.2" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidLibrary Remove="NativeDependencies\annotations-13.0.jar" />
-    <AndroidLibrary Remove="NativeDependencies\kotlin-stdlib-1.8.22.jar" />
-    <AndroidLibrary Remove="NativeDependencies\kotlin-stdlib-common-1.8.22.jar" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="NativeDependencies\annotations-13.0.jar" />
-    <None Remove="NativeDependencies\kotlin-stdlib-1.8.22.jar" />
-    <None Remove="NativeDependencies\kotlin-stdlib-common-1.8.22.jar" />
-  </ItemGroup>
-  <ItemGroup>
+	<ItemGroup>
+		<AndroidJavaSource Remove="NativeDependencies\**" />
+		<AndroidLibrary Remove="NativeDependencies\**" />
+		<AndroidNativeLibrary Remove="NativeDependencies\**" />
+		<Compile Remove="NativeDependencies\**" />
+		<EmbeddedResource Remove="NativeDependencies\**" />
+		<JavaSourceJar Remove="NativeDependencies\**" />
+		<None Remove="NativeDependencies\**" />
+		<ProguardConfiguration Remove="NativeDependencies\**" />
+		<TransformFile Remove="NativeDependencies\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<!--
+		gradle dependencies
+			org.jetbrains.kotlin:kotlin-stdlib
+		-->
+		<AndroidLibrary Include="NativeDependencies\mediation-sdk-*.aar" />
+	</ItemGroup>
+	<ItemGroup>
     <AndroidNamespaceReplacement Include="ironsource" Replacement="IronSource" />
     <AndroidNamespaceReplacement Include="ironsourceads" Replacement="IronSourceAds" />
     <AndroidNamespaceReplacement Include="unity3d" Replacement="Unity3D" />

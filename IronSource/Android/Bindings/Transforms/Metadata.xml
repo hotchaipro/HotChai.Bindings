@@ -8,9 +8,6 @@
 	<remove-node path="/api/package[@name='com.iab.omid.library.ironsrc.adsession.media']" />
 	<remove-node path="/api/package[@name='com.iab.omid.library.ironsrc.publisher']" />
 	<remove-node path="/api/package[@name='com.iab.omid.library.ironsrc.walking']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter.internal']" />
 	<remove-node path="/api/package[@name='com.ironsource.adapters.ironsource.nativeAd']/class[@name='IronSourceNativeAdViewBinder']" />
-	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter.internal']/class[@name='BaseAdInteractionAdapter']" />
-	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter']/class[@name='BaseBanner']" />
-	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter']/class[@name='BaseNativeAd']" />
-	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.sdk']/interface[@name='LevelPlayInterstitialListener']" />
 </metadata>
