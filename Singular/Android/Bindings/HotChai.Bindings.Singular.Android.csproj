@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>false</ImplicitUsings>
+		<IsTrimmable>false</IsTrimmable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.4" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidJavaSource Remove="NativeDependencies\**" />
+		<AndroidLibrary Remove="NativeDependencies\**" />
+		<AndroidNativeLibrary Remove="NativeDependencies\**" />
+		<Compile Remove="NativeDependencies\**" />
+		<EmbeddedResource Remove="NativeDependencies\**" />
+		<JavaSourceJar Remove="NativeDependencies\**" />
+		<None Remove="NativeDependencies\**" />
+		<ProguardConfiguration Remove="NativeDependencies\**" />
+		<TransformFile Remove="NativeDependencies\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<!--
+		gradle dependencies
+			com.android.installreferrer:installreferrer
+			com.google.android.gms:play-services-appset
+		-->
+		<AndroidLibrary Include="NativeDependencies\singular_sdk-*.aar" />
+	</ItemGroup>
+</Project>

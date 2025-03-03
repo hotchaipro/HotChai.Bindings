@@ -1,0 +1,22 @@
+repositories
+{
+    google()
+    mavenCentral()
+    maven { url 'https://maven.singular.net/' }
+}
+
+configurations
+{
+    implementation
+}
+
+dependencies
+{
+    implementation 'com.singular.sdk:singular_sdk:+'
+}
+
+task update(type: Copy)
+{
+    into "NativeDependencies"
+    from configurations.implementation
+}
