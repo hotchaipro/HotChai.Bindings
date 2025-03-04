@@ -1,0 +1,12 @@
+﻿<metadata>
+	<!-- Remove generated events from all interfaces -->
+	<attr path="/api/package/interface/method" name="eventName"></attr>
+
+	<!-- Remove unused, obsolete or breaking classes -->
+	<remove-node path="/api/package[@name='com.yahoo.memory']" />
+	<remove-node path="/api/package[@name='com.yahoo.sketches.quantiles']" />
+	<remove-node path="/api/package[@name='com.yahoo.sketches']" />
+	<remove-node path="/api/package[@name='com.gameanalytics.sdk.errorreporter']" />
+	<remove-node path="/api/package[@name='com.gameanalytics.sdk.events']/class[@name='SdkErrorTask']" />
+	<remove-node path="/api/package[@name='com.gameanalytics.sdk.http']/class[@name='SendTestRequest']" />
+</metadata>

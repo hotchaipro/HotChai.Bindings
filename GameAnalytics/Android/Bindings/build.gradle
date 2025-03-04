@@ -1,0 +1,22 @@
+repositories
+{
+    google()
+    mavenCentral()
+    maven { url 'https://maven.gameanalytics.com/release' }
+}
+
+configurations
+{
+    implementation
+}
+
+dependencies
+{
+    implementation 'com.gameanalytics.sdk:gameanalytics-android:+'
+}
+
+task update(type: Copy)
+{
+    into "NativeDependencies"
+    from configurations.implementation
+}
