@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-android34</TargetFramework>
+		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<IsTrimmable>false</IsTrimmable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.4" />
+		<PackageReference Include="Xamarin.GooglePlayServices.InstantApps" Version="118.1.0.4" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="build.gradle" />
+		<None Include="update-dependencies.cmd" />
+		<ProguardConfiguration Include="proguard.cfg" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidLibrary Include="NativeDependencies\gameanalytics-android-*.aar" />
+	</ItemGroup>
+</Project>
