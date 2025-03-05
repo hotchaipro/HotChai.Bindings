@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-android34</TargetFramework>
+		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<IsTrimmable>false</IsTrimmable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Firebase.Messaging" Version="124.1.0.1" />
+		<PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProguardConfiguration Include="proguard.cfg" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidNamespaceReplacement Include="com.bytebrew.bytebrewlibrary" Replacement="Com.ByteBrew.Library" />
+		<AndroidNamespaceReplacement Include="bytebrew" Replacement="ByteBrew" />
+	</ItemGroup>
+</Project>
