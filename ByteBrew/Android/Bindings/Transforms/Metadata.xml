@@ -1,0 +1,4 @@
+﻿<metadata>
+	<!-- Remove generated events from all interfaces -->
+	<attr path="/api/package/interface/method" name="eventName"></attr>
+</metadata>
