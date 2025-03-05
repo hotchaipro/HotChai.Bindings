@@ -16,6 +16,19 @@
 		<ProguardConfiguration Include="proguard.cfg" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidLibrary Include="NativeDependencies\gameanalytics-android-*.aar" />
+		<AndroidJavaSource Remove="NativeDependencies\**" />
+		<AndroidLibrary Remove="NativeDependencies\**" />
+		<AndroidNativeLibrary Remove="NativeDependencies\**" />
+		<Compile Remove="NativeDependencies\**" />
+		<EmbeddedResource Remove="NativeDependencies\**" />
+		<JavaSourceJar Remove="NativeDependencies\**" />
+		<None Remove="NativeDependencies\**" />
+		<TransformFile Remove="NativeDependencies\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidLibrary Include="NativeDependencies\*" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidNamespaceReplacement Include="gameanalytics" Replacement="GameAnalytics" />
 	</ItemGroup>
 </Project>
