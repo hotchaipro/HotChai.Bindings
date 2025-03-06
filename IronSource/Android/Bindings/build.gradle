@@ -2,7 +2,9 @@ repositories
 {
     google()
     mavenCentral()
-    maven { url 'https://android-sdk.is.com/' }
+    maven { url 'https://artifact.bytedance.com/repository/pangle' }
+    maven { url 'https://cboost.jfrog.io/artifactory/chartboost-ads/' }
+    maven { url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea' }
 }
 
 configurations
@@ -14,6 +16,34 @@ dependencies
 {
     // IronSource
     implementation 'com.unity3d.ads-mediation:mediation-sdk:+'
+    //implementation 'com.unity3d.ads-mediation:adquality-sdk:+'
+    // Applovin Network
+    implementation 'com.unity3d.ads-mediation:applovin-adapter:+'
+    implementation 'com.applovin:applovin-sdk:+'
+    // DT Exchange/Fyber Network
+    implementation 'com.unity3d.ads-mediation:fyber-adapter:+'
+    implementation "com.fyber:marketplace-sdk:+"
+    // Facebook Network
+    implementation 'com.unity3d.ads-mediation:facebook-adapter:+'
+    implementation 'com.facebook.android:audience-network-sdk:+'
+    // AdMob Network
+    implementation 'com.unity3d.ads-mediation:admob-adapter:+'
+    //implementation 'com.google.android.gms:play-services-ads:+'
+    // InMobi Network
+    implementation 'com.unity3d.ads-mediation:inmobi-adapter:+' 
+    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:+'
+    // Vungle Network (NOTE: Showing interstitial ads with no close button)
+    //implementation 'com.unity3d.ads-mediation:vungle-adapter:+'
+    //implementation 'com.vungle:vungle-ads:+'
+    // Mintegral Network
+    implementation 'com.unity3d.ads-mediation:mintegral-adapter:+'
+    implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:+'
+    // Pangle/TikTok Network
+    implementation 'com.unity3d.ads-mediation:pangle-adapter:+'
+    implementation 'com.pangle.global:ads-sdk:+'
+    // Unity Ads Network
+    implementation 'com.unity3d.ads-mediation:unityads-adapter:+'
+    implementation 'com.unity3d.ads:unity-ads:+'
 }
 
 task update(type: Copy)
