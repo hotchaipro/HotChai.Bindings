@@ -4,7 +4,7 @@ install! 'cocoapods', :integrate_targets => false
 
 use_frameworks! :linkage => :dynamic
 
-target 'IronSourceSDK' do
+target 'NativeDependencies' do
     pod 'IronSourceSDK'
     pod 'IronSourceAdMobAdapter'
     pod 'IronSourceAppLovinAdapter'
