@@ -487,6 +487,17 @@ namespace IronSourceSdk
 		ISARewardedAdRequest Build();
 	}
 
+	// @protocol ISAdapterAdaptiveProtocol <NSObject>
+	[Protocol]
+	[BaseType (typeof(NSObject))]
+	interface ISAdapterAdaptiveProtocol
+	{
+		// @required -(CGFloat)getAdaptiveHeightWithWidth:(CGFloat)width;
+		[Abstract]
+		[Export ("getAdaptiveHeightWithWidth:")]
+		nfloat GetAdaptiveHeightWithWidth (nfloat width);
+	}
+
 	// @interface ISContainerParams : NSObject
 	[BaseType (typeof(NSObject))]
 	interface ISContainerParams
@@ -550,8 +561,9 @@ namespace IronSourceSdk
 	[BaseType (typeof(NSObject))]
 	interface ISSegment
 	{
-		// @property (nonatomic) int age;
+		// @property (nonatomic) int age __attribute__((deprecated("")));
 		[Export ("age")]
+		[Obsolete]
 		int Age { get; set; }
 
 		// @property (nonatomic) int level;
@@ -566,8 +578,9 @@ namespace IronSourceSdk
 		[Export ("paying")]
 		bool Paying { get; set; }
 
-		// @property (nonatomic) ISGender gender;
+		// @property (nonatomic) ISGender gender __attribute__((deprecated("")));
 		[Export ("gender", ArgumentSemantic.Assign)]
+		[Obsolete]
 		ISGender Gender { get; set; }
 
 		// @property (nonatomic, strong) NSDate * userCreationDate;
@@ -881,9 +894,22 @@ namespace IronSourceSdk
 		[NullAllowed, Export ("auction_id")]
 		string AuctionId { get; }
 
-		// @property (readonly, copy) NSString * _Nullable ad_unit;
-		[NullAllowed, Export ("ad_unit")]
+		// @property (readonly, copy) NSString * ad_unit __attribute__((deprecated("This parameter will be removed in version 9.0.0. Please use ad_format parameter instead.")));
+		[Export ("ad_unit")]
+		[Obsolete("This parameter will be removed in version 9.0.0. Please use ad_format parameter instead.")]
 		string AdUnit { get; }
+
+		// @property (readonly, copy) NSString * _Nullable mediation_ad_unit_name;
+		[NullAllowed, Export ("mediation_ad_unit_name")]
+		string MediationAdUnitName { get; }
+
+		// @property (readonly, copy) NSString * _Nullable mediation_ad_unit_id;
+		[NullAllowed, Export ("mediation_ad_unit_id")]
+		string MediationAdUnitId { get; }
+
+		// @property (readonly, copy) NSString * _Nullable ad_format;
+		[NullAllowed, Export ("ad_format")]
+		string AdFormat { get; }
 
 		// @property (readonly, copy) NSString * _Nullable ad_network;
 		[NullAllowed, Export ("ad_network")]
@@ -921,8 +947,9 @@ namespace IronSourceSdk
 		[NullAllowed, Export ("segment_name")]
 		string SegmentName { get; }
 
-		// @property (readonly, copy) NSNumber * _Nullable lifetime_revenue;
-		[NullAllowed, Export ("lifetime_revenue", ArgumentSemantic.Copy)]
+		// @property (readonly, copy) NSNumber * lifetime_revenue __attribute__((deprecated("This parameter will be removed in version 9.0.0.")));
+		[Export ("lifetime_revenue", ArgumentSemantic.Copy)]
+		[Obsolete("This parameter will be removed in version 9.0.0.")]
 		NSNumber LifetimeRevenue { get; }
 
 		// @property (readonly, copy) NSString * _Nullable encrypted_cpm;
@@ -932,6 +959,10 @@ namespace IronSourceSdk
 		// @property (readonly, copy) NSNumber * _Nullable conversion_value;
 		[NullAllowed, Export ("conversion_value", ArgumentSemantic.Copy)]
 		NSNumber ConversionValue { get; }
+
+		// @property (readonly, copy) NSString * _Nullable creative_id;
+		[NullAllowed, Export ("creative_id")]
+		string CreativeId { get; }
 
 		// @property (readonly, copy) NSDictionary * _Nullable all_data;
 		[NullAllowed, Export ("all_data", ArgumentSemantic.Copy)]
@@ -1185,6 +1216,11 @@ namespace IronSourceSdk
 		[Export ("sendAdUnitCappingParseFailedEventWithAdUnitId:error:")]
 		void SendAdUnitCappingParseFailedEventWithAdUnitId (string adUnitId, NSError error);
 
+		// @required -(void)sendRewardParseFailedEventWithAdUnitId:(NSString * _Nonnull)adUnitId error:(NSError * _Nonnull)error;
+		[Abstract]
+		[Export ("sendRewardParseFailedEventWithAdUnitId:error:")]
+		void SendRewardParseFailedEventWithAdUnitId (string adUnitId, NSError error);
+
 		// @required -(void)sendPlacementCappingParseFailedEventWithPlacementName:(NSString * _Nonnull)placementName adFormat:(ISAdUnit * _Nonnull)adFormat error:(NSError * _Nonnull)error;
 		[Abstract]
 		[Export ("sendPlacementCappingParseFailedEventWithPlacementName:adFormat:error:")]
@@ -1194,6 +1230,20 @@ namespace IronSourceSdk
 		[Abstract]
 		[Export ("sendConfigParseFailedEventWithError:")]
 		void SendConfigParseFailedEventWithError (NSError error);
+	}
+
+	// typedef void (^LPMDispatcherBlock)();
+	delegate void LPMDispatcherBlock ();
+
+	// @protocol LPMDispatcherProtocol <NSObject>
+	[Protocol]
+	[BaseType (typeof(NSObject))]
+	interface LPMDispatcherProtocol
+	{
+		// @required -(void)dispatch:(LPMDispatcherBlock _Nonnull)task;
+		[Abstract]
+		[Export ("dispatch:")]
+		void Dispatch (LPMDispatcherBlock task);
 	}
 
 	// @protocol ISAdapterAdDelegate <NSObject>
@@ -1482,8 +1532,9 @@ namespace IronSourceSdk
 		NSNumber GetNumber (string key);
 
 		// -(NSDictionary * _Nullable)getAdUnitData;
-		//[NullAllowed, Export ("getAdUnitData")]
-		//NSDictionary AdUnitData { get; }
+		[Export("getAdUnitData")]
+		[return: NullAllowed]
+		NSDictionary GetAdUnitData();
 	}
 
 	// @protocol ISBannerAdDelegate <ISAdapterAdViewDelegate>
@@ -1503,7 +1554,7 @@ namespace IronSourceSdk
   protocol, then [Model] is redundant and will generate code that will never
   be used.
 */
-[Protocol, Model]
+	[Protocol, Model]
 	[BaseType (typeof(NSObject))]
 	interface ISAdapterBannerProtocol
 	{
@@ -1610,12 +1661,12 @@ namespace IronSourceSdk
 		NativeHandle Constructor (ISAdapterConfig providerConfig);
 
 		// -(void)loadAdWithAdData:(ISAdData * _Nonnull)adData viewController:(UIViewController * _Nonnull)viewController size:(ISBannerSize * _Nonnull)size delegate:(id<ISBannerAdDelegate> _Nonnull)delegate;
-		//[Export ("loadAdWithAdData:viewController:size:delegate:")]
-		//void LoadAdWithAdData (ISAdData adData, UIViewController viewController, ISBannerSize size, ISBannerAdDelegate @delegate);
+		[Export ("loadAdWithAdData:viewController:size:delegate:")]
+		void LoadAdWithAdData (ISAdData adData, UIViewController viewController, ISBannerSize size, ISBannerAdDelegate @delegate);
 
 		// -(void)destroyAdWithAdData:(ISAdData * _Nonnull)adData;
-		//[Export ("destroyAdWithAdData:")]
-		//void DestroyAdWithAdData (ISAdData adData);
+		[Export ("destroyAdWithAdData:")]
+		void DestroyAdWithAdData (ISAdData adData);
 	}
 
 	// @protocol ISAdapterAdInteractionDelegate <ISAdapterAdDelegate>
@@ -1676,6 +1727,11 @@ namespace IronSourceSdk
 		[Abstract]
 		[Export ("isAdAvailableWithAdData:")]
 		bool IsAdAvailableWithAdData (ISAdData adData);
+
+		// @required -(void)disposeAd;
+		[Abstract]
+		[Export ("disposeAd")]
+		void DisposeAd();
 	}
 
 	// @interface ISBaseAdInteractionAdapter : ISBaseAdAdapter <ISAdapterAdFullscreenProtocol>
@@ -1787,6 +1843,11 @@ namespace IronSourceSdk
 		[Abstract]
 		[Export ("allData")]
 		NSDictionary AllData { get; }
+
+		// @required -(id)dataByKeyIgnoreCase:(NSString *)desiredKey valueType:(Class)valueType;
+		[Abstract]
+		[Export ("dataByKeyIgnoreCase:valueType:")]
+		NSObject DataByKeyIgnoreCase(string desiredKey, Class valueType);
 	}
 
 	// @protocol ISAdapterNetworkDataProtocol <NSObject>
@@ -1983,34 +2044,40 @@ namespace IronSourceSdk
 	[BaseType (typeof(NSObject))]
 	interface LevelPlayBannerDelegate
 	{
-		// @required -(void)didLoad:(ISBannerView *)bannerView withAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didLoad:(ISBannerView *)bannerView withAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMBannerAdViewDelegate didLoadAdWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didLoad:withAdInfo:")]
+		[Obsolete("Use [LPMBannerAdViewDelegate didLoadAdWithAdInfo:] instead.")]
 		void DidLoad (ISBannerView bannerView, ISAdInfo adInfo);
 
-		// @required -(void)didFailToLoadWithError:(NSError *)error;
+		// @required -(void)didFailToLoadWithError:(NSError *)error __attribute__((deprecated("Use [LPMBannerAdViewDelegate didFailToLoadAdWithAdUnitId:errorId:] instead.")));
 		[Abstract]
 		[Export ("didFailToLoadWithError:")]
+		[Obsolete("Use [LPMBannerAdViewDelegate didFailToLoadAdWithAdUnitId:errorId:] instead.")]
 		void DidFailToLoadWithError (NSError error);
 
-		// @required -(void)didClickWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didClickWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMBannerAdViewDelegate didClickAdWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didClickWithAdInfo:")]
+		[Obsolete("Use [LPMBannerAdViewDelegate didClickAdWithAdInfo:] instead.")]
 		void DidClickWithAdInfo (ISAdInfo adInfo);
 
-		// @required -(void)didLeaveApplicationWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didLeaveApplicationWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMBannerAdViewDelegate didLeaveAppWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didLeaveApplicationWithAdInfo:")]
+		[Obsolete("Use [LPMBannerAdViewDelegate didLeaveAppWithAdInfo:] instead.")]
 		void DidLeaveApplicationWithAdInfo (ISAdInfo adInfo);
 
-		// @required -(void)didPresentScreenWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didPresentScreenWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMBannerAdViewDelegate didExpandAdWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didPresentScreenWithAdInfo:")]
+		[Obsolete("Use [LPMBannerAdViewDelegate didExpandAdWithAdInfo:] instead.")]
 		void DidPresentScreenWithAdInfo (ISAdInfo adInfo);
 
-		// @required -(void)didDismissScreenWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didDismissScreenWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMBannerAdViewDelegate didCollapseAdWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didDismissScreenWithAdInfo:")]
+		[Obsolete("Use [LPMBannerAdViewDelegate didCollapseAdWithAdInfo:] instead.")]
 		void DidDismissScreenWithAdInfo (ISAdInfo adInfo);
 	}
 
@@ -2019,39 +2086,46 @@ namespace IronSourceSdk
 	[BaseType (typeof(NSObject))]
 	interface LevelPlayInterstitialDelegate
 	{
-		// @required -(void)didLoadWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didLoadWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMInterstitialAdDelegate didLoadAdWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didLoadWithAdInfo:")]
+		[Obsolete("Use [LPMInterstitialAdDelegate didLoadAdWithAdInfo:] instead.")]
 		void DidLoadWithAdInfo (ISAdInfo adInfo);
 
-		// @required -(void)didFailToLoadWithError:(NSError *)error;
+		// @required -(void)didFailToLoadWithError:(NSError *)error __attribute__((deprecated("Use [LPMInterstitialAdDelegate didFailToLoadAdWithAdUnitId:error:] instead.")));
 		[Abstract]
 		[Export ("didFailToLoadWithError:")]
+		[Obsolete("Use [LPMInterstitialAdDelegate didFailToLoadAdWithAdUnitId:error:] instead.")]
 		void DidFailToLoadWithError (NSError error);
 
-		// @required -(void)didOpenWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didOpenWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMInterstitialAdDelegate didDisplayAdWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didOpenWithAdInfo:")]
+		[Obsolete("Use [LPMInterstitialAdDelegate didDisplayAdWithAdInfo:] instead.")]
 		void DidOpenWithAdInfo (ISAdInfo adInfo);
 
-		// @required -(void)didShowWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didShowWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("No replacement available.")));
 		[Abstract]
 		[Export ("didShowWithAdInfo:")]
+		[Obsolete("No replacement available.")]
 		void DidShowWithAdInfo (ISAdInfo adInfo);
 
-		// @required -(void)didFailToShowWithError:(NSError *)error andAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didFailToShowWithError:(NSError *)error andAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMInterstitialAdDelegate didFailToDisplayAdWithAdInfo:error:] instead.")));
 		[Abstract]
 		[Export ("didFailToShowWithError:andAdInfo:")]
+		[Obsolete("Use [LPMInterstitialAdDelegate didFailToDisplayAdWithAdInfo:error:] instead.")]
 		void DidFailToShowWithError (NSError error, ISAdInfo adInfo);
 
-		// @required -(void)didClickWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didClickWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMInterstitialAdDelegate didClickAdWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didClickWithAdInfo:")]
+		[Obsolete("Use [LPMInterstitialAdDelegate didClickAdWithAdInfo:] instead.")]
 		void DidClickWithAdInfo (ISAdInfo adInfo);
 
-		// @required -(void)didCloseWithAdInfo:(ISAdInfo *)adInfo;
+		// @required -(void)didCloseWithAdInfo:(ISAdInfo *)adInfo __attribute__((deprecated("Use [LPMInterstitialAdDelegate didCloseAdWithAdInfo:] instead.")));
 		[Abstract]
 		[Export ("didCloseWithAdInfo:")]
+		[Obsolete("Use [LPMInterstitialAdDelegate didCloseAdWithAdInfo:] instead.")]
 		void DidCloseWithAdInfo (ISAdInfo adInfo);
 	}
 
@@ -2201,7 +2275,8 @@ namespace IronSourceSdk
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/[Protocol]
+*/
+	[Protocol]
 	interface ISAdapterNativeAdViewBinderProtocol : ISNativeAdViewBinderProtocol
 	{
 		// @required @property (nonatomic, strong) UIView * _Nullable networkNativeAdView;
@@ -2562,65 +2637,112 @@ namespace IronSourceSdk
 	[BaseType (typeof(NSObject))]
 	interface LPMAdInfo
 	{
-		// @property (copy, nonatomic) NSString * _Nonnull adUnitId;
+		// @property (readonly, copy) NSString * _Nonnull adId;
+		[Export ("adId")]
+		string AdId { get; }
+
+		// @property (readonly, copy) NSString * _Nonnull adUnitId;
 		[Export ("adUnitId")]
-		string AdUnitId { get; set; }
+		string AdUnitId { get; }
 
-		// @property (copy, nonatomic) NSString * _Nullable placementName;
+		// @property (readonly, copy) NSString * _Nonnull adUnitName;
+		[Export ("adUnitName")]
+		string AdUnitName { get; }
+
+		// @property (readonly, copy) NSString * _Nullable placementName;
 		[NullAllowed, Export ("placementName")]
-		string PlacementName { get; set; }
+		string PlacementName { get; }
 
-		// @property (copy, nonatomic) LPMAdSize * _Nullable adSize;
+		// @property (readonly, copy) LPMAdSize * _Nullable adSize;
 		[NullAllowed, Export ("adSize", ArgumentSemantic.Copy)]
-		LPMAdSize AdSize { get; set; }
+		LPMAdSize AdSize { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull adFormat;
+		// @property (readonly, copy) NSString * _Nonnull adFormat;
 		[Export ("adFormat")]
-		string AdFormat { get; set; }
+		string AdFormat { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull auction_id;
+		// @property (readonly, copy) NSString * auction_id __attribute__((deprecated("This parameter will be removed in version 9.0.0. Please use auctionId parameter instead.")));
 		[Export ("auction_id")]
-		string Auction_id { get; set; }
+		[Obsolete("This parameter will be removed in version 9.0.0. Please use auctionId parameter instead.")]
+		string Auction_id { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull country;
+		// @property (readonly, copy) NSString * _Nonnull auctionId;
+		[Export ("auctionId")]
+		string AuctionId { get; }
+
+		// @property (readonly, copy) NSString * _Nonnull country;
 		[Export ("country")]
-		string Country { get; set; }
+		string Country { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull ab;
+		// @property (readonly, copy) NSString * _Nonnull ab;
 		[Export ("ab")]
-		string Ab { get; set; }
+		string Ab { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull segment_name;
+		// @property (readonly, copy) NSString * segment_name __attribute__((deprecated("This parameter will be removed in version 9.0.0. Please use segmentName parameter instead.")));
 		[Export ("segment_name")]
-		string Segment_name { get; set; }
+		[Obsolete("This parameter will be removed in version 9.0.0. Please use segmentName parameter instead.")]
+		string Segment_name { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull ad_network;
+		// @property (readonly, copy) NSString * _Nonnull segmentName;
+		[Export ("segmentName")]
+		string SegmentName { get; }
+
+		// @property (readonly, copy) NSString * ad_network __attribute__((deprecated("This parameter will be removed in version 9.0.0. Please use adNetwork parameter instead.")));
 		[Export ("ad_network")]
-		string Ad_network { get; set; }
+		[Obsolete("This parameter will be removed in version 9.0.0. Please use adNetwork parameter instead.")]
+		string Ad_network { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull instance_name;
+		// @property (readonly, copy) NSString * _Nonnull adNetwork;
+		[Export ("adNetwork")]
+		string AdNetwork { get; }
+
+		// @property (readonly, copy) NSString * instance_name __attribute__((deprecated("This parameter will be removed in version 9.0.0. Please use instanceName parameter instead.")));
 		[Export ("instance_name")]
-		string Instance_name { get; set; }
+		[Obsolete("This parameter will be removed in version 9.0.0. Please use instanceName parameter instead.")]
+		string Instance_name { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull instance_id;
+		// @property (readonly, copy) NSString * _Nonnull instanceName;
+		[Export ("instanceName")]
+		string InstanceName { get; }
+
+		// @property (readonly, copy) NSString * instance_id __attribute__((deprecated("This parameter will be removed in version 9.0.0. Please use instanceId parameter instead.")));
 		[Export ("instance_id")]
-		string Instance_id { get; set; }
+		[Obsolete("This parameter will be removed in version 9.0.0. Please use instanceId parameter instead.")]
+		string Instance_id { get; }
 
-		// @property (copy, nonatomic) NSNumber * _Nonnull revenue;
+		// @property (readonly, copy) NSString * _Nonnull instanceId;
+		[Export ("instanceId")]
+		string InstanceId { get; }
+
+		// @property (readonly, copy) NSNumber * _Nonnull revenue;
 		[Export ("revenue", ArgumentSemantic.Copy)]
-		NSNumber Revenue { get; set; }
+		NSNumber Revenue { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull precision;
+		// @property (readonly, copy) NSString * _Nonnull precision;
 		[Export ("precision")]
-		string Precision { get; set; }
+		string Precision { get; }
 
-		// @property (copy, nonatomic) NSString * _Nonnull encrypted_cpm;
+		// @property (readonly, copy) NSString * encrypted_cpm __attribute__((deprecated("This parameter will be removed in version 9.0.0. Please use encryptedCPM parameter instead.")));
 		[Export ("encrypted_cpm")]
-		string Encrypted_cpm { get; set; }
+		[Obsolete("This parameter will be removed in version 9.0.0. Please use encryptedCPM parameter instead.")]
+		string Encrypted_cpm { get; }
 
-		// @property (copy, nonatomic) NSNumber * _Nonnull conversion_value;
+		// @property (readonly, copy) NSString * _Nonnull encryptedCPM;
+		[Export ("encryptedCPM")]
+		string EncryptedCPM { get; }
+
+		// @property (readonly, copy) NSNumber * conversion_value __attribute__((deprecated("This parameter will be removed in version 9.0.0. Please use conversionValue parameter instead.")));
 		[Export ("conversion_value", ArgumentSemantic.Copy)]
-		NSNumber Conversion_value { get; set; }
+		[Obsolete("This parameter will be removed in version 9.0.0. Please use conversionValue parameter instead.")]
+		NSNumber Conversion_value { get; }
+
+		// @property (readonly, copy) NSNumber * _Nonnull conversionValue;
+		[Export ("conversionValue", ArgumentSemantic.Copy)]
+		NSNumber ConversionValue { get; }
+
+		// @property (readonly, copy) NSString * _Nonnull creativeId;
+		[Export ("creativeId")]
+		string CreativeId { get; }
 	}
 
 	// @protocol LPMBannerAdViewDelegate <NSObject>
@@ -2668,6 +2790,10 @@ namespace IronSourceSdk
 	[DisableDefaultCtor]
 	interface LPMBannerAdView
 	{
+		// @property (readonly, nonatomic, strong) NSString * _Nonnull adId;
+		[Export ("adId", ArgumentSemantic.Strong)]
+		string AdId { get; }
+
 		// -(instancetype _Nonnull)initWithAdUnitId:(NSString * _Nonnull)adUnitId;
 		[Export ("initWithAdUnitId:")]
 		NativeHandle Constructor (string adUnitId);
@@ -2787,6 +2913,10 @@ namespace IronSourceSdk
 	[DisableDefaultCtor]
 	interface LPMInterstitialAd
 	{
+		// @property (readonly, nonatomic, strong) NSString * _Nonnull adId;
+		[Export ("adId", ArgumentSemantic.Strong)]
+		string AdId { get; }
+
 		// -(instancetype _Nonnull)initWithAdUnitId:(NSString * _Nonnull)adUnitId;
 		[Export ("initWithAdUnitId:")]
 		NativeHandle Constructor (string adUnitId);
@@ -2794,6 +2924,101 @@ namespace IronSourceSdk
 		// -(void)setDelegate:(id<LPMInterstitialAdDelegate> _Nonnull)delegate;
 		[Export ("setDelegate:")]
 		void SetDelegate (LPMInterstitialAdDelegate @delegate);
+
+		// -(void)loadAd __attribute__((swift_name("loadAd()")));
+		[Export ("loadAd")]
+		void LoadAd ();
+
+		// -(void)showAdWithViewController:(UIViewController * _Nonnull)viewController placementName:(NSString * _Nullable)placementName __attribute__((swift_name("showAd(viewController:placementName:)")));
+		[Export ("showAdWithViewController:placementName:")]
+		void ShowAdWithViewController (UIViewController viewController, [NullAllowed] string placementName);
+
+		// -(BOOL)isAdReady;
+		[Export ("isAdReady")]
+		bool IsAdReady { get; }
+
+		// +(BOOL)isPlacementCapped:(NSString * _Nonnull)placementName;
+		[Static]
+		[Export ("isPlacementCapped:")]
+		bool IsPlacementCapped (string placementName);
+	}
+
+	// @interface LPMReward : NSObject
+	[BaseType (typeof(NSObject))]
+	[DisableDefaultCtor]
+	interface LPMReward
+	{
+		// @property (readonly, nonatomic) NSInteger amount;
+		[Export ("amount")]
+		nint Amount { get; }
+
+		// @property (readonly, nonatomic, strong) NSString * _Nonnull name;
+		[Export ("name", ArgumentSemantic.Strong)]
+		string Name { get; }
+
+		// -(instancetype _Nonnull)initWithName:(NSString * _Nonnull)name amount:(NSInteger)amount;
+		[Export ("initWithName:amount:")]
+		NativeHandle Constructor (string name, nint amount);
+	}
+
+	// @protocol LPMRewardedAdDelegate <NSObject>
+	[Protocol, Model]
+	[BaseType (typeof(NSObject))]
+	interface LPMRewardedAdDelegate
+	{
+		// @required -(void)didLoadAdWithAdInfo:(LPMAdInfo * _Nonnull)adInfo;
+		[Abstract]
+		[Export ("didLoadAdWithAdInfo:")]
+		void DidLoadAdWithAdInfo (LPMAdInfo adInfo);
+
+		// @required -(void)didFailToLoadAdWithAdUnitId:(NSString * _Nonnull)adUnitId error:(NSError * _Nonnull)error;
+		[Abstract]
+		[Export ("didFailToLoadAdWithAdUnitId:error:")]
+		void DidFailToLoadAdWithAdUnitId (string adUnitId, NSError error);
+
+		// @required -(void)didDisplayAdWithAdInfo:(LPMAdInfo * _Nonnull)adInfo;
+		[Abstract]
+		[Export ("didDisplayAdWithAdInfo:")]
+		void DidDisplayAdWithAdInfo (LPMAdInfo adInfo);
+
+		// @required -(void)didRewardAdWithAdInfo:(LPMAdInfo * _Nonnull)adInfo reward:(LPMReward * _Nonnull)reward;
+		[Abstract]
+		[Export ("didRewardAdWithAdInfo:reward:")]
+		void DidRewardAdWithAdInfo (LPMAdInfo adInfo, LPMReward reward);
+
+		// @optional -(void)didFailToDisplayAdWithAdInfo:(LPMAdInfo * _Nonnull)adInfo error:(NSError * _Nonnull)error;
+		[Export ("didFailToDisplayAdWithAdInfo:error:")]
+		void DidFailToDisplayAdWithAdInfo (LPMAdInfo adInfo, NSError error);
+
+		// @optional -(void)didClickAdWithAdInfo:(LPMAdInfo * _Nonnull)adInfo;
+		[Export ("didClickAdWithAdInfo:")]
+		void DidClickAdWithAdInfo (LPMAdInfo adInfo);
+
+		// @optional -(void)didCloseAdWithAdInfo:(LPMAdInfo * _Nonnull)adInfo;
+		[Export ("didCloseAdWithAdInfo:")]
+		void DidCloseAdWithAdInfo (LPMAdInfo adInfo);
+
+		// @optional -(void)didChangeAdInfo:(LPMAdInfo * _Nonnull)adInfo __attribute__((swift_name("didChangeAdInfo(_:)")));
+		[Export ("didChangeAdInfo:")]
+		void DidChangeAdInfo (LPMAdInfo adInfo);
+	}
+
+	// @interface LPMRewardedAd : NSObject
+	[BaseType (typeof(NSObject))]
+	[DisableDefaultCtor]
+	interface LPMRewardedAd
+	{
+		// @property (readonly, nonatomic, strong) NSString * _Nonnull adId;
+		[Export ("adId", ArgumentSemantic.Strong)]
+		string AdId { get; }
+
+		// -(instancetype _Nonnull)initWithAdUnitId:(NSString * _Nonnull)adUnitId;
+		[Export ("initWithAdUnitId:")]
+		NativeHandle Constructor (string adUnitId);
+
+		// -(void)setDelegate:(id<LPMRewardedAdDelegate> _Nonnull)delegate;
+		[Export ("setDelegate:")]
+		void SetDelegate (LPMRewardedAdDelegate @delegate);
 
 		// -(void)loadAd __attribute__((swift_name("loadAd()")));
 		[Export ("loadAd")]
@@ -3155,31 +3380,6 @@ namespace IronSourceSdk
 		[Export ("dictionary")]
 		ISConcurrentMutableDictionary Dictionary ();
 
-		// +(instancetype)dictionaryWithDictionary:(id)dictionary;
-		[Static]
-		[Export ("dictionaryWithDictionary:")]
-		ISConcurrentMutableDictionary DictionaryWithDictionary (NSObject dictionary);
-
-		// -(instancetype)initWithCapacity:(NSUInteger)numItems;
-		[Export ("initWithCapacity:")]
-		NativeHandle Constructor (nuint numItems);
-
-		// -(instancetype)initWithContentsOfFile:(NSString *)path;
-		[Export ("initWithContentsOfFile:")]
-		NativeHandle Constructor (string path);
-
-		// -(instancetype)initWithContentsOfURL:(NSURL *)url;
-		[Export ("initWithContentsOfURL:")]
-		NativeHandle Constructor (NSUrl url);
-
-		// -(instancetype)initWithCoder:(NSCoder *)aDecoder;
-		[Export ("initWithCoder:")]
-		NativeHandle Constructor (NSCoder aDecoder);
-
-		// -(instancetype)initWithDictionary:(NSMutableDictionary *)dictionary;
-		[Export ("initWithDictionary:")]
-		NativeHandle Constructor (NSMutableDictionary dictionary);
-
 		// -(NSUInteger)count;
 		[Export ("count")]
 		nuint Count { get; }
@@ -3188,29 +3388,13 @@ namespace IronSourceSdk
 		[Export ("objectForKey:")]
 		NSObject ObjectForKey (NSObject key);
 
-		// -(NSEnumerator *)keyEnumerator;
-		[Export ("keyEnumerator")]
-		NSEnumerator KeyEnumerator { get; }
-
 		// -(void)setObject:(id)object forKey:(id<NSCopying>)key;
 		[Export ("setObject:forKey:")]
 		void SetObject (NSObject @object, NSCopying key);
 
-		// -(void)setDictionary:(NSDictionary *)otherDictionary;
-		[Export ("setDictionary:")]
-		void SetDictionary (NSDictionary otherDictionary);
-
-		// -(void)addEntriesFromDictionary:(NSDictionary *)otherDictionary;
-		[Export ("addEntriesFromDictionary:")]
-		void AddEntriesFromDictionary (NSDictionary otherDictionary);
-
 		// -(void)removeObjectForKey:(id)key;
 		[Export ("removeObjectForKey:")]
 		void RemoveObjectForKey (NSObject key);
-
-		// -(void)removeObjectsForKeys:(NSArray *)keyArray;
-		[Export ("removeObjectsForKeys:")]
-		void RemoveObjectsForKeys (NSObject[] keyArray);
 
 		// -(void)removeAllObjects;
 		[Export ("removeAllObjects")]
@@ -3309,6 +3493,10 @@ namespace IronSourceSdk
 		// @optional -(BOOL)hasInterstitialWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
 		[Export ("hasInterstitialWithAdapterConfig:")]
 		bool HasInterstitialWithAdapterConfig (ISAdapterConfig adapterConfig);
+
+		// @optional -(void)disposeInterstitialAdWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
+		[Export ("disposeInterstitialAdWithAdapterConfig:")]
+		void DisposeInterstitialAdWithAdapterConfig (ISAdapterConfig adapterConfig);
 
 		// @optional -(void)initInterstitialWithUserId:(NSString *)userId adapterConfig:(ISAdapterConfig *)adapterConfig delegate:(id<ISInterstitialAdapterDelegate>)delegate;
 		[Export ("initInterstitialWithUserId:adapterConfig:delegate:")]
@@ -3427,6 +3615,10 @@ namespace IronSourceSdk
 		[Export ("showRewardedVideoWithViewController:adapterConfig:delegate:")]
 		void ShowRewardedVideoWithViewController (UIViewController viewController, ISAdapterConfig adapterConfig, ISRewardedVideoAdapterDelegate @delegate);
 
+		// @optional -(void)disposeRewardedVideoAdWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
+		[Export ("disposeRewardedVideoAdWithAdapterConfig:")]
+		void DisposeRewardedVideoAdWithAdapterConfig (ISAdapterConfig adapterConfig);
+
 		// @optional -(void)initAndLoadRewardedVideoWithUserId:(NSString *)userId adapterConfig:(ISAdapterConfig *)adapterConfig adData:(NSDictionary *)adData delegate:(id<ISRewardedVideoAdapterDelegate>)delegate;
 		[Export ("initAndLoadRewardedVideoWithUserId:adapterConfig:adData:delegate:")]
 		void InitAndLoadRewardedVideoWithUserId (string userId, ISAdapterConfig adapterConfig, NSDictionary adData, ISRewardedVideoAdapterDelegate @delegate);
@@ -3513,8 +3705,8 @@ namespace IronSourceSdk
 		ISLoadWhileShowSupportState GetLWSSupportState (ISAdapterConfig adapterConfig);
 
 		// -(void)setNetworkData:(id<ISAdapterNetworkData>)networkData;
-		//[Export ("setNetworkData:")]
-		//void SetNetworkData (ISAdapterNetworkData networkData);
+		[Export ("setNetworkData:")]
+		void SetNetworkData (ISAdapterNetworkData networkData);
 
 		// -(void)setRewardedVideoAdapter:(id<ISRewardedVideoAdapterProtocol>)rewardedVideoAdapter;
 		[Export ("setRewardedVideoAdapter:")]
@@ -3553,8 +3745,16 @@ namespace IronSourceSdk
 		ISNativeAdAdapterProtocol NativeAdAdapter { get; }
 
 		// -(CGFloat)getAdaptiveHeightWithWidth:(CGFloat)width;
-		//[Export ("getAdaptiveHeightWithWidth:")]
-		//nfloat GetAdaptiveHeightWithWidth (nfloat width);
+		[Export ("getAdaptiveHeightWithWidth:")]
+		nfloat GetAdaptiveHeightWithWidth (nfloat width);
+
+		// -(void)disposeRewardedVideoAdWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
+		[Export ("disposeRewardedVideoAdWithAdapterConfig:")]
+		void DisposeRewardedVideoAdWithAdapterConfig (ISAdapterConfig adapterConfig);
+
+		// -(void)disposeInterstitialAdWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
+		[Export ("disposeInterstitialAdWithAdapterConfig:")]
+		void DisposeInterstitialAdWithAdapterConfig (ISAdapterConfig adapterConfig);
 	}
 
 	// @interface ISMetaData : NSObject
@@ -3788,27 +3988,27 @@ namespace IronSourceSdk
 		void AddSubviewAndAdjust (UIView view);
 	}
 
-	// @interface  (ISBaseAdapter)
-	[Category]
-	[BaseType (typeof(ISBaseAdapter))]
-	interface ISBaseAdapter_
-	{
-		// -(BOOL)isConfigValueValid:(NSString *)value;
-		[Export ("isConfigValueValid:")]
-		bool IsConfigValueValid (string value);
-
-		// -(NSError *)errorForMissingCredentialFieldWithName:(NSString *)fieldName;
-		[Export ("errorForMissingCredentialFieldWithName:")]
-		NSError ErrorForMissingCredentialFieldWithName (string fieldName);
-
-		// -(UIViewController *)topMostController;
-		//[Export ("topMostController")]
-		//UIViewController TopMostController { get; }
-
-		// -(void)setMetaDataWithKey:(NSString *)key andValues:(NSMutableArray *)values;
-		[Export ("setMetaDataWithKey:andValues:")]
-		void SetMetaDataWithKey (string key, NSMutableArray values);
-	}
+	//// @interface  (ISBaseAdapter)
+	//[Category]
+	//[BaseType (typeof(ISBaseAdapter))]
+	//interface ISBaseAdapter_
+	//{
+	//	// -(BOOL)isConfigValueValid:(NSString *)value;
+	//	[Export ("isConfigValueValid:")]
+	//	bool IsConfigValueValid (string value);
+	//
+	//	// -(NSError *)errorForMissingCredentialFieldWithName:(NSString *)fieldName;
+	//	[Export ("errorForMissingCredentialFieldWithName:")]
+	//	NSError ErrorForMissingCredentialFieldWithName (string fieldName);
+	//
+	//	// -(UIViewController *)topMostController;
+	//	[Export ("topMostController")]
+	//	UIViewController TopMostController { get; }
+	//
+	//	// -(void)setMetaDataWithKey:(NSString *)key andValues:(NSMutableArray *)values;
+	//	[Export ("setMetaDataWithKey:andValues:")]
+	//	void SetMetaDataWithKey (string key, NSMutableArray values);
+	//}
 
 	// @interface ISIronSourceAdapter : ISBaseAdapter
 	[BaseType (typeof(ISBaseAdapter))]
@@ -4056,9 +4256,10 @@ namespace IronSourceSdk
 		[Export ("initWithAppKey:adUnits:delegate:")]
 		void InitWithAppKey (string appKey, string[] adUnits, [NullAllowed] ISInitializationDelegate @delegate);
 
-		// +(void)initISDemandOnly:(NSString * _Nonnull)appKey adUnits:(NSArray<NSString *> * _Nonnull)adUnits __attribute__((deprecated("This API has been deprecated. Please use [IronSourceAds initWithRequest:completion:] instead.")));
+		// +(void)initISDemandOnly:(NSString * _Nonnull)appKey adUnits:(NSArray<NSString *> * _Nonnull)adUnits __attribute__((deprecated("Use [IronSourceAds initWithRequest:completion:] instead.")));
 		[Static]
 		[Export ("initISDemandOnly:adUnits:")]
+		[Obsolete("Use [IronSourceAds initWithRequest:completion:] instead.")]
 		void InitISDemandOnly (string appKey, string[] adUnits);
 
 		// +(void)setLevelPlayRewardedVideoDelegate:(id<LevelPlayRewardedVideoDelegate> _Nullable)delegate;
@@ -4111,9 +4312,10 @@ namespace IronSourceSdk
 		[Export ("loadISDemandOnlyRewardedVideo:")]
 		void LoadISDemandOnlyRewardedVideo (string instanceId);
 
-		// +(void)loadISDemandOnlyRewardedVideoWithAdm:(NSString * _Nonnull)instanceId adm:(NSString * _Nonnull)adm __attribute__((deprecated("This API has been deprecated. Please use [ISARewardedAdLoader loadAdWithAdRequest:delegate:] instead.")));
+		// +(void)loadISDemandOnlyRewardedVideoWithAdm:(NSString * _Nonnull)instanceId adm:(NSString * _Nonnull)adm __attribute__((deprecated("Use [ISARewardedAdLoader loadAdWithAdRequest:delegate:] instead.")));
 		[Static]
 		[Export ("loadISDemandOnlyRewardedVideoWithAdm:adm:")]
+		[Obsolete("Use [ISARewardedAdLoader loadAdWithAdRequest:delegate:] instead.")]
 		void LoadISDemandOnlyRewardedVideoWithAdm (string instanceId, string adm);
 
 		// +(void)showISDemandOnlyRewardedVideo:(UIViewController * _Nonnull)viewController instanceId:(NSString * _Nonnull)instanceId;
@@ -4141,29 +4343,34 @@ namespace IronSourceSdk
 		[Export ("setLevelPlayInterstitialDelegate:")]
 		void SetLevelPlayInterstitialDelegate ([NullAllowed] LevelPlayInterstitialDelegate @delegate);
 
-		// +(void)loadInterstitial;
+		// +(void)loadInterstitial __attribute__((deprecated("Use [LPMInterstitialAd loadAd] instead.")));
 		[Static]
 		[Export ("loadInterstitial")]
+		[Obsolete("Use [LPMInterstitialAd loadAd] instead.")]
 		void LoadInterstitial ();
 
-		// +(void)showInterstitialWithViewController:(UIViewController * _Nonnull)viewController;
+		// +(void)showInterstitialWithViewController:(UIViewController * _Nonnull)viewController __attribute__((deprecated("Use [LPMInterstitialAd showAdWithViewController:placementName:] instead.")));
 		[Static]
 		[Export ("showInterstitialWithViewController:")]
+		[Obsolete("Use [LPMInterstitialAd showAdWithViewController:placementName:] instead.")]
 		void ShowInterstitialWithViewController (UIViewController viewController);
 
-		// +(void)showInterstitialWithViewController:(UIViewController * _Nonnull)viewController placement:(NSString * _Nullable)placementName;
+		// +(void)showInterstitialWithViewController:(UIViewController * _Nonnull)viewController placement:(NSString * _Nullable)placementName __attribute__((deprecated("Use [LPMInterstitialAd showAdWithViewController:placementName:] instead.")));
 		[Static]
 		[Export ("showInterstitialWithViewController:placement:")]
+		[Obsolete("Use [LPMInterstitialAd showAdWithViewController:placementName:] instead.")]
 		void ShowInterstitialWithViewController (UIViewController viewController, [NullAllowed] string placementName);
 
-		// +(BOOL)hasInterstitial;
+		// +(BOOL)hasInterstitial __attribute__((deprecated("Use [LPMInterstitialAd isAdReady] instead.")));
 		[Static]
 		[Export ("hasInterstitial")]
+		[Obsolete("Use [LPMInterstitialAd isAdReady] instead.")]
 		bool HasInterstitial { get; }
 
-		// +(BOOL)isInterstitialCappedForPlacement:(NSString * _Nonnull)placementName;
+		// +(BOOL)isInterstitialCappedForPlacement:(NSString * _Nonnull)placementName __attribute__((deprecated("Use [LPMInterstitialAd isPlacementCapped:] instead.")));
 		[Static]
 		[Export ("isInterstitialCappedForPlacement:")]
+		[Obsolete("Use [LPMInterstitialAd isPlacementCapped:] instead.")]
 		bool IsInterstitialCappedForPlacement (string placementName);
 
 		// +(void)setISDemandOnlyInterstitialDelegate:(id<ISDemandOnlyInterstitialDelegate> _Nonnull)delegate;
@@ -4176,7 +4383,7 @@ namespace IronSourceSdk
 		[Export ("loadISDemandOnlyInterstitial:")]
 		void LoadISDemandOnlyInterstitial (string instanceId);
 
-		// +(void)loadISDemandOnlyInterstitialWithAdm:(NSString * _Nonnull)instanceId adm:(NSString * _Nonnull)adm __attribute__((deprecated("This API has been deprecated. Please use [ISAInterstitialAdLoader loadAdWithAdRequest:delegate:] instead.")));
+		// +(void)loadISDemandOnlyInterstitialWithAdm:(NSString * _Nonnull)instanceId adm:(NSString * _Nonnull)adm __attribute__((deprecated("Use [ISAInterstitialAdLoader loadAdWithAdRequest:delegate:] instead.")));
 		[Static]
 		[Export ("loadISDemandOnlyInterstitialWithAdm:adm:")]
 		void LoadISDemandOnlyInterstitialWithAdm (string instanceId, string adm);
@@ -4191,29 +4398,34 @@ namespace IronSourceSdk
 		[Export ("hasISDemandOnlyInterstitial:")]
 		bool HasISDemandOnlyInterstitial (string instanceId);
 
-		// +(void)setLevelPlayBannerDelegate:(id<LevelPlayBannerDelegate> _Nullable)delegate;
+		// +(void)setLevelPlayBannerDelegate:(id<LevelPlayBannerDelegate> _Nullable)delegate __attribute__((deprecated("Use [LPMBannerAdView setDelegate:] instead.")));
 		[Static]
 		[Export ("setLevelPlayBannerDelegate:")]
+		[Obsolete("Use [LPMBannerAdView setDelegate:] instead.")]
 		void SetLevelPlayBannerDelegate ([NullAllowed] LevelPlayBannerDelegate @delegate);
 
-		// +(void)loadBannerWithViewController:(UIViewController * _Nonnull)viewController size:(ISBannerSize * _Nonnull)size;
+		// +(void)loadBannerWithViewController:(UIViewController * _Nonnull)viewController size:(ISBannerSize * _Nonnull)size __attribute__((deprecated("Use [LPMBannerAdView loadAdWithViewController:] instead.")));
 		[Static]
 		[Export ("loadBannerWithViewController:size:")]
+		[Obsolete("Use [LPMBannerAdView loadAdWithViewController:] instead.")]
 		void LoadBannerWithViewController (UIViewController viewController, ISBannerSize size);
 
-		// +(void)loadBannerWithViewController:(UIViewController * _Nonnull)viewController size:(ISBannerSize * _Nonnull)size placement:(NSString * _Nullable)placementName;
+		// +(void)loadBannerWithViewController:(UIViewController * _Nonnull)viewController size:(ISBannerSize * _Nonnull)size placement:(NSString * _Nullable)placementName __attribute__((deprecated("Use [LPMBannerAdView setPlacementName:] with [LPMBannerAdView loadAdWithViewController:] instead.")));
 		[Static]
 		[Export ("loadBannerWithViewController:size:placement:")]
+		[Obsolete("Use [LPMBannerAdView setPlacementName:] with [LPMBannerAdView loadAdWithViewController:] instead.")]
 		void LoadBannerWithViewController (UIViewController viewController, ISBannerSize size, [NullAllowed] string placementName);
 
-		// +(void)destroyBanner:(ISBannerView * _Nonnull)banner;
+		// +(void)destroyBanner:(ISBannerView * _Nonnull)banner __attribute__((deprecated("Use [LPMBannerAdView destroy] instead.")));
 		[Static]
 		[Export ("destroyBanner:")]
+		[Obsolete("Use [LPMBannerAdView destroy] instead.")]
 		void DestroyBanner (ISBannerView banner);
 
-		// +(BOOL)isBannerCappedForPlacement:(NSString * _Nonnull)placementName;
+		// +(BOOL)isBannerCappedForPlacement:(NSString * _Nonnull)placementName __attribute__((deprecated("Capping is no longer supported for banners.")));
 		[Static]
 		[Export ("isBannerCappedForPlacement:")]
+		[Obsolete("Capping is no longer supported for banners.")]
 		bool IsBannerCappedForPlacement (string placementName);
 
 		// +(void)setISDemandOnlyBannerDelegate:(id<ISDemandOnlyBannerDelegate> _Nonnull)delegate forInstanceId:(NSString * _Nonnull)instanceId;
