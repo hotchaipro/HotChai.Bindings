@@ -3390,7 +3390,7 @@ namespace IronSourceSdk
 
 		// -(void)setObject:(id)object forKey:(id<NSCopying>)key;
 		[Export ("setObject:forKey:")]
-		void SetObject (NSObject @object, NSCopying key);
+		void SetObject (NSObject @object, INSCopying key);
 
 		// -(void)removeObjectForKey:(id)key;
 		[Export ("removeObjectForKey:")]
