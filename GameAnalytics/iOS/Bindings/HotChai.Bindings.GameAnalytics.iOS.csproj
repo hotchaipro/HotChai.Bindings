@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- GameAnalytics -->
+    <NativeReference Include="Pods/GA-SDK-IOS/GameAnalytics.xcframework">
+      <Kind>Framework</Kind>
+      <ForceLoad>True</ForceLoad>
+      <LinkerFlags>-ObjC -lc++ -lsqlite3 -lz</LinkerFlags>
+      <Frameworks>AdSupport SystemConfiguration</Frameworks>
+    </NativeReference>
+  </ItemGroup>
+
+</Project>
