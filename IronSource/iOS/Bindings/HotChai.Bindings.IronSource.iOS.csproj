@@ -1,22 +1,245 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0-ios</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>true</ImplicitUsings>
-    <IsBindingProject>true</IsBindingProject>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0-ios</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <IsBindingProject>true</IsBindingProject>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
-    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
-  </ItemGroup>
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+        <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <NativeReference Include="Pods\IronSourceSDK\IronSource\IronSource.xcframework">
-		<Kind>Framework</Kind>
-		<ForceLoad>true</ForceLoad>
-		<LinkerFlags>-ObjC -lz</LinkerFlags>
-		<Frameworks>AVFoundation AdSupport AudioToolbox CFNetwork CoreGraphics CoreMedia CoreTelephony CoreVideo Foundation MobileCoreServices QuartzCore Security StoreKit SystemConfiguration</Frameworks>
-    </NativeReference>
-  </ItemGroup>
+    <ItemGroup>
+        <!--
+        <Compile Include="obj\Debug\net8.0-ios\iOS\IronSourceSdk\*.cs" />
+        <Compile Include="obj\Debug\net8.0-ios\iOS\SupportDelegates.g.cs" />
+        -->
+    </ItemGroup>
+        
+    <ItemGroup>
+        <!-- IronSource SDK -->
+        <NativeReference Include="Pods\IronSourceSDK\IronSource\IronSource.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC -lz</LinkerFlags>
+            <Frameworks>AVFoundation AdSupport AudioToolbox CFNetwork CoreGraphics CoreMedia CoreTelephony CoreVideo Foundation MobileCoreServices QuartzCore Security StoreKit SystemConfiguration</Frameworks>
+        </NativeReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- IronSource AdMob Adapter -->
+        <NativeReference Include="Pods\IronSourceAdMobAdapter\ISAdMobAdapter\ISAdMobAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\Google-Mobile-Ads-SDK\Frameworks\GoogleMobileAdsFramework\GoogleMobileAds.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+    </ItemGroup>
+    <ItemGroup>
+        <!-- IronSource AppLovin Adapter -->
+        <NativeReference Include="Pods\IronSourceAppLovinAdapter\ISAppLovinAdapter\ISAppLovinAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\AppLovinSDK\applovin-ios-sdk-13.1.0\AppLovinSDK.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+    </ItemGroup>
+    <ItemGroup>
+        <!-- IronSource Facebook Adapter -->
+        <NativeReference Include="Pods\IronSourceFacebookAdapter\ISFacebookAdapter\ISFacebookAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <!-- Facebook Audience Network -->
+        <NativeReference Include="Pods\FBAudienceNetwork\Static\FBAudienceNetwork.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC -lc++ -lxml2 -lz</LinkerFlags>
+            <Frameworks>AVFoundation AppTrackingTransparency AudioToolbox CoreFoundation CoreGraphics CoreImage CoreMedia Foundation Security StoreKit UIKit</Frameworks>
+            <WeakFrameworks>AdSupport CFNetwork CoreMotion CoreTelephony LocalAuthentication SafariServices SystemConfiguration VideoToolbox WebKit</WeakFrameworks>
+        </NativeReference>
+    </ItemGroup>
+    <ItemGroup>
+        <!-- IronSource Fyber/DT Exchange Adapter -->
+        <NativeReference Include="Pods\IronSourceFyberAdapter\ISFyberAdapter\ISFyberAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\Fyber_Marketplace_SDK\IASDKCore\IASDKCore.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+    </ItemGroup>
+    <ItemGroup><!-- IronSource InMobi Adapter -->
+        <!--
+        <NativeReference Include="Pods\IronSourceInMobiAdapter\ISInMobiAdapter\ISInMobiAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\InMobiSDK\InMobiSDK.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        -->
+    </ItemGroup>
+    <ItemGroup>
+        <!-- IronSource Mintegral Adapter -->
+        <NativeReference Include="Pods\IronSourceMintegralAdapter\ISMintegralAdapter\ISMintegralAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\MintegralAdSDK\Fmk\MTGSDK.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\MintegralAdSDK\Fmk\MTGSDKBanner.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\MintegralAdSDK\Fmk\MTGSDKBidding.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\MintegralAdSDK\Fmk\MTGSDKInterstitialVideo.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\MintegralAdSDK\Fmk\MTGSDKNativeAdvanced.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\MintegralAdSDK\Fmk\MTGSDKNewInterstitial.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\MintegralAdSDK\Fmk\MTGSDKReward.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\MintegralAdSDK\Fmk\MTGSDKSplash.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+    </ItemGroup>
+    <ItemGroup>
+        <!-- IronSource Pangle Adapter -->
+        <!--
+        <NativeReference Include="Pods\IronSourcePangleAdapter\ISPangleAdapter\ISPangleAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC -lc++abi</LinkerFlags>
+            <Frameworks>AVFoundation Accelerate AdSupport AudioToolbox CFNetwork CoreFoundation CoreGraphics CoreImage CoreMedia CoreMotion CoreServices CoreTelephony CoreText CoreVideo Foundation ImageIO JavaScriptCore MediaPlayer MobileCoreServices QuartzCore Security StoreKit SystemConfiguration UIKit WebKit</Frameworks>
+            <WeakFrameworks>AppTrackingTransparency CoreML DeviceCheck</WeakFrameworks>
+        </NativeReference>
+        <NativeReference Include="Pods/Ads-Global/SDK/PAGAdSDK.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC -lbz2 -lc++ -lc++abi -liconv -lresolv -lsqlite3 -lxml2 -lz</LinkerFlags>
+            <Frameworks>AVFoundation Accelerate AdSupport AudioToolbox CoreFoundation CoreGraphics CoreImage CoreMedia CoreMotion CoreServices CoreTelephony CoreText ImageIO JavaScriptCore MediaPlayer MobileCoreServices QuartzCore Security StoreKit SystemConfiguration UIKit WebKit</Frameworks>
+            <WeakFrameworks>AppTrackingTransparency CoreML DeviceCheck</WeakFrameworks>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalAFN\BURelyFoundationGlobalAFN.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC -lbz2 -lc++ -lc++abi -liconv -lresolv.9 -lsqlite3 -lxml2 -lz</LinkerFlags>
+            <Frameworks>AVFoundation Accelerate AdSupport AudioToolbox CoreFoundation CoreMedia CoreServices CoreTelephony MediaPlayer Security StoreKit SystemConfiguration UIKit WebKit</Frameworks>
+            <WeakFrameworks>AppTrackingTransparency</WeakFrameworks>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalAPM\BURelyFoundationGlobalAPM.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalFoundation\BURelyFoundationGlobalFoundation.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalGecko\BURelyFoundationGlobalGecko.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalHeader\BURelyFoundationGlobalHeader.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalNETWork\BURelyFoundationGlobalNETWork.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalSDWebImage\BURelyFoundationGlobalSDWebImage.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalYYModel\BURelyFoundationGlobalYYModel.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalZFPlayer\BURelyFoundationGlobalZFPlayer.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\BURelyFoundation_Global\Frameworks\SDK\BURelyFoundationGlobalZip\BURelyFoundationGlobalZip.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        -->
+    </ItemGroup>
+    <ItemGroup>
+        <!-- IronSource Unity Ads Adapter -->
+        <NativeReference Include="Pods\IronSourceUnityAdsAdapter\ISUnityAdsAdapter\ISUnityAdsAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\UnityAds\UnityAds.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+    </ItemGroup>
+    <ItemGroup>
+        <!-- IronSource Vungle Adapter -->
+        <NativeReference Include="Pods\IronSourceVungleAdapter\ISVungleAdapter\ISVungleAdapter.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+        <NativeReference Include="Pods\VungleAds\static\VungleAdsSDK.xcframework">
+            <Kind>Framework</Kind>
+            <ForceLoad>true</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+        </NativeReference>
+    </ItemGroup>
 </Project>

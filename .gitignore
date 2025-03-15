@@ -355,8 +355,5 @@ MigrationBackup/
 # Gradle
 .gradle/
 
-# CocoaPods
-Pods/
-
 # JetBrains
 .idea/
