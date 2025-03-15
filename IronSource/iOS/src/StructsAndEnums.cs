@@ -42,7 +42,8 @@ namespace IronSourceSdk
 		Info = 1,
 		Warning = 2,
 		Error = 3,
-		Critical = 4
+		General = 4,
+		Critical = 5
 	}
 
 	public enum LogTag : uint
@@ -126,10 +127,12 @@ namespace IronSourceSdk
 		ErrorCodeNoAdUnitSpecified = 624,
 		ErrorCodeLoadBeforeInitSuccessCallback = 625,
 		ErrorCodeInvalidAdUnitId = 626,
-		ErrorIsLoadFailedAlreadyCalled = 627,
+		ErrorCodeLoadFailedAlreadyCalled = 627,
 		ErrorCodeShowBeforeLoadSuccessCallback = 628,
 		ErrorCodeLoadWhileShow = 629,
 		ErrorCodeShowWhileShow = 630,
+		ErrorCodeShowControllerNil = 631,
+		ErrorCodeShowViewControllerNil = 632,
 		ErrorNtLoadAfterInitFailed = 700,
 		ErrorNtLoadAfterLongInitiation = 701,
 		ErrorNtInitFailedAfterLoad = 702,
@@ -250,7 +253,8 @@ namespace IronSourceSdk
 		ErrorCappingValidationFailed = 3000,
 		ErrorDeliveryCappingValidationFailed = 3001,
 		ErrorCappingEnabledFalse = 3002,
-		ErrorCappingConfigAdditionFailed = 3003
+		ErrorCappingConfigAdditionFailed = 3003,
+		ErrorRewardValidationFailed = 3004
 	}
 
 	[Native]
