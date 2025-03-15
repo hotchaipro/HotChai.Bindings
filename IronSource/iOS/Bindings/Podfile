@@ -6,4 +6,12 @@ use_frameworks! :linkage => :dynamic
 
 target 'IronSourceSDK' do
     pod 'IronSourceSDK'
+    pod 'IronSourceAdMobAdapter'
+    pod 'IronSourceAppLovinAdapter'
+    pod 'IronSourceFacebookAdapter'
+    pod 'IronSourceFyberAdapter'
+    pod 'IronSourceInMobiAdapter'
+    pod 'IronSourceMintegralAdapter'
+    pod 'IronSourceUnityAdsAdapter'
+    pod 'IronSourceVungleAdapter'
 end

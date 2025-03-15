@@ -2598,22 +2598,22 @@ namespace IronSourceSdk
 		// +(instancetype _Nonnull)bannerSize;
 		[Static]
 		[Export ("bannerSize")]
-		LPMAdSize BannerSize ();
+		LPMAdSize BannerSize { get; }
 
 		// +(instancetype _Nonnull)largeSize;
 		[Static]
 		[Export ("largeSize")]
-		LPMAdSize LargeSize ();
+		LPMAdSize LargeSize { get; }
 
 		// +(instancetype _Nonnull)mediumRectangleSize;
 		[Static]
 		[Export ("mediumRectangleSize")]
-		LPMAdSize MediumRectangleSize ();
+		LPMAdSize MediumRectangleSize { get; }
 
 		// +(instancetype _Nonnull)leaderBoardSize;
 		[Static]
 		[Export ("leaderBoardSize")]
-		LPMAdSize LeaderBoardSize ();
+		LPMAdSize LeaderBoardSize { get; }
 
 		// +(instancetype _Nonnull)customSizeWithWidth:(NSInteger)width height:(NSInteger)height;
 		[Static]
