@@ -12,12 +12,18 @@
     </ItemGroup>
 
     <ItemGroup>
-        <!--
-        <Compile Include="obj\Debug\net8.0-ios\iOS\IronSourceSdk\*.cs" />
-        <Compile Include="obj\Debug\net8.0-ios\iOS\SupportDelegates.g.cs" />
-        -->
+        <AtlasTexture Remove="Pods\**" />
+        <Compile Remove="Pods\**" />
+        <CoreMLModel Remove="Pods\**" />
+        <EmbeddedResource Remove="Pods\**" />
+        <ImageAsset Remove="Pods\**" />
+        <InterfaceDefinition Remove="Pods\**" />
+        <Metal Remove="Pods\**" />
+        <None Remove="Pods\**" />
+        <SceneKitAsset Remove="Pods\**" />
+        <NativeReference Remove="Pods\**" />
     </ItemGroup>
-        
+
     <ItemGroup>
         <!-- IronSource SDK -->
         <NativeReference Include="Pods\IronSourceSDK\IronSource\IronSource.xcframework">
@@ -83,7 +89,8 @@
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
     </ItemGroup>
-    <ItemGroup><!-- IronSource InMobi Adapter -->
+    <ItemGroup>
+        <!-- IronSource InMobi Adapter -->
         <!--
         <NativeReference Include="Pods\IronSourceInMobiAdapter\ISInMobiAdapter\ISInMobiAdapter.xcframework">
             <Kind>Framework</Kind>
