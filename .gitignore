@@ -357,3 +357,6 @@ MigrationBackup/
 
 # JetBrains
 .idea/
+
+# CocoaPods
+Pods.xcodeproj/
