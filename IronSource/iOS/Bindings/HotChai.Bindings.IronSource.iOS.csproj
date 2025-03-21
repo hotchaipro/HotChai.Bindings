@@ -91,7 +91,6 @@
     </ItemGroup>
     <ItemGroup>
         <!-- IronSource InMobi Adapter -->
-        <!--
         <NativeReference Include="Pods\IronSourceInMobiAdapter\ISInMobiAdapter\ISInMobiAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -102,7 +101,6 @@
             <ForceLoad>true</ForceLoad>
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
-        -->
     </ItemGroup>
     <ItemGroup>
         <!-- IronSource Mintegral Adapter -->
