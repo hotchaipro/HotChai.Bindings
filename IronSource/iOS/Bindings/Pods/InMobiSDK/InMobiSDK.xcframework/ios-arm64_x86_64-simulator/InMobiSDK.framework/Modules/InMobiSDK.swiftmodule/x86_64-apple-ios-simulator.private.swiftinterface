@@ -391,6 +391,11 @@ import _SwiftConcurrencyShims
   @objc override dynamic public func isEqual(_ other: Any?) -> Swift.Bool
   @objc deinit
 }
+@_inheritsConvenienceInitializers @objc public class IMPublisherProvidedInfo : ObjectiveC.NSObject {
+  @objc public static func getIsAgeRestricted() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class IMSdk : ObjectiveC.NSObject {
   @objc public class func initWithAccountID(_ accountID: Swift.String, andCompletionHandler completionBlock: (((any Swift.Error)?) -> Swift.Void)? = nil)
   @objc public class func initWithAccountID(_ accountID: Swift.String, consentDictionary: [Swift.String : Any]?, andCompletionHandler completionBlock: (((any Swift.Error)?) -> Swift.Void)? = nil)
@@ -847,6 +852,7 @@ extension InMobiSDK.IMAudio {
   @objc public var ice: InMobiSDK.IceConfig
   @objc public var purchases: InMobiSDK.PurchasesConfig
   @objc public var publisher: InMobiSDK.PublisherConfig
+  @objc public var experiments: InMobiSDK.ExperimentsConfig
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -948,6 +954,13 @@ extension InMobiSDK.IMAudio {
   @objc public var enableMCO: Swift.Bool
   @objc public var enableHB: Swift.Bool
   @objc public var payloadSize: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class ExperimentsConfig : ObjectiveC.NSObject {
+  @objc public var networkRevamp: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1141,6 +1154,7 @@ extension InMobiSDK.AnyDictionary : Swift.Encodable {
   @objc public var latestSdkInfo: InMobiSDK.IMLatestSdkInfo
   @objc public var components: [InMobiSDK.IMComponent]
   @objc public var gdpr: InMobiSDK.IMGDPR
+  @objc public var ipAddrTPSupport: [Swift.String]
   @objc public func urlForProductType(_ type: Swift.String) -> Swift.String
   @objc public func expiryForProductType(_ type: Swift.String) -> Swift.Int64
   @objc override dynamic public init()
@@ -1389,6 +1403,8 @@ extension InMobiSDK.PurchasesConfig : Swift.Encodable {}
 extension InMobiSDK.PurchasesConfig : Swift.Decodable {}
 extension InMobiSDK.PublisherConfig : Swift.Encodable {}
 extension InMobiSDK.PublisherConfig : Swift.Decodable {}
+extension InMobiSDK.ExperimentsConfig : Swift.Encodable {}
+extension InMobiSDK.ExperimentsConfig : Swift.Decodable {}
 extension InMobiSDK.IMRemoteLogLevel : Swift.Equatable {}
 extension InMobiSDK.IMRemoteLogLevel : Swift.Hashable {}
 extension InMobiSDK.IMRemoteLogLevel : Swift.RawRepresentable {}

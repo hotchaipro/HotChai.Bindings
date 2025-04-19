@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <IronSource/ISBaseAdapter+Internal.h>
 
-static NSString * const FyberAdapterVersion = @"4.3.41";
-static NSString * Githash = @"d4d60f7";
+static NSString * const FyberAdapterVersion = @"4.3.42";
+static NSString * Githash = @"dffd56e";
 
 //System Frameworks For Fyber Adapter
 

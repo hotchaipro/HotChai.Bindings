@@ -7,8 +7,8 @@
 
 #import <IronSource/ISBaseAdapter+Internal.h>
 
-static NSString * const MintegralAdapterVersion = @"4.3.33";
-static NSString * Githash = @"234bcfb";
+static NSString * const MintegralAdapterVersion = @"4.3.34";
+static NSString * Githash = @"65f1e20";
 
 //System Frameworks For Mintegral Adapter
 

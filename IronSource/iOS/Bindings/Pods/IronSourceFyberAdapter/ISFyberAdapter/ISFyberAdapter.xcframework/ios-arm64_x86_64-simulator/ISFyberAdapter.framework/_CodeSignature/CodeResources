@@ -6,7 +6,7 @@
 	<dict>
 		<key>Fyber_Marketplace_SDK.bundle/Info.plist</key>
 		<data>
-		D8YfkI3f1ckneKr6l8PIk2hHUGM=
+		v+R3viBdHv/sL2fkEd6yWZpLdr8=
 		</data>
 		<key>Fyber_Marketplace_SDK.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Headers/ISFyberAdapter.h</key>
 		<data>
-		WIZV7s5leABMvezIzWWHuRdpNPc=
+		kFMa8nLgF6eAMR3MoeFuGDZXRsc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jTF39NWTuOjCULieFizpgrtgbqU=
+		GP1fEZqPUGhfE7Sfh/G63wcX/X0=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<data>
-		JXz65QlsSyka326dDZxG3tlc5wo=
+		BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -39,11 +39,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D8YfkI3f1ckneKr6l8PIk2hHUGM=
+			v+R3viBdHv/sL2fkEd6yWZpLdr8=
 			</data>
 			<key>hash2</key>
 			<data>
-			9s/nl8QRxHGpkMlt4pLf0xtbOLpbtZM4i1Oi4WLOUek=
+			e2dnquTdRJkLBNXyFpcf6yE+tm4ZNcdlAzlZzFCOD+s=
 			</data>
 		</dict>
 		<key>Fyber_Marketplace_SDK.bundle/PrivacyInfo.xcprivacy</key>
@@ -61,22 +61,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WIZV7s5leABMvezIzWWHuRdpNPc=
+			kFMa8nLgF6eAMR3MoeFuGDZXRsc=
 			</data>
 			<key>hash2</key>
 			<data>
-			k0z0A70dK4rOlvSw36LNqzLX7oY+/IdJUdT4u1IEc4k=
+			kf4tDTCdZudcHUHrx0sBiTiQRRkly6SvjFC5PH+EmtA=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JXz65QlsSyka326dDZxG3tlc5wo=
+			BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
 			</data>
 			<key>hash2</key>
 			<data>
-			gsDZLKlQaQaXXP2WLmas8KlEwd57mj+LmZoIth2a5ds=
+			3G+xTbeCyPSgyl5TugwfE+fXcjbPUnr38qWV/XNhdNQ=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>

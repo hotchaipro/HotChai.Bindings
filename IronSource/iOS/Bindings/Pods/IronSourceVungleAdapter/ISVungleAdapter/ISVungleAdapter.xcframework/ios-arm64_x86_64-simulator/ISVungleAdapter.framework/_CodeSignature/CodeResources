@@ -6,15 +6,15 @@
 	<dict>
 		<key>Headers/ISVungleAdapter.h</key>
 		<data>
-		2KN7KmYp2PXMOy7Q/zAjWaSlamo=
+		J9T9iqMMB8h5rCO98WJTfG2iALQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cpv0KLBurXIqVX/Xh0SGDwf1Jrw=
+		vXwDCZ3HcI59XDpGotdk5Yvg0Go=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<data>
-		JXz65QlsSyka326dDZxG3tlc5wo=
+		BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>VungleAds.bundle/Info.plist</key>
 		<data>
-		YQ3qCCH7PD4O7DfZeVB8miO1aLM=
+		f6pgyFhG7GYIbiX5NwMm71JcRU0=
 		</data>
 		<key>VungleAds.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -39,22 +39,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2KN7KmYp2PXMOy7Q/zAjWaSlamo=
+			J9T9iqMMB8h5rCO98WJTfG2iALQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			7mRwqvr5bQTCrX7zIPQRf7I+CL5azquHZnJSi03EByg=
+			PadOmoY/ocftpxIVcniw0i596yQuFdxQzcgbOr7jXvg=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JXz65QlsSyka326dDZxG3tlc5wo=
+			BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
 			</data>
 			<key>hash2</key>
 			<data>
-			gsDZLKlQaQaXXP2WLmas8KlEwd57mj+LmZoIth2a5ds=
+			3G+xTbeCyPSgyl5TugwfE+fXcjbPUnr38qWV/XNhdNQ=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
@@ -83,11 +83,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YQ3qCCH7PD4O7DfZeVB8miO1aLM=
+			f6pgyFhG7GYIbiX5NwMm71JcRU0=
 			</data>
 			<key>hash2</key>
 			<data>
-			UwHYHc2JQrvxNJYebcvp8IiDXPNJAEdZFEg/JAvTrQQ=
+			IKy9Ebn51ietUn82CXViQXksqIuP4nfETp9sfoG5Xqs=
 			</data>
 		</dict>
 		<key>VungleAds.bundle/PrivacyInfo.xcprivacy</key>

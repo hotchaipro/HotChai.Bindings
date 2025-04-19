@@ -1,36 +1,36 @@
 PODS:
   - AppLovinSDK (13.1.0)
   - FBAudienceNetwork (6.17.1)
-  - Fyber_Marketplace_SDK (8.3.5)
-  - Google-Mobile-Ads-SDK (12.2.0):
+  - Fyber_Marketplace_SDK (8.3.6)
+  - Google-Mobile-Ads-SDK (12.3.0):
     - GoogleUserMessagingPlatform (>= 1.1)
-  - GoogleUserMessagingPlatform (2.7.0)
-  - InMobiSDK (10.8.0)
-  - IronSourceAdMobAdapter (4.3.63.0):
-    - Google-Mobile-Ads-SDK (= 12.2.0)
+  - GoogleUserMessagingPlatform (3.0.0)
+  - InMobiSDK (10.8.2)
+  - IronSourceAdMobAdapter (4.3.64.0):
+    - Google-Mobile-Ads-SDK (= 12.3.0)
     - IronSourceSDK (~> 8.4)
-  - IronSourceAppLovinAdapter (4.3.52.0):
+  - IronSourceAppLovinAdapter (4.3.53.0):
     - AppLovinSDK (= 13.1.0)
     - IronSourceSDK (~> 8.4)
   - IronSourceFacebookAdapter (4.3.49.0):
     - FBAudienceNetwork (= 6.17.1)
     - IronSourceSDK (~> 8.5)
-  - IronSourceFyberAdapter (4.3.41.0):
-    - Fyber_Marketplace_SDK (= 8.3.5)
+  - IronSourceFyberAdapter (4.3.42.0):
+    - Fyber_Marketplace_SDK (= 8.3.6)
     - IronSourceSDK (~> 8.4)
-  - IronSourceInMobiAdapter (4.3.26.0):
-    - InMobiSDK (= 10.8.0)
+  - IronSourceInMobiAdapter (4.3.27.0):
+    - InMobiSDK (= 10.8.2)
     - IronSourceSDK (~> 8.4)
-  - IronSourceMintegralAdapter (4.3.33.0):
+  - IronSourceMintegralAdapter (4.3.34.0):
     - IronSourceSDK (~> 8.4)
     - MintegralAdSDK (= 7.7.7)
-  - IronSourceSDK (8.7.0.0)
-  - IronSourceUnityAdsAdapter (4.3.49.0):
+  - IronSourceSDK (8.8.0.0)
+  - IronSourceUnityAdsAdapter (4.3.51.0):
     - IronSourceSDK (~> 8.4)
-    - UnityAds (= 4.14.0)
-  - IronSourceVungleAdapter (4.3.42.0):
+    - UnityAds (= 4.14.2)
+  - IronSourceVungleAdapter (4.3.43.0):
     - IronSourceSDK (~> 8.4)
-    - VungleAds (= 7.4.4)
+    - VungleAds (= 7.4.5)
   - MintegralAdSDK (7.7.7):
     - MintegralAdSDK/BannerAd (= 7.7.7)
     - MintegralAdSDK/BidBannerAd (= 7.7.7)
@@ -66,8 +66,8 @@ PODS:
     - MintegralAdSDK/NativeAd
   - MintegralAdSDK/RewardVideoAd (7.7.7):
     - MintegralAdSDK/NativeAd
-  - UnityAds (4.14.0)
-  - VungleAds (7.4.4)
+  - UnityAds (4.14.2)
+  - VungleAds (7.4.5)
 
 DEPENDENCIES:
   - IronSourceAdMobAdapter
@@ -104,22 +104,22 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AppLovinSDK: 539a0178d8bef4d68b2551a93526e0c1bba06cb2
   FBAudienceNetwork: eb3ffbf2b35df25e21e163657044ffef66616a40
-  Fyber_Marketplace_SDK: 8b042ecd850accf338a052ca23a4e105f71154ec
-  Google-Mobile-Ads-SDK: 1dfb0c3cb46c7e2b00b0f4de74a1e06d9ea25d67
-  GoogleUserMessagingPlatform: a8b56893477f67212fbc8411c139e61d463349f5
-  InMobiSDK: 0cfb1a1eb5112fa0236ae1fab549e31fb96c9566
-  IronSourceAdMobAdapter: 1c1bdd564a97ab694009f606a1177d416ee9ede5
-  IronSourceAppLovinAdapter: d6a1cac7a5e8143cdab3edd301bdc166957bba93
+  Fyber_Marketplace_SDK: 231146f679a38b29fe40c855b51c2a7dc085c116
+  Google-Mobile-Ads-SDK: 01b1b77e0bdba8b4027ae62e9bd52e5a95d930aa
+  GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
+  InMobiSDK: bf6bc10caae18237d097755d19ff5441f146f9c7
+  IronSourceAdMobAdapter: 28bd1ecdb745dbe8a68fe0c0e21e92bbce0b84d6
+  IronSourceAppLovinAdapter: 616be261763d52ff433896464d740cff2eee7172
   IronSourceFacebookAdapter: 0a7d6f747b0e1e7dbe5566a1ff75d477ef863139
-  IronSourceFyberAdapter: dc02376c7ba49165cbc9728ceb52862445184b3e
-  IronSourceInMobiAdapter: adbdf1204568af02545e994c1967518504f03923
-  IronSourceMintegralAdapter: dd4747f867582ee9b8d27dcaa6737879c1637ba0
-  IronSourceSDK: 0b5a640179ef91acc637332608183a05db1757df
-  IronSourceUnityAdsAdapter: 51b9139e0c4ed40e95412c83286ada1716ef12a9
-  IronSourceVungleAdapter: 623d3aa35a4d2495117d7b329e8178a725d35406
+  IronSourceFyberAdapter: 8a316945bf3d81623bb8e9c7427f3899cfa68c71
+  IronSourceInMobiAdapter: d05e0413b599130dc937e41e6da2a28585da14a2
+  IronSourceMintegralAdapter: 9ef7faf91169e95ccc2d8b74dac9e8d7e0a6b3af
+  IronSourceSDK: ff0b14630899756847f7608a75182f10f022e5ef
+  IronSourceUnityAdsAdapter: 9071c7db50f8d90a8bec96b238c7eb2037a56269
+  IronSourceVungleAdapter: 756ed620bb83dcc84b119a388822597e26692e4c
   MintegralAdSDK: 190c6cd3d83b31b51833e3341857c58dc430da2e
-  UnityAds: 4fdff895cdc1b625f6897d563f92bd703e9760d2
-  VungleAds: 7ceb822f20a6619d8d9ed6a616dacd8cc5b05036
+  UnityAds: eabbbb3014326e45dc221a467fba16960e7b73e3
+  VungleAds: 1da221690dd1a8710d0b6a4c7aeac14cb12d31ab
 
 PODFILE CHECKSUM: bae30b3830f2c84847199697b0bdce184f6b82cf
 
