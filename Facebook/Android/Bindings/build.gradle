@@ -11,7 +11,7 @@ configurations
 
 dependencies
 {
-    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+    implementation 'com.facebook.android:facebook-core:latest.release'
 }
 
 task update(type: Copy)
