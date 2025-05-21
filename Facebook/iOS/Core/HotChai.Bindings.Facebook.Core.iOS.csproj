@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="Enums.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="Pods\FBAEMKit\XCFrameworks\FBAEMKit.xcframework">
+      <Kind>Framework</Kind>
+      <ForceLoad>true</ForceLoad>
+	  <LinkerFlags>-ObjC -lz</LinkerFlags>
+      <Frameworks>FBSDKCoreKit_Basics</Frameworks>
+    </NativeReference>
+    <NativeReference Include="Pods\FBSDKCoreKit_Basics\XCFrameworks\FBSDKCoreKit_Basics.xcframework">
+      <Kind>Framework</Kind>
+      <ForceLoad>true</ForceLoad>
+      <LinkerFlags>-ObjC -lz</LinkerFlags>
+    </NativeReference>
+    <NativeReference Include="Pods\FBSDKCoreKit\XCFrameworks\FBSDKCoreKit.xcframework">
+      <Kind>Framework</Kind>
+      <ForceLoad>true</ForceLoad>
+      <LinkerFlags>-ObjC</LinkerFlags>
+      <Frameworks>FBAEMKit FBSDKCoreKit_Basics</Frameworks>
+    </NativeReference>
+  </ItemGroup>
+</Project>
