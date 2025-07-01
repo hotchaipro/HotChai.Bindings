@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net8.0-android34.0</TargetFramework>
-		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+		<TargetFramework>net9.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>24.0</SupportedOSPlatformVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
