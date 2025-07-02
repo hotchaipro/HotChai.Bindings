@@ -1,13 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net9.0-android35.0</TargetFramework>
-		<SupportedOSPlatformVersion>24.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion>23.0</SupportedOSPlatformVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
 		<Version>18.0.3.0</Version>
-		<Title>.NET for Android binding for Facebook Core SDK</Title>
+		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
+		<Authors>David Taylor</Authors>
+		<Company>Hot Chai Games</Company>
+		<Description>.NET for Android bindings for the Facebook Core SDK</Description>
+		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="build.gradle" />
