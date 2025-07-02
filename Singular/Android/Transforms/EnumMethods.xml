@@ -1,0 +1,8 @@
+﻿<enum-method-mappings>
+
+	<!-- NOTE: The following is broken. See https://github.com/dotnet/java-interop/issues/515 -->
+	<mapping jni-class="com/singular/sdk/SingularConfig">
+		<method jni-name="withLogLevel" parameter="level" clr-enum-type="Com.Singular.Sdk.LogLevel" />
+	</mapping>
+
+</enum-method-mappings>

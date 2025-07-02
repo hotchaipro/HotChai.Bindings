@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChai.Bindings.ByteBrew.iOS", "iOS\HotChai.Bindings.ByteBrew.iOS.csproj", "{2060222E-C90B-42EE-371B-DD6B8F0DB4CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2060222E-C90B-42EE-371B-DD6B8F0DB4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2060222E-C90B-42EE-371B-DD6B8F0DB4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2060222E-C90B-42EE-371B-DD6B8F0DB4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2060222E-C90B-42EE-371B-DD6B8F0DB4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72543758-9752-45B1-B504-5430A27B3C33}
+	EndGlobalSection
+EndGlobal
