@@ -1,0 +1,61 @@
+﻿<metadata>
+	<!-- Remove generated events from all interfaces -->
+	<attr path="/api/package/interface/method" name="eventName"></attr>
+
+	<!-- Modify or remove nodes that generate binding errors -->
+	<remove-node path="/api/package[@name='com.facebook']/class[@name='GraphRequestAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" />
+	<remove-node path="/api/package[@name='com.facebook']/class[@name='GraphRequestBatch']/method[@name='getSize' and count(parameter)=0]" />
+	<attr path="/api/package[@name='com.facebook']/class[@name='GraphRequestBatch']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
+
+	<!-- Remove external API's -->
+	<remove-node path="/api/package[@name='android.adservices.topics']" />
+
+	<!-- Remove internal Facebook API's -->
+	<remove-node path="/api/package[@name='com.facebook.appevents.aam']/class[@name='MetadataIndexer']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.aam']/class[@name='MetadataRule']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.codeless.internal']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.codeless']/class[@name='CodelessLoggingEventListener']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.codeless']/class[@name='CodelessManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.codeless']/class[@name='ViewIndexer.Companion']/method[@name='buildAppIndexingRequest' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='com.facebook.AccessToken'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String']]" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.codeless']/class[@name='ViewIndexer']/method[@name='buildAppIndexingRequest' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='com.facebook.AccessToken'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String']]" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.eventdeactivation']/class[@name='EventDeactivationManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.iap']/class[@name='InAppPurchaseAutoLogger']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.iap']/class[@name='InAppPurchaseBillingClientWrapperV2V4']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.iap']/class[@name='InAppPurchaseBillingClientWrapperV5V7']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.iap']/class[@name='InAppPurchaseDedupeConfig']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.iap']/class[@name='InAppPurchaseEventManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.iap']/class[@name='InAppPurchaseLoggerManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.iap']/class[@name='InAppPurchaseManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.iap']/class[@name='InAppPurchaseSkuDetailsWrapper']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.internal']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.ml']/class[@name='Model']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.ml']/class[@name='ModelManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.ml']/class[@name='Utils']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.ondeviceprocessing']/class[@name='OnDeviceProcessingManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.ondeviceprocessing']/class[@name='RemoteServiceWrapper']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.restrictivedatafilter']/class[@name='RestrictiveDataManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.suggestedevents']/class[@name='SuggestedEventsManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents.suggestedevents']/class[@name='ViewOnClickListener']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='AppEvent']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='AppEventsLogger.Companion']/method[@name='setInstallReferrer' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='AppEventsLogger']/method[@name='setInstallReferrer' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='AppEventsManager']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='InternalAppEventsLogger.Companion']/method[@name='createInstance' and count(parameter)=1 and parameter[1][@type='android.content.Context']]" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='InternalAppEventsLogger.Companion']/method[@name='createInstance' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String']]" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='InternalAppEventsLogger.Companion']/method[@name='createInstance' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.AccessToken']]" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='InternalAppEventsLogger.Companion']/method[@name='setInternalUserData' and count(parameter)=1 and parameter[1][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;']]" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='InternalAppEventsLogger']" />
+	<remove-node path="/api/package[@name='com.facebook.appevents']/class[@name='UserDataStore']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.gatekeeper']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.instrument']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.instrument.anrreport']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.instrument.crashreport']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.instrument.crashshield']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.instrument.errorreport']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.instrument.threadcheck']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.qualityvalidation']" />
+	<remove-node path="/api/package[@name='com.facebook.internal.security']" />
+	<remove-node path="/api/package[@name='com.facebook.internal']" />
+	<remove-node path="/api/package[@name='com.facebook']/class[@name='FacebookSdk']/method[@name='isFullyInitialized' and count(parameter)=0]" />
+
+</metadata>
