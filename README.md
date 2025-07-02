@@ -34,4 +34,4 @@
 
 ## Distribution
 
-NuGet packages are available in [packages](packages) and on [Nuget.org](https://nuget.org)
+NuGet packages are available in packages and on [Nuget.org](https://nuget.org)
