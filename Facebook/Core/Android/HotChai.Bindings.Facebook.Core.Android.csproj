@@ -6,7 +6,8 @@
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
 		<Version>18.0.3.0</Version>
-		<Title>.NET binding for Android Facebook Core SDK</Title>
+		<Title>.NET for Android binding for Facebook Core SDK</Title>
+		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="build.gradle" />
