@@ -12,6 +12,7 @@
 		<Company>Hot Chai Games</Company>
 		<Description>.NET for Android bindings for the Singular Analytics SDK</Description>
 		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.4" />

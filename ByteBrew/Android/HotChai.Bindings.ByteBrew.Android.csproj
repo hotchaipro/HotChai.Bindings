@@ -12,6 +12,7 @@
 		<Company>Hot Chai Games</Company>
 		<Description>.NET for Android bindings for the ByteBrew Analytics SDK</Description>
 		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Xamarin.Firebase.Messaging" Version="124.1.1.2" />
