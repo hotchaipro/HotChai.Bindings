@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0-android35</TargetFramework>
+        <SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IsTrimmable>true</IsTrimmable>
+		<Version>4.31.1.0</Version>
+		<Title>$(AssemblyName)</Title>
+		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
+		<Authors>David Taylor</Authors>
+		<Company>Hot Chai Games</Company>
+		<Description>.NET for Android bindings for the Android Java library 'com.google.protobuf:protobuf-kotlin-lite'</Description>
+		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.2.0" />
+		<PackageReference Include="Xamarin.Protobuf.JavaLite" Version="4.31.1" />
+	</ItemGroup>
+	<ItemGroup>
+        <AndroidMavenLibrary Include="com.google.protobuf:protobuf-kotlin-lite" Version="4.31.1" Bind="false" Pack="true" />
+    </ItemGroup>
+</Project>
