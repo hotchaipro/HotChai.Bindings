@@ -2,6 +2,28 @@
 	<!-- Remove generated events from all interfaces -->
 	<attr path="/api/package/interface/method" name="eventName"></attr>
 
+	<!-- Fixup non-abstract methods in listener interfaces -->
+
+	<!-- ILevelPlayRewardedAdListener -->
+	<attr path="/api/package[@name='com.unity3d.mediation.rewarded']/interface[@name='LevelPlayRewardedAdListener']/method[@name='onAdClicked' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.rewarded']/interface[@name='LevelPlayRewardedAdListener']/method[@name='onAdClosed' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.rewarded']/interface[@name='LevelPlayRewardedAdListener']/method[@name='onAdDisplayFailed' and count(parameter)=2 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdError'] and parameter[2][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.rewarded']/interface[@name='LevelPlayRewardedAdListener']/method[@name='onAdInfoChanged' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+
+	<!-- ILevelPlayInterstitialAdListener -->
+	<attr path="/api/package[@name='com.unity3d.mediation.interstitial']/interface[@name='LevelPlayInterstitialAdListener']/method[@name='onAdClicked' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.interstitial']/interface[@name='LevelPlayInterstitialAdListener']/method[@name='onAdClosed' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.interstitial']/interface[@name='LevelPlayInterstitialAdListener']/method[@name='onAdDisplayFailed' and count(parameter)=2 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdError'] and parameter[2][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.interstitial']/interface[@name='LevelPlayInterstitialAdListener']/method[@name='onAdInfoChanged' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+
+	<!-- ILevelPlayBannerAdViewListener -->
+	<attr path="/api/package[@name='com.unity3d.mediation.banner']/interface[@name='LevelPlayBannerAdViewListener']/method[@name='onAdClicked' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.banner']/interface[@name='LevelPlayBannerAdViewListener']/method[@name='onAdCollapsed' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.banner']/interface[@name='LevelPlayBannerAdViewListener']/method[@name='onAdDisplayFailed' and count(parameter)=2 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo'] and parameter[2][@type='com.unity3d.mediation.LevelPlayAdError']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.banner']/interface[@name='LevelPlayBannerAdViewListener']/method[@name='onAdDisplayed' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.banner']/interface[@name='LevelPlayBannerAdViewListener']/method[@name='onAdExpanded' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.banner']/interface[@name='LevelPlayBannerAdViewListener']/method[@name='onAdLeftApplication' and count(parameter)=1 and parameter[1][@type='com.unity3d.mediation.LevelPlayAdInfo']]" name="abstract">true</attr>
+
 	<!-- Remove unused, obsolete or breaking classes -->
 	<remove-node path="/api/package[@name='com.iab.omid.library.ironsrc']" />
 	<remove-node path="/api/package[@name='com.iab.omid.library.ironsrc.adsession']" />

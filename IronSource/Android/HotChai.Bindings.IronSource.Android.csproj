@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
-		<Version>8.9.1.0</Version>
+		<Version>8.9.1.1</Version>
 		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 		<Authors>David Taylor</Authors>
@@ -15,47 +15,32 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Square.OkHttp3" Version="4.12.0.10" />
-		<PackageReference Include="Square.OkIO" Version="3.13.0" />
 		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.10.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.4" />
 		<PackageReference Include="Xamarin.AndroidX.Browser" Version="1.8.0.10" />
+		<PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.16.0.2" />
 		<PackageReference Include="Xamarin.AndroidX.DataStore" Version="1.1.7" />
-		<PackageReference Include="Xamarin.AndroidX.ExifInterface" Version="1.4.1" />
-		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.UI" Version="1.0.0.34" />
 		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Process" Version="2.9.1" />
 		<PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.4.0.2" />
-		<PackageReference Include="Xamarin.AndroidX.SlidingPaneLayout" Version="1.2.0.21" />
-		<PackageReference Include="Xamarin.AndroidX.SwipeRefreshLayout" Version="1.1.0.28" />
-		<PackageReference Include="Xamarin.AndroidX.WebKit" Version="1.14.0" />
 		<PackageReference Include="Xamarin.AndroidX.Work.Work.Runtime.Ktx" Version="2.10.2" />
-		<PackageReference Include="Xamarin.Google.Guava" Version="33.4.8.2" />
-		<PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="124.4.0" />
-		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0.3" />
-		<PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.6" />
-		<PackageReference Include="Xamarin.GooglePlayServices.CroNet" Version="118.1.0.6" />
-		<PackageReference Include="Xamarin.Kotlin.StdLib.Common" Version="2.0.21.4" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.2.0" />
 		<PackageReference Include="Xamarin.KotlinX.Serialization.Core.Jvm" Version="1.8.1" />
 		<PackageReference Include="Xamarin.KotlinX.Serialization.Json.Jvm" Version="1.8.1" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="124.4.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0.3" />
+		<PackageReference Include="Xamarin.GooglePlayServices.CroNet" Version="118.1.0.6" />
+		<PackageReference Include="Xamarin.Protobuf.JavaLite" Version="4.31.1" />
+		<PackageReference Include="HotChai.Bindings.Protobuf.Kotlin.Lite" Version="4.31.1" />
+		<PackageReference Include="Square.OkHttp3" Version="4.12.0.10" />
+		<PackageReference Include="Square.Picasso" Version="2.8.0.19" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="build.gradle" />
 		<ProguardConfiguration Include="proguard.cfg" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidJavaSource Remove="NativeDependencies\**" />
-		<AndroidLibrary Remove="NativeDependencies\**" />
-		<AndroidNativeLibrary Remove="NativeDependencies\**" />
-		<Compile Remove="NativeDependencies\**" />
-		<EmbeddedResource Remove="NativeDependencies\**" />
-		<JavaSourceJar Remove="NativeDependencies\**" />
-		<None Remove="NativeDependencies\**" />
-		<TransformFile Remove="NativeDependencies\**" />
-	</ItemGroup>
-	<ItemGroup>
-		<AndroidLibrary Include="NativeDependencies\mediation-sdk-*.aar" />
-	</ItemGroup>
-	<ItemGroup>
-		<AndroidLibrary Include="NativeDependencies\*" Bind="false" />
+		<AndroidLibrary Update="NativeDependencies\**" Bind="false" />
+		<AndroidLibrary Update="NativeDependencies\mediation-sdk-*.aar" Bind="true" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidNamespaceReplacement Include="ironsource" Replacement="IronSource" />
