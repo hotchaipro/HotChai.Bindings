@@ -35,9 +35,9 @@ dependencies
     // InMobi Network
     implementation 'com.unity3d.ads-mediation:inmobi-adapter:+' 
     implementation 'com.inmobi.monetization:inmobi-ads-kotlin:+'
-    // Vungle Network (NOTE: Showing interstitial ads with no close button)
-    //implementation 'com.unity3d.ads-mediation:vungle-adapter:+'
-    //implementation 'com.vungle:vungle-ads:+'
+    // Vungle Network
+    implementation 'com.unity3d.ads-mediation:vungle-adapter:+'
+    implementation 'com.vungle:vungle-ads:+'
     // Mintegral Network
     implementation 'com.unity3d.ads-mediation:mintegral-adapter:+'
     implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:+'
