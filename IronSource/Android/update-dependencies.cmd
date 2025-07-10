@@ -7,8 +7,6 @@ call "%ProgramFiles%\Gradle\bin\gradle.bat" update
 :: Map 'gradle dependencies' to Xamarin NuGet packages where possible
 
 :: +--- com.google.android.gms:play-services-ads-identifier -> Xamarin.GooglePlayServices.Ads.Identifier (#)
-:: +--- com.jakewharton.threetenabp:threetenabp
-:: |    \--- org.threeten:threetenbp
 :: +--- com.unity3d.ads-mediation:mediation-sdk
 :: |    +--- com.unity3d.ads-mediation:adquality-sdk
 :: |    \--- org.jetbrains.kotlin:kotlin-stdlib -> Xamarin.Kotlin.StdLib (#)

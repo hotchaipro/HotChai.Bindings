@@ -15,8 +15,6 @@ configurations
 dependencies
 {
     implementation 'com.google.android.gms:play-services-ads-identifier:+'
-    // API 23 support
-    implementation 'com.jakewharton.threetenabp:threetenabp:+'
     // IronSource
     implementation 'com.unity3d.ads-mediation:mediation-sdk:+'
     //implementation 'com.unity3d.ads-mediation:adquality-sdk:+'
