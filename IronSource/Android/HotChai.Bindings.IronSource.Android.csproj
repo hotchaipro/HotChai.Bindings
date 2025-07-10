@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
-		<Version>8.9.1.1</Version>
+		<Version>8.10.0.0</Version>
 		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 		<Authors>David Taylor</Authors>
