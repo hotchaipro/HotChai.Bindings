@@ -33,7 +33,7 @@
 		<PackageReference Include="Xamarin.Protobuf.JavaLite" Version="4.31.1" />
 		<PackageReference Include="HotChai.Bindings.Protobuf.Kotlin.Lite" Version="4.31.1" />
 		<PackageReference Include="Square.OkHttp3" Version="5.1.0" />
-		<PackageReference Include="Square.Picasso" Version="2.71828.0" />
+		<PackageReference Include="Square.Picasso" Version="2.8.0.19" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="build.gradle" />
