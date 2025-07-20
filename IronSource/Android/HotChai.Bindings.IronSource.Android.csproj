@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
-		<Version>8.10.0.0</Version>
+		<Version>8.10.0.1</Version>
 		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 		<Authors>David Taylor</Authors>
@@ -25,15 +25,15 @@
 		<PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.4.0.2" />
 		<PackageReference Include="Xamarin.AndroidX.Work.Work.Runtime.Ktx" Version="2.10.2" />
 		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.2.0" />
-		<PackageReference Include="Xamarin.KotlinX.Serialization.Core.Jvm" Version="1.8.1" />
-		<PackageReference Include="Xamarin.KotlinX.Serialization.Json.Jvm" Version="1.8.1" />
+		<PackageReference Include="Xamarin.KotlinX.Serialization.Core.Jvm" Version="1.9.0" />
+		<PackageReference Include="Xamarin.KotlinX.Serialization.Json.Jvm" Version="1.9.0" />
 		<PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="124.4.0" />
 		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0.3" />
 		<PackageReference Include="Xamarin.GooglePlayServices.CroNet" Version="118.1.0.6" />
 		<PackageReference Include="Xamarin.Protobuf.JavaLite" Version="4.31.1" />
 		<PackageReference Include="HotChai.Bindings.Protobuf.Kotlin.Lite" Version="4.31.1" />
-		<PackageReference Include="Square.OkHttp3" Version="4.12.0.10" />
-		<PackageReference Include="Square.Picasso" Version="2.8.0.19" />
+		<PackageReference Include="Square.OkHttp3" Version="5.1.0" />
+		<PackageReference Include="Square.Picasso" Version="2.71828.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="build.gradle" />
