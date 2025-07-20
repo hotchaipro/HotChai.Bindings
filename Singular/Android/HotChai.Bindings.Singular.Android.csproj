@@ -23,16 +23,7 @@
 		<ProguardConfiguration Include="proguard.cfg" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidJavaSource Remove="NativeDependencies\**" />
-		<AndroidLibrary Remove="NativeDependencies\**" />
-		<AndroidNativeLibrary Remove="NativeDependencies\**" />
-		<Compile Remove="NativeDependencies\**" />
-		<EmbeddedResource Remove="NativeDependencies\**" />
-		<JavaSourceJar Remove="NativeDependencies\**" />
-		<None Remove="NativeDependencies\**" />
-		<TransformFile Remove="NativeDependencies\**" />
-	</ItemGroup>
-	<ItemGroup>
-		<AndroidLibrary Include="NativeDependencies\singular_sdk-*.aar" />
+		<AndroidLibrary Update="NativeDependencies\**" Bind="false" />
+		<AndroidLibrary Update="NativeDependencies\singular_sdk-*.aar" Bind="true" />
 	</ItemGroup>
 </Project>
