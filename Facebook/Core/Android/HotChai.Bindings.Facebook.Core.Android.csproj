@@ -19,18 +19,8 @@
 		<ProguardConfiguration Include="proguard.cfg" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidJavaSource Remove="NativeDependencies\**" />
-		<AndroidLibrary Remove="NativeDependencies\**" />
-		<AndroidNativeLibrary Remove="NativeDependencies\**" />
-		<Compile Remove="NativeDependencies\**" />
-		<EmbeddedResource Remove="NativeDependencies\**" />
-		<JavaSourceJar Remove="NativeDependencies\**" />
-		<None Remove="NativeDependencies\**" />
-		<TransformFile Remove="NativeDependencies\**" />
-	</ItemGroup>
-	<ItemGroup>
-		<AndroidLibrary Include="NativeDependencies\facebook-bolts-*.aar" Bind="false" />
-		<AndroidLibrary Include="NativeDependencies\facebook-core-*.aar" />
+		<AndroidLibrary Update="NativeDependencies\**" Bind="false" />
+		<AndroidLibrary Update="NativeDependencies\facebook-core-*.aar" Bind="true" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.4" />
