@@ -19,7 +19,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Xamarin.Android.Tools.DesugarJdkLibs" Version="1.1.5" />
-		<PackageReference Include="Xamarin.Firebase.Messaging" Version="124.1.1.2" />
+		<PackageReference Include="Xamarin.Firebase.Messaging" Version="124.1.2" />
 		<PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.4" />
 		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0.3" />
 	</ItemGroup>
