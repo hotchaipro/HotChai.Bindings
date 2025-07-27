@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
-		<Version>8.10.0.2</Version>
+		<Version>8.10.0.3</Version>
 		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 		<Authors>David Taylor</Authors>
@@ -13,6 +13,7 @@
 		<Description>.NET for Android bindings for the ironSource SDK</Description>
 		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Xamarin.Android.Tools.DesugarJdkLibs" Version="1.1.5" />
@@ -36,7 +37,6 @@
 		<PackageReference Include="Xamarin.GooglePlayServices.CroNet" Version="118.1.0.6" />
 		<PackageReference Include="Xamarin.Protobuf.JavaLite" Version="4.31.1" />
 		<PackageReference Include="HotChai.Bindings.Protobuf.Kotlin.Lite" Version="4.31.1" />
-		<PackageReference Include="Square.OkHttp3" Version="5.1.0" />
 		<PackageReference Include="Square.Picasso" Version="2.8.0.19" />
 	</ItemGroup>
 	<ItemGroup>
