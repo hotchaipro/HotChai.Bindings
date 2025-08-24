@@ -4,6 +4,19 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>8.8.0.0</Version>
+        <Title>$(AssemblyName)</Title>
+        <RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
+        <Authors>David Taylor</Authors>
+        <Company>Hot Chai Games</Company>
+        <Description>.NET for iOS bindings for the ironSource SDK</Description>
+        <PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
     </PropertyGroup>
 
     <ItemGroup>

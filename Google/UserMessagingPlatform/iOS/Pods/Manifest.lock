@@ -2,7 +2,7 @@ PODS:
   - GoogleUserMessagingPlatform (2.7.0)
 
 DEPENDENCIES:
-  - GoogleUserMessagingPlatform
+  - GoogleUserMessagingPlatform (= 2.7.0)
 
 SPEC REPOS:
   trunk:
@@ -11,6 +11,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   GoogleUserMessagingPlatform: a8b56893477f67212fbc8411c139e61d463349f5
 
-PODFILE CHECKSUM: 729f8868b775bc586228a9fee6d2b30a9276810c
+PODFILE CHECKSUM: 03608ac87a4b0f1ab2398be6a99a27e11baa03d8
 
 COCOAPODS: 1.16.2

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net8.0-ios</TargetFramework>
         <Nullable>enable</Nullable>
@@ -8,12 +8,12 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>18.0.0.0</Version>
+        <Version>2.7.0.0</Version>
         <Title>$(AssemblyName)</Title>
         <RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
         <Authors>David Taylor</Authors>
         <Company>Hot Chai Games</Company>
-        <Description>.NET for iOS bindings for the Facebook Core SDK</Description>
+        <Description>.NET for iOS bindings for the Google User Messaging Platform SDK</Description>
         <PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
@@ -21,26 +21,15 @@
 
     <ItemGroup>
         <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
-        <ObjcBindingCoreSource Include="Enums.cs" />
+        <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
     </ItemGroup>
 
     <ItemGroup>
-        <NativeReference Include="Pods\FBAEMKit\XCFrameworks\FBAEMKit.xcframework">
+        <NativeReference Include="Pods\GoogleUserMessagingPlatform/Frameworks/Release/UserMessagingPlatform.xcframework">
             <Kind>Framework</Kind>
-            <ForceLoad>true</ForceLoad>
-            <LinkerFlags>-ObjC -lz</LinkerFlags>
-            <Frameworks>FBSDKCoreKit_Basics</Frameworks>
-        </NativeReference>
-        <NativeReference Include="Pods\FBSDKCoreKit_Basics\XCFrameworks\FBSDKCoreKit_Basics.xcframework">
-            <Kind>Framework</Kind>
-            <ForceLoad>true</ForceLoad>
-            <LinkerFlags>-ObjC -lz</LinkerFlags>
-            </NativeReference>
-        <NativeReference Include="Pods\FBSDKCoreKit\XCFrameworks\FBSDKCoreKit.xcframework">
-            <Kind>Framework</Kind>
-            <ForceLoad>true</ForceLoad>
+            <SmartLink>False</SmartLink>
+            <ForceLoad>True</ForceLoad>
             <LinkerFlags>-ObjC</LinkerFlags>
-            <Frameworks>FBAEMKit FBSDKCoreKit_Basics</Frameworks>
         </NativeReference>
     </ItemGroup>
 </Project>
