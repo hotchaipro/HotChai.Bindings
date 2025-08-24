@@ -5,5 +5,5 @@ install! 'cocoapods', :integrate_targets => false
 use_frameworks! :linkage => :dynamic
 
 target 'NativeDependencies' do
-    pod 'GoogleUserMessagingPlatform'
+    pod 'GoogleUserMessagingPlatform', '2.7.0'
 end
