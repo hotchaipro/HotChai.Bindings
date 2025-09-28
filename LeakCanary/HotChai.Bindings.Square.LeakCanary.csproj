@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net9.0-android35.0</TargetFramework>
+		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<IsTrimmable>false</IsTrimmable>
+		<Version>3.0.0.0-alpha8</Version>
+		<Title>$(AssemblyName)</Title>
+		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
+		<Authors>David Taylor</Authors>
+		<Company>Hot Chai Games</Company>
+		<Description>.NET for Android bindings for the Square LeakCanary library</Description>
+		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Square.OkIO" Version="3.16.0" />
+		<PackageReference Include="Xamarin.AndroidX.Annotation.Jvm" Version="1.9.1.5" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.5.0.3" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.5.0.3" />
+		<PackageReference Include="Xamarin.KotlinX.Coroutines.Core.Jvm" Version="1.10.2.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidLibrary Update="NativeDependencies\**" Bind="false" />
+	</ItemGroup>
+</Project>
