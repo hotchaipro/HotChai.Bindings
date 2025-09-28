@@ -1,0 +1,21 @@
+repositories
+{
+    google()
+    mavenCentral()
+}
+
+configurations
+{
+    implementation
+}
+
+dependencies
+{
+    implementation 'com.squareup.leakcanary:leakcanary-android:+'
+}
+
+task update(type: Copy)
+{
+    into "NativeDependencies"
+    from configurations.implementation
+}
