@@ -30,6 +30,41 @@
 	<remove-node path="/api/package[@name='com.iab.omid.library.ironsrc.adsession.media']" />
 	<remove-node path="/api/package[@name='com.iab.omid.library.ironsrc.publisher']" />
 	<remove-node path="/api/package[@name='com.iab.omid.library.ironsrc.walking']" />
+	<remove-node path="/api/package[@name='com.ironsource']" />
+	<remove-node path="/api/package[@name='com.ironsource.adapters.ironsource']" />
+	<remove-node path="/api/package[@name='com.ironsource.adapters.ironsource.nativeAd']" />
+	<remove-node path="/api/package[@name='com.ironsource.environment']" />
+	<remove-node path="/api/package[@name='com.ironsource.environment.thread']" />
+	<remove-node path="/api/package[@name='com.ironsource.environment.workerthread']" />
+	<remove-node path="/api/package[@name='com.ironsource.lifecycle']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adapter']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adquality']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.ads.nativead']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.ads.nativead.interfaces']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.ads.nativead.internal']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter']" />
 	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter.internal']" />
-	<remove-node path="/api/package[@name='com.ironsource.adapters.ironsource.nativeAd']/class[@name='IronSourceNativeAdViewBinder']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter.internal.listener']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter.internal.nativead']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter.listener']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.adapter.utility']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.adunit.data']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.bidding']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.config']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.demandOnly']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.logger']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.metadata']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.model']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.sdk']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.testSuite']" />
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.utils']" />
+	<remove-node path="/api/package[@name='com.ironsource.sdk']" />
+	<remove-node path="/api/package[@name='com.ironsource.sdk.controller']" />
+	<remove-node path="/api/package[@name='com.ironsource.sdk.service.Connectivity']" />
+	<remove-node path="/api/package[@name='com.ironsource.sdk.utils']" />
+	<remove-node path="/api/package[@name='com.unity3d.ironsourceads']" />
+	<remove-node path="/api/package[@name='com.unity3d.ironsourceads.banner']" />
+	<remove-node path="/api/package[@name='com.unity3d.ironsourceads.interstitial']" />
+	<remove-node path="/api/package[@name='com.unity3d.ironsourceads.rewarded']" />
 </metadata>
