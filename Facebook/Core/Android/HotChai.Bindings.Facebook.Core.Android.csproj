@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
-		<Version>18.0.3.0</Version>
+		<Version>18.1.3.0</Version>
 		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 		<Authors>David Taylor</Authors>
@@ -13,20 +13,21 @@
 		<Description>.NET for Android bindings for the Facebook Core SDK</Description>
 		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="build.gradle" />
 		<ProguardConfiguration Include="proguard.cfg" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidLibrary Update="NativeDependencies\**" Bind="false" />
-		<AndroidLibrary Update="NativeDependencies\facebook-core-*.aar" Bind="true" />
+		<AndroidMavenLibrary Include="com.facebook.android:facebook-core" Version="18.1.3" Bind="true" />
+		<AndroidMavenLibrary Include="com.facebook.android:facebook-bolts" Version="18.1.3" Bind="false" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.4" />
-	  <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.16.0.2" />
-	  <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.33" />
-	  <PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.4" />
-	  <PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.2.0" />
+	  <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.5" />
+	  <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.17.0" />
+	  <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.34" />
+	  <PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.5" />
+	  <PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.2.10" />
 	</ItemGroup>
 </Project>
