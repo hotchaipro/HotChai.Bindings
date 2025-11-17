@@ -16,35 +16,35 @@ dependencies
 {
     implementation 'com.google.android.gms:play-services-ads-identifier:+'
     // IronSource
-    implementation 'com.unity3d.ads-mediation:mediation-sdk:+'
+    implementation 'com.unity3d.ads-mediation:mediation-sdk:9.1.0'
     //implementation 'com.unity3d.ads-mediation:adquality-sdk:+'
     // Applovin Network
-    implementation 'com.unity3d.ads-mediation:applovin-adapter:+'
-    implementation 'com.applovin:applovin-sdk:+'
+    implementation 'com.unity3d.ads-mediation:applovin-adapter:5.2.0'
+    implementation 'com.applovin:applovin-sdk:13.5.1'
     // DT Exchange/Fyber Network
-    implementation 'com.unity3d.ads-mediation:fyber-adapter:+'
-    implementation "com.fyber:marketplace-sdk:+"
-    // Facebook Network
-    implementation 'com.unity3d.ads-mediation:facebook-adapter:+'
-    implementation 'com.facebook.android:audience-network-sdk:+'
+    implementation 'com.unity3d.ads-mediation:fyber-adapter:5.1.0'
+    implementation 'com.fyber:marketplace-sdk:8.4.0'
+    // Meta/Facebook Audience Network
+    implementation 'com.unity3d.ads-mediation:facebook-adapter:5.1.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.21.0'
     // AdMob Network
-    implementation 'com.unity3d.ads-mediation:admob-adapter:+'
-    implementation 'com.google.android.gms:play-services-ads:+'
+    implementation 'com.unity3d.ads-mediation:admob-adapter:5.2.0'
+    implementation 'com.google.android.gms:play-services-ads:24.7.0'
     // InMobi Network
-    implementation 'com.unity3d.ads-mediation:inmobi-adapter:+' 
-    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:+'
-    // Vungle Network
-    implementation 'com.unity3d.ads-mediation:vungle-adapter:+'
-    implementation 'com.vungle:vungle-ads:+'
+    implementation 'com.unity3d.ads-mediation:inmobi-adapter:5.2.0' 
+    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:11.0.0'
+    // Liftoff/Vungle Network
+    implementation 'com.unity3d.ads-mediation:vungle-adapter:5.2.0'
+    implementation 'com.vungle:vungle-ads:7.6.1'
     // Mintegral Network
-    implementation 'com.unity3d.ads-mediation:mintegral-adapter:+'
-    implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:+'
+    implementation 'com.unity3d.ads-mediation:mintegral-adapter:5.3.0'
+    implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:17.0.31'
     // Pangle/TikTok Network
-    implementation 'com.unity3d.ads-mediation:pangle-adapter:+'
-    implementation 'com.pangle.global:ads-sdk:+'
+    implementation 'com.unity3d.ads-mediation:pangle-adapter:5.3.0'
+    implementation 'com.pangle.global:pag-sdk:7.7.0.2'
     // Unity Ads Network
-    implementation 'com.unity3d.ads-mediation:unityads-adapter:+'
-    implementation 'com.unity3d.ads:unity-ads:+'
+    implementation 'com.unity3d.ads-mediation:unityads-adapter:5.3.0'
+    implementation 'com.unity3d.ads:unity-ads:4.16.4'
 }
 
 task update(type: Copy)

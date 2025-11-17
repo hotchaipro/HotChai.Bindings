@@ -11,4 +11,10 @@
     <field jni-name="Fragment_tag" clr-name="Tag" value="2" />
   </mapping>
   -->
+  <!--
+    <mapping class="com/unity3d/mediation/LevelPlayAdError" clr-enum-type='Com.Unity3D.Mediation.LevelPlayAdError'>
+    <field clr-name='ErrorCodeInvalidAdUnitId' value='626' />
+    <field clr-name='ErrorCodeLoadBeforeInitSuccessCallback' value='625' />
+    </mapping>
+  -->
 </enum-field-mappings>
