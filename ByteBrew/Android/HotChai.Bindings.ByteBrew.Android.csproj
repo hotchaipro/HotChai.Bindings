@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
-		<Version>0.1.5.2</Version>
+		<Version>0.1.5.3</Version>
 		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 		<Authors>David Taylor</Authors>
@@ -13,15 +13,16 @@
 		<Description>.NET for Android bindings for the ByteBrew Analytics SDK</Description>
 		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
 	</PropertyGroup>
 	<ItemGroup>
 		<ProguardConfiguration Include="proguard.cfg" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Xamarin.Android.Tools.DesugarJdkLibs" Version="1.1.5" />
-		<PackageReference Include="Xamarin.Firebase.Messaging" Version="124.1.2" />
-		<PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.4" />
-		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0.3" />
+		<PackageReference Include="Xamarin.Firebase.Messaging" Version="125.0.1" />
+		<PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.5" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0.4" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidNamespaceReplacement Include="com.bytebrew.bytebrewlibrary" Replacement="Com.ByteBrew.Library" />
