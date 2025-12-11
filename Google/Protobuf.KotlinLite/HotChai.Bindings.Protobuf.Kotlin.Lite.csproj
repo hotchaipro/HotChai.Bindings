@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net9.0-android35</TargetFramework>
+		<TargetFramework>net10.0-android36</TargetFramework>
 		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<IsTrimmable>true</IsTrimmable>
-		<Version>4.32.1.0</Version>
+		<Version>4.33.1.0</Version>
 		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 		<Authors>David Taylor</Authors>
@@ -16,10 +16,10 @@
 		<PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.2.20" />
-		<PackageReference Include="Xamarin.Protobuf.JavaLite" Version="4.32.1" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.2.21" />
+		<PackageReference Include="Xamarin.Protobuf.JavaLite" Version="4.33.1" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidMavenLibrary Include="com.google.protobuf:protobuf-kotlin-lite" Version="4.32.1" Bind="false" Pack="true" />
+		<AndroidMavenLibrary Include="com.google.protobuf:protobuf-kotlin-lite" Version="4.33.1" Bind="false" Pack="true" />
 	</ItemGroup>
 </Project>
