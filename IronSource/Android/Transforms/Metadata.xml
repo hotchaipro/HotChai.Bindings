@@ -1,4 +1,4 @@
-﻿<metadata>
+<metadata>
 	<!-- Remove generated events from all interfaces -->
 	<attr path="/api/package/interface/method" name="eventName"></attr>
 
@@ -67,4 +67,50 @@
 	<remove-node path="/api/package[@name='com.unity3d.ironsourceads.banner']" />
 	<remove-node path="/api/package[@name='com.unity3d.ironsourceads.interstitial']" />
 	<remove-node path="/api/package[@name='com.unity3d.ironsourceads.rewarded']" />
+
+	<!-- Remove internal listener package referencing obfuscated types (BG8503/BG8800) -->
+	<remove-node path="/api/package[@name='com.ironsource.mediationsdk.impressionData']" />
+
+	<!-- Remove internal adapter base classes with obfuscated/removed base types (BG8102) -->
+	<remove-node path="/api/package[@name='com.unity3d.mediation.adapters.levelplay']" />
+
+	<!-- Remove constructors/methods exposing obfuscated internal parameter types (BG8800) -->
+	<remove-node path="/api/package[@name='com.unity3d.mediation']/class[@name='LevelPlayInitError']/constructor[parameter[1][@type='com.ironsource.pe']]" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation']/class[@name='LevelPlayAdError']/constructor[parameter[1][@type='com.ironsource.mediationsdk.logger.IronSourceError']]" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation']/class[@name='LevelPlayAdInfo']/constructor[parameter[@type='com.ironsource.q2']]" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation']/class[@name='LevelPlayAdInfo']/method[@name='copy' and parameter[@type='com.ironsource.q2']]" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.interstitial']/class[@name='LevelPlayInterstitialAd']/constructor[parameter[2][@type='com.ironsource.Ya.c']]" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.rewarded']/class[@name='LevelPlayRewardedAd']/constructor[parameter[2][@type='com.ironsource.Ya.c']]" />
+
+	<!-- Remove obfuscated base interfaces from public config types (BG8C00) -->
+	<remove-node path="/api/package[@name='com.unity3d.mediation.interstitial']/class[@name='LevelPlayInterstitialAd.Config']/implements[@name='com.ironsource.Ya.b']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.rewarded']/class[@name='LevelPlayRewardedAd.Config']/implements[@name='com.ironsource.Ya.b']" />
+
+	<!-- Remove Kotlin Companion fields referencing obfuscated companion classes (BG8400) -->
+	<remove-node path="/api/package[@name='com.unity3d.mediation']/class[@name='LevelPlayAdError']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation']/class[@name='LevelPlayAdError.a']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.impression']/class[@name='LevelPlayImpressionData']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.impression']/class[@name='LevelPlayImpressionData.a']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.segment']/class[@name='LevelPlaySegment']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.segment']/class[@name='LevelPlaySegment.a']" />
+
+	<!-- Remove Companion fields that duplicate nested Companion type names (BG8401) -->
+	<remove-node path="/api/package[@name='com.unity3d.mediation']/class[@name='LevelPlayAdSize']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.banner']/class[@name='LevelPlayBannerAdView.Config']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.interstitial']/class[@name='LevelPlayInterstitialAd']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.interstitial']/class[@name='LevelPlayInterstitialAd.Config']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.rewarded']/class[@name='LevelPlayRewardedAd']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.unity3d.mediation.rewarded']/class[@name='LevelPlayRewardedAd.Config']/field[@name='Companion']" />
+
+	<!-- Rename constant fields that collide with generated property names (BG8401) -->
+	<attr path="/api/package[@name='com.unity3d.mediation.segment']/class[@name='LevelPlaySegment']/field[@name='LEVEL']" name="managedName">LevelKey</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.segment']/class[@name='LevelPlaySegment']/field[@name='PAYING']" name="managedName">PayingKey</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.segment']/class[@name='LevelPlaySegment']/field[@name='SEGMENT_NAME']" name="managedName">SegmentNameKey</attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.segment']/class[@name='LevelPlaySegment']/field[@name='USER_CREATION_DATE']" name="managedName">UserCreationDateKey</attr>
+
+	<!-- Suppress event generation on listener setters (BG8501 / unused connector fields) -->
+	<attr path="/api/package[@name='com.unity3d.mediation']/class[@name='LevelPlay']/method[@name='addImpressionDataListener']" name="eventName"></attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.banner']/class[@name='LevelPlayBannerAdView']/method[@name='setBannerListener']" name="eventName"></attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.interstitial']/class[@name='LevelPlayInterstitialAd']/method[@name='setListener']" name="eventName"></attr>
+	<attr path="/api/package[@name='com.unity3d.mediation.rewarded']/class[@name='LevelPlayRewardedAd']/method[@name='setListener']" name="eventName"></attr>
 </metadata>
