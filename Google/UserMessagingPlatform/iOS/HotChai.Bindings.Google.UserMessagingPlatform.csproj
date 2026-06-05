@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0-ios</TargetFramework>
+        <TargetFramework>net10.0-ios</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>2.7.0.0</Version>
+        <Version>3.1.0.0</Version>
         <Title>$(AssemblyName)</Title>
         <RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
         <Authors>David Taylor</Authors>
@@ -16,16 +16,28 @@
         <Description>.NET for iOS bindings for the Google User Messaging Platform SDK</Description>
         <PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
+        <PackageOutputPath>../../../../LocalPackages</PackageOutputPath>
     </PropertyGroup>
 
     <ItemGroup>
-        <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+        <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
         <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+        <!-- bgen-only delegate hints: visible to bgen for type resolution,
+             excluded from C# compilation (bgen auto-generates these in SupportDelegates.g.cs) -->
+        <ObjcBindingCoreSource Include="BgenDelegates.cs" Condition="Exists('BgenDelegates.cs')" />
     </ItemGroup>
 
+    <!-- Remove bgen-only delegate hints from C# compilation.
+         The SDK's ObjCBinding targets add ObjcBindingCoreSource to Compile,
+         but these delegates conflict with bgen's auto-generated SupportDelegates.g.cs. -->
+    <Target Name="_RemoveBgenDelegatesFromCompile" BeforeTargets="CoreCompile">
+        <ItemGroup>
+            <Compile Remove="BgenDelegates.cs" />
+        </ItemGroup>
+    </Target>
+
     <ItemGroup>
-        <NativeReference Include="Pods\GoogleUserMessagingPlatform/Frameworks/Release/UserMessagingPlatform.xcframework">
+        <NativeReference Include="Native\UserMessagingPlatform.xcframework">
             <Kind>Framework</Kind>
             <SmartLink>False</SmartLink>
             <ForceLoad>True</ForceLoad>
