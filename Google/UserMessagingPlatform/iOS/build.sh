@@ -1,0 +1,1 @@
+dotnet run --project ~/Documents/GitHub/swift-dotnet-bindings/src/Swift.Bindings/src -- --xcframework Native/UserMessagingPlatform.xcframework --objc --sdk-mode --namespace-pattern 'Google.{Module}' -o ./
