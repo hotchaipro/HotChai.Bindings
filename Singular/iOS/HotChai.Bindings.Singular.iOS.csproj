@@ -1,14 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0-ios</TargetFramework>
+        <TargetFramework>net10.0-ios</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>12.8.1.0</Version>
+        <Version>12.12.0.0-Alpha1</Version>
         <Title>$(AssemblyName)</Title>
         <RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
         <Authors>David Taylor</Authors>
@@ -16,7 +17,7 @@
         <Description>.NET for iOS bindings for the Singular Analytics SDK</Description>
         <PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
+        <PackageOutputPath>../../../LocalPackages</PackageOutputPath>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,20 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <AtlasTexture Remove="Pods\**" />
-        <Compile Remove="Pods\**" />
-        <CoreMLModel Remove="Pods\**" />
-        <EmbeddedResource Remove="Pods\**" />
-        <ImageAsset Remove="Pods\**" />
-        <InterfaceDefinition Remove="Pods\**" />
-        <Metal Remove="Pods\**" />
-        <None Remove="Pods\**" />
-        <SceneKitAsset Remove="Pods\**" />
-        <NativeReference Remove="Pods\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <NativeReference Include="Pods\Singular-SDK\Singular.xcframework">
+        <NativeReference Include="Native\Singular.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
             <LinkerFlags>-ObjC -lz -lsqlite3</LinkerFlags>

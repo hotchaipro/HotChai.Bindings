@@ -2,89 +2,72 @@ using ObjCRuntime;
 
 namespace IronSourceSdk
 {
-	[Native]
-	public enum ISAAdFormatType : ulong
-	{
-		Interstitial,
-		Rewarded,
-		Banner
-	}
+    /// <summary>
+    /// Enum representing available ad formats.
+    /// </summary>
+    [Native]
+    public enum ISAAdFormatType : ulong
+    {
+        Interstitial,
+        Rewarded,
+        Banner
+    }
+
+    /// <summary>
+    /// Enum representing the different log levels in IronSourceAds.
+    /// </summary>
+    [Native]
+    public enum ISALogLevel : long
+    {
+        None,
+        Error,
+        Verbose
+    }
+
+    [Native]
+    public enum DebugLevel : long
+    {
+        None,
+        Error,
+        Info,
+        Verbose
+    }
+
+  [Native]
+  public enum ISGender : long
+  {
+	Unknown = 0,
+	Male = 1,
+	Female = 2
+  }
+
+    [Native]
+    public enum ISAdapterErrors : long
+    {
+        Internal = 1000,
+        AdExpired = 1001,
+        MissingParams = 1002
+    }
+
+    [Native]
+    public enum ISAdapterErrorType : long
+    {
+        NoFill,
+        AdExpired,
+        Internal
+    }
+
+    [Native]
+    public enum ISLoadWhileShowSupportState : long
+    {
+        None = 0,
+        ByInstance = 1,
+        ByNetwork = 2
+    }
 
 	[Native]
-	public enum ISALogLevel : long
-	{
-		None,
-		Error,
-		Verbose
-	}
-
-	[Native]
-	public enum ISGender : long
-	{
-		Unknown,
-		Male,
-		Female
-	}
-
-	[Native]
-	public enum DebugLevel : long
-	{
-		None,
-		Error,
-		Info,
-		Verbose
-	}
-
-	public enum ISLogLevel
-	{
-		None = -1,
-		Internal = 0,
-		Info = 1,
-		Warning = 2,
-		Error = 3,
-		General = 4,
-		Critical = 5
-	}
-
-	public enum LogTag : uint
-	{
-		Api,
-		Delegate,
-		AdapterApi,
-		AdapterDelegate,
-		Network,
-		Native,
-		Internal,
-		Event
-	}
-
-	[Native]
-	public enum ISAdapterErrors : long
-	{
-		Internal = 1000,
-		AdExpired = 1001,
-		MissingParams = 1002
-	}
-
-	[Native]
-	public enum ISAdapterErrorType : long
-	{
-		NoFill,
-		AdExpired,
-		Internal
-	}
-
-	[Native]
-	public enum ISLoadWhileShowSupportState : long
-	{
-		None = 0,
-		ByInstance = 1,
-		ByNetwork = 2
-	}
-
-	[Native]
-	public enum ISErrorCode : ulong
-	{
+    public enum ISErrorCode : ulong
+    {
 		ErrorCodeDecryptFailed = 1,
 		ErrorCodeNoAdaptiveSupportiveNetworks = 2,
 		ErrorCodeNoConfigurationAvailable = 501,
@@ -255,54 +238,110 @@ namespace IronSourceSdk
 		ErrorCappingEnabledFalse = 3002,
 		ErrorCappingConfigAdditionFailed = 3003,
 		ErrorRewardValidationFailed = 3004
-	}
+    }
 
-	[Native]
-	public enum LPMAdSizeType : long
-	{
-		Banner,
-		Large,
-		MediumRectangle,
-		Custom,
-		LeaderBoard
-	}
+    [Native]
+    public enum LPMAdSizeType : long
+    {
+        Banner,
+        Large,
+        MediumRectangle,
+        Custom,
+        LeaderBoard
+    }
 
-	[Native]
-	public enum ISAdOptionsPosition : long
-	{
-		TopLeft,
-		TopRight,
-		BottomLeft,
-		BottomRight
-	}
+    [Native]
+    public enum ISAdOptionsPosition : long
+    {
+        TopLeft,
+        TopRight,
+        BottomLeft,
+        BottomRight
+    }
 
-	[Native]
-	public enum ISMetaDataValueTypes : ulong
-	{
+    [Native]
+    public enum ISMetaDataValueTypes : ulong
+    {
 		String,
 		Bool,
 		Int,
 		Long,
 		Double,
 		Float
+    }
+
+    [Native]
+    public enum LogLevelValues : long
+    {
+        None = -1,
+        Internal = 0,
+        Info = 1,
+        Warning = 2,
+        Error = 3,
+        General = 4,
+        Critical = 5,
+    }
+
+	[Native]
+	public enum ISLogLevel : long
+	{
+		None = -1,
+		Internal = 0,
+		Info = 1,
+		Warning = 2,
+		Error = 3,
+		General = 4,
+		Critical = 5,
 	}
 
 	[Native]
-	public enum ISNLogLevel : ulong
+	public enum ISNLogLevel : long
 	{
-		Verbose = 0,
-		Info,
-		Error
+		None = -1,
+		Internal = 0,
+		Info = 1,
+		Warning = 2,
+		Error = 3,
+		General = 4,
+		Critical = 5,
 	}
 
+    [Native]
+    public enum LogTagValue : long
+    {
+        Api,
+        Delegate,
+        Adapter_api,
+        Adapter_delegate,
+        Network,
+        Native,
+        Internal,
+        Event
+    }
+
 	[Native]
-	public enum ISNLogTag : ulong
+	public enum LogTag : long
 	{
+		Api,
+		Delegate,
+		Adapter_api,
+		Adapter_delegate,
+		Network,
 		Native,
 		Internal,
-		ControllerInternal,
-		ControllerApi,
-		ControllerDelegate,
-		NativeAd
+		Event
+	}
+
+	[Native]
+	public enum ISNLogTag : long
+	{
+		Api,
+		Delegate,
+		Adapter_api,
+		Adapter_delegate,
+		Network,
+		Native,
+		Internal,
+		Event
 	}
 }
