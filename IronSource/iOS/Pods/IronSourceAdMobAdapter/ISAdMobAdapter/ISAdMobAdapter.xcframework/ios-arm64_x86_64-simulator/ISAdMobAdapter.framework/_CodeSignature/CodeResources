@@ -6,7 +6,7 @@
 	<dict>
 		<key>GoogleMobileAdsResources.bundle/Info.plist</key>
 		<data>
-		SwEqCFtLBbagAIhI9ZwZazMT+vE=
+		VHAqQLWewDisqlnoBGOiXccdKTA=
 		</data>
 		<key>GoogleMobileAdsResources.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/ISAdMobAdapter.h</key>
 		<data>
-		3rH6rZNeuIu0ynlhig13qWpSspA=
+		Byvtze//ilAgKfrbcLQABQ39xcw=
 		</data>
 		<key>ISAdMobNativeBannerTemplateBasicView.nib</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>ISAdMobNativeBannerTemplateIconTextView.nib</key>
 		<data>
-		PMG+s3Yx9wyJIrI/xD47oWV4skU=
+		egkBPtrBGxBZTdKDarGA/9oBzo8=
 		</data>
 		<key>ISAdMobNativeBannerTemplateRectView.nib</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		H8DBLKCqYuU4c/10UQPHaLI3us4=
+		1USclqcAxoixmV1x002mQRHe+F0=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<data>
-		BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
+		I9jxgzXX581xO5o9OtJns6QSHKU=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>UserMessagingPlatformResources.bundle/Info.plist</key>
 		<data>
-		zuF3pibVt5nE2cmmbIqkzoucpnA=
+		hvtBWraz82G21atCfT2zlw14yUo=
 		</data>
 		<key>UserMessagingPlatformResources.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -63,11 +63,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SwEqCFtLBbagAIhI9ZwZazMT+vE=
+			VHAqQLWewDisqlnoBGOiXccdKTA=
 			</data>
 			<key>hash2</key>
 			<data>
-			9+Gs4pvd4UMbGKlLi+AV9rguACo14qFo+encSGMeIwA=
+			WLYYMCcDKDRaqj8FvqRIEE+7DNzWAIdUVgU/Cd5kTk8=
 			</data>
 		</dict>
 		<key>GoogleMobileAdsResources.bundle/PrivacyInfo.xcprivacy</key>
@@ -85,11 +85,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3rH6rZNeuIu0ynlhig13qWpSspA=
+			Byvtze//ilAgKfrbcLQABQ39xcw=
 			</data>
 			<key>hash2</key>
 			<data>
-			mS0P84gDXPeIacF96ewfbCvAmnZQ5+20Ae2+Y1LhwmQ=
+			rZ+XDEAn2iKm5Uasit/6adkBAFk5OPcmZVGXx/Tu+W4=
 			</data>
 		</dict>
 		<key>ISAdMobNativeBannerTemplateBasicView.nib</key>
@@ -107,11 +107,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PMG+s3Yx9wyJIrI/xD47oWV4skU=
+			egkBPtrBGxBZTdKDarGA/9oBzo8=
 			</data>
 			<key>hash2</key>
 			<data>
-			jZSNF58fDg//A+gcj22dEG7y3ANyndJEEI+bLGzh1R0=
+			2yKwr2BWx94Pp4nFTceVvXr1lYW972ejECdHdgHU8+U=
 			</data>
 		</dict>
 		<key>ISAdMobNativeBannerTemplateRectView.nib</key>
@@ -140,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
+			I9jxgzXX581xO5o9OtJns6QSHKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			3G+xTbeCyPSgyl5TugwfE+fXcjbPUnr38qWV/XNhdNQ=
+			O4oD9sjJuglvMwX/NEGKA67hMhmSyOHavPxHlw+m9rM=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
@@ -173,11 +173,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zuF3pibVt5nE2cmmbIqkzoucpnA=
+			hvtBWraz82G21atCfT2zlw14yUo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ONQXSnyq6aHhPrin1WO1uqHcVjHzQUIBH6qRMvb8YOI=
+			cGSCJB29NgPBt3mAPKyvuQbAkhA6bGf7iA/g51tHmw0=
 			</data>
 		</dict>
 		<key>UserMessagingPlatformResources.bundle/PrivacyInfo.xcprivacy</key>

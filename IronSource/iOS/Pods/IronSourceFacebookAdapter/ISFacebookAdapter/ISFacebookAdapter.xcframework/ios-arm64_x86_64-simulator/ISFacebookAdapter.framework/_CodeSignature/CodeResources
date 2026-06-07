@@ -6,23 +6,23 @@
 	<dict>
 		<key>FBAudienceNetwork.bundle/Info.plist</key>
 		<data>
-		hgEPjDJWUdQCLn8pvVvri5dkAW0=
+		2pb2XdHXydplZ6RpSOj1lQy7Ae4=
 		</data>
 		<key>FBAudienceNetwork.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
-		iJf6SpfSfy71MDcGI+K9k1a78DU=
+		/IoNSvpjCTLQociq6B9xAKSP5JU=
 		</data>
 		<key>Headers/ISFacebookAdapter.h</key>
 		<data>
-		CYlbSYR9WraGOYFHejAx3UvU7+Y=
+		PzPfDxiR+H60bFetyomwyNCjUoE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YfUU/PdhbIC1dYCqaLGeftho8V0=
+		qQdnZjfFc6INVsaxbVQjALxru+A=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<data>
-		tZ62A0SLyVl84TQR+IeUq5YqKAo=
+		I9jxgzXX581xO5o9OtJns6QSHKU=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -39,44 +39,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hgEPjDJWUdQCLn8pvVvri5dkAW0=
+			2pb2XdHXydplZ6RpSOj1lQy7Ae4=
 			</data>
 			<key>hash2</key>
 			<data>
-			CQMF+VKuoZ74AKA2iJY3EwznGDdJX45p4h328AyFHzM=
+			H/IauRuGP39WDvV10j1aVt6SSHN8+SgYmOeBkvR0dNU=
 			</data>
 		</dict>
 		<key>FBAudienceNetwork.bundle/PrivacyInfo.xcprivacy</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iJf6SpfSfy71MDcGI+K9k1a78DU=
+			/IoNSvpjCTLQociq6B9xAKSP5JU=
 			</data>
 			<key>hash2</key>
 			<data>
-			cSw93xWtIPxdaMlNpIyJu23eaMe/V5QkksYayESwhlc=
+			uNoQPhS2jLhZ8mPCOzVTVxgIljmsBkk0EtXDAuPX4Zc=
 			</data>
 		</dict>
 		<key>Headers/ISFacebookAdapter.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CYlbSYR9WraGOYFHejAx3UvU7+Y=
+			PzPfDxiR+H60bFetyomwyNCjUoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			s1fFf2Q4W6YipG4rDwI8F+IRgbdY0exa5EtTgYN+vkM=
+			TUC5PWcUXzp3VRqJ2XJZdETXmi5NWf1/Bsogb8uNy/8=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tZ62A0SLyVl84TQR+IeUq5YqKAo=
+			I9jxgzXX581xO5o9OtJns6QSHKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			fmCAI5Onl24oKvO+PUstq0UEW6BWUtguiEY0sc2a4FA=
+			O4oD9sjJuglvMwX/NEGKA67hMhmSyOHavPxHlw+m9rM=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>

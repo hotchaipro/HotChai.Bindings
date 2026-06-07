@@ -2,16 +2,16 @@
 //  ISFyberAdapter.h
 //  ISFyberAdapter
 //
-//  Copyright © 2023 ironSource Mobile Ltd. All rights reserved.
+//  Copyright © 2021-2025 Unity Technologies. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <IronSource/ISBaseAdapter+Internal.h>
 
-static NSString * const FyberAdapterVersion = @"4.3.42";
-static NSString * Githash = @"dffd56e";
+static NSString* const FyberAdapterVersion = @"5.8.0";
+static NSString* Githash = @"0403ca8";
 
-//System Frameworks For Fyber Adapter
+// System Frameworks For Fyber Adapter
 
 @import AdSupport;
 @import AVFoundation;
@@ -26,4 +26,3 @@ static NSString * Githash = @"dffd56e";
 @interface ISFyberAdapter : ISBaseAdapter
 
 @end
-

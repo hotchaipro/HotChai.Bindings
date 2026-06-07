@@ -17,6 +17,12 @@ static NSString *const kSSErrorsForSS = @"for IronSource";
 
 static NSString *const kEmptyString = @"";
 
+// TestSuite error messages
+static NSString *const kErrorMessageTestSuiteDisabled =
+    @"TestSuite cannot be launched because the setMetadata flag is not enabled.\n"
+     "To fix this, call LevelPlay.setMetaData(withKey: \"is_test_suite\", value: \"enable\")\n"
+     "before initializing the LevelPlay SDK.";
+
 typedef NS_ENUM(NSUInteger, ISErrorCode) {
 
   ERROR_CODE_DECRYPT_FAILED = 1,
@@ -69,6 +75,7 @@ typedef NS_ENUM(NSUInteger, ISErrorCode) {
   ERROR_CODE_SHOW_WHILE_SHOW = 630,
   ERROR_CODE_SHOW_CONTROLLER_NIL = 631,
   ERROR_CODE_SHOW_VIEW_CONTROLLER_NIL = 632,
+  ERROR_CODE_BN_LOAD_CALLED_AFTER_DESTROY = 633,
 
   ERROR_NT_LOAD_AFTER_INIT_FAILED = 700,
   ERROR_NT_LOAD_AFTER_LONG_INITIATION = 701,
@@ -201,6 +208,7 @@ typedef NS_ENUM(NSUInteger, ISErrorCode) {
   ERROR_INIT_NO_RESPONSE_KEY = 2100,
   ERROR_OLD_INIT_API_MULTIPLE_CALLS = 2110,
   ERROR_INIT_DECOMPRESS_FAILED = 2120,
+  ERROR_INIT_CONNECTION_ERROR = 2130,
 
   // Capping service error codes
   ERROR_CAPPING_VALIDATION_FAILED = 3000,

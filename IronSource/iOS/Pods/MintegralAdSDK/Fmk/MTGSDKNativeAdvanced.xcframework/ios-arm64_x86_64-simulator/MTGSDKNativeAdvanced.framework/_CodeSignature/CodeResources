@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MTGNativeAdvancedAd.h</key>
 		<data>
-		eYhLgmsp3Llr0ONzi7k9BN3dbfg=
+		aGLQAlSiRWSe9cp6U2a/sIuv5Cg=
 		</data>
 		<key>Headers/MTGNativeAdvancedAdDelegate.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mRS+pU1xmZEVMBVFmbMgiQZmKLw=
+		fNY2jBdsgsiS9GwP9UUvq1u3eOg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -27,11 +27,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eYhLgmsp3Llr0ONzi7k9BN3dbfg=
+			aGLQAlSiRWSe9cp6U2a/sIuv5Cg=
 			</data>
 			<key>hash2</key>
 			<data>
-			te6VnYBb+VtLCqlECBSctS17iHYEZrV4wbsbUnPqLD0=
+			B3V5m+oDSDnvdYM1RqmW3HemyYdZ+t9S06xZCTlfd1Q=
 			</data>
 		</dict>
 		<key>Headers/MTGNativeAdvancedAdDelegate.h</key>

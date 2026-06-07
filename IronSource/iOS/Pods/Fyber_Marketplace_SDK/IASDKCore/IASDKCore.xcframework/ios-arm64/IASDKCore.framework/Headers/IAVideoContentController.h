@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import <IASDKCore/IAInterfaceBuilder.h>
 #import <IASDKCore/IAContentController.h>
@@ -26,15 +27,6 @@
 + (instancetype _Nullable)build:(void(^ _Nonnull)(id<IAVideoContentControllerBuilder> _Nonnull builder))buildBlock;
 
 @property (nonatomic, readwrite, getter=isMuted) BOOL muted;
-
-/**
- *  @brief Deprecated.
- */
-- (void)play DEPRECATED_MSG_ATTRIBUTE("This API is deprecated.");
-
-/**
- *  @brief Deprecated.
- */
-- (void)pause DEPRECATED_MSG_ATTRIBUTE("This API is deprecated.");
+@property (nonatomic, readonly) CGFloat mediaAspectRatio;
 
 @end
