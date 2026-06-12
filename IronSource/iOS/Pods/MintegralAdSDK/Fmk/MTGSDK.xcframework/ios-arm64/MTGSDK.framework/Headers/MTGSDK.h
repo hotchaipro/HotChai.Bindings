@@ -23,13 +23,16 @@
 #import <MTGSDK/MTGUserInfo.h>
 #import <MTGSDK/MTGBool.h>
 
-#define MTGSDKVersion @"7.7.7"
+#define MTGSDKVersion @"8.1.4"
 
 
 typedef NS_ENUM(NSInteger,MTGAdType) {
     MTGRewardAd,
     MTGInterstitialAd
 };
+
+typedef void (^MTGSDKInitializationCompletionHandler)(BOOL success, NSError * _Nullable error);
+
 
 @interface MTGSDK : NSObject
 
@@ -48,6 +51,20 @@ typedef NS_ENUM(NSInteger,MTGAdType) {
  */
 + (nonnull instancetype)sharedInstance;
 
+
+/// Initializes the SDK with the given AppID and ApiKey and completion block.
+///
+/// The SDK invokes the callback on the main thread.
+
+/// @param appID Application ID registered on our portal.
+/// @param apiKey The API Key generated on our Portal.
+/// @param completionHandler The callback that the SDK will call when the SDK finishes initializing.
+- (void)initializeWithAppID:(nonnull NSString *)appID
+                     ApiKey:(nonnull NSString *)apiKey
+          completionHandler:(nullable MTGSDKInitializationCompletionHandler)completionHandler;
+
+
+
 /**
  * Set the AppID and ApiKey.
  *  This must be called after set the authorization of user privacy information collection if you need to keep GDPR terms.
@@ -56,7 +73,7 @@ typedef NS_ENUM(NSInteger,MTGAdType) {
  * @param appID  T application Id registered on the our portal.
  * @param apiKey The API Key generated on the our Portal.
  */
-- (void)setAppID:(nonnull NSString *)appID ApiKey:(nonnull NSString *)apiKey;
+- (void)setAppID:(nonnull NSString *)appID ApiKey:(nonnull NSString *)apiKey DEPRECATED_MSG_ATTRIBUTE("This method is deprecated and will be removed in a future SDK version, please use `[MTGSDK sharedInstance] initializeWithAppID:ApiKey:completionHandler` instead");
 
 @property (nonatomic, assign) BOOL autoSetAudioCategory;
 

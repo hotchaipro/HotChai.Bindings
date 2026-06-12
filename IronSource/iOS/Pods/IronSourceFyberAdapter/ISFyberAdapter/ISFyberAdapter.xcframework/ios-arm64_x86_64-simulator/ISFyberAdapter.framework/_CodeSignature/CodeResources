@@ -6,7 +6,7 @@
 	<dict>
 		<key>Fyber_Marketplace_SDK.bundle/Info.plist</key>
 		<data>
-		v+R3viBdHv/sL2fkEd6yWZpLdr8=
+		QpiLnK/VjLEL/PmD2tiNEICudPQ=
 		</data>
 		<key>Fyber_Marketplace_SDK.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -14,15 +14,19 @@
 		</data>
 		<key>Headers/ISFyberAdapter.h</key>
 		<data>
-		kFMa8nLgF6eAMR3MoeFuGDZXRsc=
+		gKOyQdhqqUFDYgct7q25p7X4SCc=
+		</data>
+		<key>Headers/ISFyberConstants.h</key>
+		<data>
+		w2lGU6Vdeg2Yoo3LJhBKfWQPLSE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GP1fEZqPUGhfE7Sfh/G63wcX/X0=
+		jUV/CdCeigsxjPXd49IL3b0O1QQ=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<data>
-		BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
+		I9jxgzXX581xO5o9OtJns6QSHKU=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -39,11 +43,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v+R3viBdHv/sL2fkEd6yWZpLdr8=
+			QpiLnK/VjLEL/PmD2tiNEICudPQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			e2dnquTdRJkLBNXyFpcf6yE+tm4ZNcdlAzlZzFCOD+s=
+			gI2fsW+57qO8c3NAYLU57cD0yUWapBS8RqHnbOQCVzw=
 			</data>
 		</dict>
 		<key>Fyber_Marketplace_SDK.bundle/PrivacyInfo.xcprivacy</key>
@@ -61,22 +65,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kFMa8nLgF6eAMR3MoeFuGDZXRsc=
+			gKOyQdhqqUFDYgct7q25p7X4SCc=
 			</data>
 			<key>hash2</key>
 			<data>
-			kf4tDTCdZudcHUHrx0sBiTiQRRkly6SvjFC5PH+EmtA=
+			XkXU+GFBglGBCEnqApzIENlzJGw4slwBtH0HlaWeNHc=
+			</data>
+		</dict>
+		<key>Headers/ISFyberConstants.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			w2lGU6Vdeg2Yoo3LJhBKfWQPLSE=
+			</data>
+			<key>hash2</key>
+			<data>
+			tEgMRZf7duj+jmv+N04n9v7zdBpV4jwPolweJdoYhvY=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
+			I9jxgzXX581xO5o9OtJns6QSHKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			3G+xTbeCyPSgyl5TugwfE+fXcjbPUnr38qWV/XNhdNQ=
+			O4oD9sjJuglvMwX/NEGKA67hMhmSyOHavPxHlw+m9rM=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>

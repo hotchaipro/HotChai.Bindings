@@ -6,15 +6,23 @@
 	<dict>
 		<key>Headers/ISUnityAdsAdapter.h</key>
 		<data>
-		oYvoHczC6H++mHtCTpIinOmvjLs=
+		1S51ptP01PQOtIWyIY6v4RgurIA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cEL1tJxz2fsu0BXbdWqh3QeJDSk=
+		vrm2enn/BfrwjqvBnHAwzHar5ng=
+		</data>
+		<key>IronSourceAdQualityPrivacyInfo.bundle/Info.plist</key>
+		<data>
+		rF9HP0hDi3Zrtn9XTflkxgj97Zs=
+		</data>
+		<key>IronSourceAdQualityPrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		l2ZduCvSJbNtPnHg+4cAbLgDbyQ=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<data>
-		BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
+		pDJCoRvNd7huEEkmvmF9/c3UH6E=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -26,7 +34,7 @@
 		</data>
 		<key>UnityAdsResources.bundle/Info.plist</key>
 		<data>
-		t1ykFQui26j4d8P/C+rjJlS71Rs=
+		wwDSc9BiGWDeviLtHbaCaOccKvA=
 		</data>
 		<key>UnityAdsResources.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -47,22 +55,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oYvoHczC6H++mHtCTpIinOmvjLs=
+			1S51ptP01PQOtIWyIY6v4RgurIA=
 			</data>
 			<key>hash2</key>
 			<data>
-			UXzAwHVZtiOxiNxccrJr2s6hnqY0qvePwOTxSAGzYlM=
+			5ZF76xqrWsWUX2pJzufChysOqSnuAj3/aoaofj5QCvg=
+			</data>
+		</dict>
+		<key>IronSourceAdQualityPrivacyInfo.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rF9HP0hDi3Zrtn9XTflkxgj97Zs=
+			</data>
+			<key>hash2</key>
+			<data>
+			u+C19wAwduKHhmmHIV3Z9kvEYkynUs4DN8/H7wjemQo=
+			</data>
+		</dict>
+		<key>IronSourceAdQualityPrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l2ZduCvSJbNtPnHg+4cAbLgDbyQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			r2z7AqVxBGjN8OndNxmPkrvnp5Bc0eybVPrs5UKShZ8=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
+			pDJCoRvNd7huEEkmvmF9/c3UH6E=
 			</data>
 			<key>hash2</key>
 			<data>
-			3G+xTbeCyPSgyl5TugwfE+fXcjbPUnr38qWV/XNhdNQ=
+			fhOuGuivdmkE4A1kDWl104hqRa9zRT66pvPb0Vb8gzU=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
@@ -91,11 +121,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t1ykFQui26j4d8P/C+rjJlS71Rs=
+			wwDSc9BiGWDeviLtHbaCaOccKvA=
 			</data>
 			<key>hash2</key>
 			<data>
-			OHT7q+fLmBD2Hvx82SbrgxoZIgUC6AaA5UPcHIHvF8c=
+			G6sIp1IuCnB2f2dC/u3OdrU4ECghLstsG+0g9/y8RG8=
 			</data>
 		</dict>
 		<key>UnityAdsResources.bundle/PrivacyInfo.xcprivacy</key>

@@ -2,15 +2,15 @@
 //  ISFacebookAdapter.h
 //  ISFacebookAdapter
 //
-//  Copyright © 2023 ironSource Mobile Ltd. All rights reserved.
+//  Copyright © 2021-2025 Unity Technologies. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <IronSource/ISBaseAdapter+Internal.h>
 #import <IronSource/IronSource.h>
 
-static NSString * const FacebookAdapterVersion = @"4.3.49";
-static NSString * Githash = @"91fe0d6";
+static NSString * const FacebookAdapterVersion = @"5.3.0";
+static NSString * Githash = @"89d6e28";
 
 //System Frameworks For Facebook Adapter
 @import AdSupport;

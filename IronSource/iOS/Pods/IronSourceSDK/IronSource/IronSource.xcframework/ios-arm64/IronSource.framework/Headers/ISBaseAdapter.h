@@ -29,7 +29,7 @@
 @property(nonatomic, strong) NSString *providerNetworkKey;
 @property(strong, nonatomic) NSString *pluginType;
 @property(strong, nonatomic) NSString *userId;
-@property(strong, nonatomic) ISConcurrentMutableDictionary *adUnitAdapters;
+@property(strong, nonatomic) id<LPMThreadSafeDictionaryProtocol> adUnitAdapters;
 
 - (instancetype)initAdapter:(NSString *)name;
 - (void)earlyInitWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
@@ -48,6 +48,7 @@
 - (void)setBannerAdapter:(id<ISBannerAdapterProtocol>)bannerAdapter;
 - (void)setNativeAdAdapter:(id<ISNativeAdAdapterProtocol>)nativeAdAdapter;
 - (void)setConsent:(BOOL)consent;
+- (void)setTestMode:(BOOL)enabled;
 
 - (id<ISRewardedVideoAdapterProtocol>)getRewardedVideoAdapter;
 - (id<ISInterstitialAdapterProtocol>)getInterstitialAdapter;
@@ -56,7 +57,7 @@
 
 - (CGFloat)getAdaptiveHeightWithWidth:(CGFloat)width;
 
-- (void)disposeRewardedVideoAdWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
-- (void)disposeInterstitialAdWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
+- (void)destroyRewardedVideoAdWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
+- (void)destroyInterstitialAdWithAdapterConfig:(ISAdapterConfig *)adapterConfig;
 
 @end

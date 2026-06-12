@@ -2,14 +2,15 @@
 //  ISAppLovinAdapter.h
 //  ISAppLovinAdapter
 //
-//  Copyright © 2023 ironSource Mobile Ltd. All rights reserved.
+//  Copyright © 2021-2025 Unity Technologies. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <IronSource/ISBaseAdapter+Internal.h>
+#import <AppLovinSDK/AppLovinSDK.h>
 
-static NSString * const AppLovinAdapterVersion = @"4.3.53";
-static NSString * Githash = @"33cf5a5";
+static NSString * const AppLovinAdapterVersion = @"5.6.0";
+static NSString * Githash = @"5ccd63a";
 
 //System Frameworks For AppLovin Adapter
 @import AdSupport;
@@ -29,8 +30,6 @@ static NSString * Githash = @"33cf5a5";
 @import WebKit;
 
 @interface ISAppLovinAdapter : ISBaseAdapter
-
-- (void)disposeRewardedVideoAdWithZoneId:(NSString *)zoneId;
 
 - (void)disposeInterstitialAdWithZoneId:(NSString *)zoneId;
 

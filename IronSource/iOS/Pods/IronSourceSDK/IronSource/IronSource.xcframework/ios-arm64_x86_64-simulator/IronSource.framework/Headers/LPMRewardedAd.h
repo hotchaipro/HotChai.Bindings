@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "LPMRewardedAdDelegate.h"
 
+@class LPMRewardedAdConfig, LPMReward;
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -30,6 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
  @param adUnitId The ad unit identifier.
  */
 - (instancetype)initWithAdUnitId:(NSString *)adUnitId;
+
+/**
+ Initializes a rewarded ad.
+
+ @param adUnitId The ad unit identifier.
+ @param config The ad configuration.
+ */
+- (instancetype)initWithAdUnitId:(NSString *)adUnitId config:(LPMRewardedAdConfig *)config;
 
 /**
  Sets a delegate for the ad callbacks.
@@ -69,6 +79,20 @@ NS_ASSUME_NONNULL_BEGIN
  @return Whether the ad is ready.
  */
 - (BOOL)isAdReady;
+
+/**
+ Retrieves the reward associated with the ad.
+
+ Use this method to obtain the reward configured for the ad unit or placement.
+ The placement-specific reward takes precedence over the ad unit reward when a valid placement name
+ is provided.
+
+ @param placement The placement name to retrieve the reward for, or `nil` to use the ad unit's
+ reward.
+ @return A `LPMReward` object. Returns an empty reward on failures (`name: ""` and `amount: 0`).
+ */
+- (LPMReward *)getRewardWithPlacementName:(nullable NSString *)placement
+    NS_SWIFT_NAME(getReward(placementName:));
 
 /**
  Checks if the placement is capped.

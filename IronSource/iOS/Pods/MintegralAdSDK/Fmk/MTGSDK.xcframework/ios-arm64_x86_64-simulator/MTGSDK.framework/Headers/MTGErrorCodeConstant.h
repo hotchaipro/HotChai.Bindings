@@ -26,6 +26,7 @@ typedef NS_ENUM (NSInteger, MTGErrorCode) {
     KMTGErrorCodeEmptyUnitId                                    = 129300001,
     KMTGErrorCodeEmptyBidToken                                  = 129300002,
     kMTGErrorCodeBannerSizeInvalid                              = 129300003,
+    kMTGErrorCodePlatformNotSupport                              = 129300004,
 
     kMTGErrorCodeNoAds                                          = 12930001,
     kMTGErrorCodeConnectionLost                                 = 12930002,

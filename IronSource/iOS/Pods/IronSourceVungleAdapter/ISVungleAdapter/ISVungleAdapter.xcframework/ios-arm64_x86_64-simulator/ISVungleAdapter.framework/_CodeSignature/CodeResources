@@ -6,15 +6,15 @@
 	<dict>
 		<key>Headers/ISVungleAdapter.h</key>
 		<data>
-		J9T9iqMMB8h5rCO98WJTfG2iALQ=
+		3H/H5mYtg4Ev7VPW1i+Lngh4yDA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vXwDCZ3HcI59XDpGotdk5Yvg0Go=
+		y8lCcRrWHy742+V5iCwTNLMmsss=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<data>
-		BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
+		I9jxgzXX581xO5o9OtJns6QSHKU=
 		</data>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>VungleAds.bundle/Info.plist</key>
 		<data>
-		f6pgyFhG7GYIbiX5NwMm71JcRU0=
+		3dAVtW/+h3T2CwWZJYr7Cvvo1+I=
 		</data>
 		<key>VungleAds.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
-		99lHiKAMEwibufp7vGK7r8V203g=
+		COhxM0H7+Gp/ed2fy4Li+IZWHRQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -39,22 +39,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J9T9iqMMB8h5rCO98WJTfG2iALQ=
+			3H/H5mYtg4Ev7VPW1i+Lngh4yDA=
 			</data>
 			<key>hash2</key>
 			<data>
-			PadOmoY/ocftpxIVcniw0i596yQuFdxQzcgbOr7jXvg=
+			HPCBJfPz5AbbZ5S7xRK/LazZojR5iNEnhkrkoqvou3E=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BPzUIDp7nLmsLoOh5lZ5MCjkD9E=
+			I9jxgzXX581xO5o9OtJns6QSHKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			3G+xTbeCyPSgyl5TugwfE+fXcjbPUnr38qWV/XNhdNQ=
+			O4oD9sjJuglvMwX/NEGKA67hMhmSyOHavPxHlw+m9rM=
 			</data>
 		</dict>
 		<key>IronSourcePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
@@ -83,22 +83,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			f6pgyFhG7GYIbiX5NwMm71JcRU0=
+			3dAVtW/+h3T2CwWZJYr7Cvvo1+I=
 			</data>
 			<key>hash2</key>
 			<data>
-			IKy9Ebn51ietUn82CXViQXksqIuP4nfETp9sfoG5Xqs=
+			lKE78GiI+pcb2NJEyO6o61brn/hKa20jImp3HHGczhc=
 			</data>
 		</dict>
 		<key>VungleAds.bundle/PrivacyInfo.xcprivacy</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			99lHiKAMEwibufp7vGK7r8V203g=
+			COhxM0H7+Gp/ed2fy4Li+IZWHRQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			RX/aXFa+FOCjdkY1ix5eE2OBHeionXWqGUSFGTmdVUQ=
+			YAGiRWxwvRHypK5douHP5fWvYgPwyj/xXlq1RpJ1kAQ=
 			</data>
 		</dict>
 	</dict>
