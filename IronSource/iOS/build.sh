@@ -1,0 +1,1 @@
+﻿dotnet run --project ~/Documents/GitHub/swift-dotnet-bindings/src/Swift.Bindings/src -- --xcframework Pods/IronSourceSDK/IronSource/IronSource.xcframework --objc --sdk-mode --namespace-pattern '{Module}' -o ./

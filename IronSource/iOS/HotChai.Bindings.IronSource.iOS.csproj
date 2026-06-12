@@ -1,14 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0-ios</TargetFramework>
+        <TargetFramework>net10.0-ios</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>8.8.0.0</Version>
+        <Version>9.4.1.0-Alpha8</Version>
         <Title>$(AssemblyName)</Title>
         <RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
         <Authors>David Taylor</Authors>
@@ -16,25 +17,12 @@
         <Description>.NET for iOS bindings for the ironSource SDK</Description>
         <PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageOutputPath>$(SolutionDir)..\..\LocalPackages\</PackageOutputPath>
+        <PackageOutputPath>../../../LocalPackages</PackageOutputPath>
     </PropertyGroup>
 
     <ItemGroup>
         <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
         <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <AtlasTexture Remove="Pods\**" />
-        <Compile Remove="Pods\**" />
-        <CoreMLModel Remove="Pods\**" />
-        <EmbeddedResource Remove="Pods\**" />
-        <ImageAsset Remove="Pods\**" />
-        <InterfaceDefinition Remove="Pods\**" />
-        <Metal Remove="Pods\**" />
-        <None Remove="Pods\**" />
-        <SceneKitAsset Remove="Pods\**" />
-        <NativeReference Remove="Pods\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -47,8 +35,8 @@
         </NativeReference>
     </ItemGroup>
 
+    <!--
     <ItemGroup>
-        <!-- IronSource AdMob Adapter -->
         <NativeReference Include="Pods\IronSourceAdMobAdapter\ISAdMobAdapter\ISAdMobAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -60,27 +48,25 @@
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
     </ItemGroup>
+    -->
     <ItemGroup>
-        <!-- IronSource AppLovin Adapter -->
         <NativeReference Include="Pods\IronSourceAppLovinAdapter\ISAppLovinAdapter\ISAppLovinAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
-        <NativeReference Include="Pods\AppLovinSDK\applovin-ios-sdk-13.1.0\AppLovinSDK.xcframework">
+        <NativeReference Include="Pods\AppLovinSDK\applovin-ios-sdk-13.6.2\AppLovinSDK.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
     </ItemGroup>
     <ItemGroup>
-        <!-- IronSource Facebook Adapter -->
         <NativeReference Include="Pods\IronSourceFacebookAdapter\ISFacebookAdapter\ISFacebookAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
-        <!-- Facebook Audience Network -->
         <NativeReference Include="Pods\FBAudienceNetwork\Static\FBAudienceNetwork.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -90,7 +76,6 @@
         </NativeReference>
     </ItemGroup>
     <ItemGroup>
-        <!-- IronSource Fyber/DT Exchange Adapter -->
         <NativeReference Include="Pods\IronSourceFyberAdapter\ISFyberAdapter\ISFyberAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -103,7 +88,6 @@
         </NativeReference>
     </ItemGroup>
     <ItemGroup>
-        <!-- IronSource InMobi Adapter -->
         <NativeReference Include="Pods\IronSourceInMobiAdapter\ISInMobiAdapter\ISInMobiAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -116,7 +100,6 @@
         </NativeReference>
     </ItemGroup>
     <ItemGroup>
-        <!-- IronSource Mintegral Adapter -->
         <NativeReference Include="Pods\IronSourceMintegralAdapter\ISMintegralAdapter\ISMintegralAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -163,9 +146,8 @@
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
     </ItemGroup>
+    <!--
     <ItemGroup>
-        <!-- IronSource Pangle Adapter -->
-        <!--
         <NativeReference Include="Pods\IronSourcePangleAdapter\ISPangleAdapter\ISPangleAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -232,10 +214,10 @@
             <ForceLoad>true</ForceLoad>
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
-        -->
     </ItemGroup>
+    -->
+    <!--
     <ItemGroup>
-        <!-- IronSource Unity Ads Adapter -->
         <NativeReference Include="Pods\IronSourceUnityAdsAdapter\ISUnityAdsAdapter\ISUnityAdsAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -247,8 +229,9 @@
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
     </ItemGroup>
+    -->
+    <!--
     <ItemGroup>
-        <!-- IronSource Vungle Adapter -->
         <NativeReference Include="Pods\IronSourceVungleAdapter\ISVungleAdapter\ISVungleAdapter.xcframework">
             <Kind>Framework</Kind>
             <ForceLoad>true</ForceLoad>
@@ -260,4 +243,5 @@
             <LinkerFlags>-ObjC</LinkerFlags>
         </NativeReference>
     </ItemGroup>
+    -->
 </Project>
