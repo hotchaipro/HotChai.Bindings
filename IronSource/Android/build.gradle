@@ -1,3 +1,16 @@
+// Downloads the ironSource mediation SDK and its network adapters/SDKs into NativeDependencies.
+//
+//     gradle update
+//
+// Only the ad SDK and adapter artifacts are copied (see sdkGroups). Every other dependency they
+// pull in (AndroidX, Google Play services, Kotlin, Square, protobuf, ...) has a .NET binding
+// NuGet package, referenced by HotChai.Bindings.IronSource.Android.csproj instead.
+//
+// When updating, run 'gradle dependencies --configuration implementation' and make sure each
+// first-level dependency of the SDK artifacts that is outside sdkGroups has a matching
+// PackageReference in the csproj (the dotnet/android-libraries config.json maps Maven
+// coordinates to NuGet package IDs).
+
 repositories
 {
     google()
@@ -9,6 +22,9 @@ repositories
 configurations
 {
     implementation
+    {
+        canBeResolved = true
+    }
 }
 
 dependencies
@@ -45,8 +61,25 @@ dependencies
     implementation 'com.unity3d.ads:unity-ads:+'
 }
 
+// Maven groups of the ad SDK and adapter artifacts, which have no .NET binding package.
+def sdkGroups = [
+    'com.unity3d.',
+    'com.applovin',
+    'com.fyber',
+    'com.vungle',
+    'com.facebook.android',
+    'com.mbridge.',
+    'com.pangle.',
+    'com.inmobi.',
+]
+
 task update(type: Copy)
 {
     into "NativeDependencies"
-    from configurations.implementation
+    from
+    {
+        configurations.implementation.resolvedConfiguration.resolvedArtifacts
+            .findAll { artifact -> sdkGroups.any { artifact.moduleVersion.id.group.startsWith(it) } }
+            .collect { it.file }
+    }
 }
