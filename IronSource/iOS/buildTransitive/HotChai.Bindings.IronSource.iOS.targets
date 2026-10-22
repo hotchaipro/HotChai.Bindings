@@ -1,0 +1,36 @@
+<Project>
+  <!--
+    HotChai.Bindings.IronSource.iOS
+
+    Validates the consuming project's configuration and fails the build early
+    with an actionable message (rather than a confusing native crash at app
+    startup) when the requirements aren't met.
+  -->
+  <Target Name="_HotChaiBindingsIronSourceValidateRequirements"
+          BeforeTargets="_DetectSigningIdentity;_LinkNativeExecutable;CoreCompile;Build">
+
+    <!--
+      Require iOS 15.0+. The bundled mediation adapters use Swift async/await,
+      and the Swift Concurrency runtime only ships inside iOS 15.0+. Targeting
+      an earlier OS forces the back-deployment concurrency runtime to be
+      embedded in the app, producing a duplicate concurrency runtime (the
+      embedded copy plus the OS copy) on iOS 15+ devices, which crashes at
+      startup. NuGet already rejects sub-15 consumers because the package
+      targets ios15.0; this check provides a clearer message and also covers
+      the case where the deployment target is lowered after restore.
+    -->
+    <Error Condition="'$(SupportedOSPlatformVersion)' != '' And $([MSBuild]::VersionLessThan('$(SupportedOSPlatformVersion)', '15.0'))"
+           Code="HCIS0001"
+           Text="HotChai.Bindings.IronSource.iOS requires a minimum deployment target of iOS 15.0, but SupportedOSPlatformVersion is '$(SupportedOSPlatformVersion)'. Set &lt;SupportedOSPlatformVersion&gt;15.0&lt;/SupportedOSPlatformVersion&gt; in the project (and set MinimumOSVersion to 15.0 in Info.plist if it is specified there). Earlier deployment targets crash at startup because the Swift Concurrency back-deployment runtime conflicts with the OS runtime on iOS 15+ devices." />
+
+    <!--
+      Require the Swift system libraries to be linked. props in this package
+      turns this on by default; this guards against a consumer explicitly
+      disabling it.
+    -->
+    <Error Condition="'$(LinkWithSwiftSystemLibraries)' == 'false'"
+           Code="HCIS0002"
+           Text="HotChai.Bindings.IronSource.iOS requires LinkWithSwiftSystemLibraries=true. Remove the &lt;LinkWithSwiftSystemLibraries&gt;false&lt;/LinkWithSwiftSystemLibraries&gt; setting; without the Swift system libraries the app aborts at launch while the Swift runtime resolves type metadata." />
+  </Target>
+</Project>
+

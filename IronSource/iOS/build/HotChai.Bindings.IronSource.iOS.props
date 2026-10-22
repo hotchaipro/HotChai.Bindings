@@ -1,0 +1,5 @@
+<Project>
+  <!-- Forward to the buildTransitive assets (older NuGet clients import build/). -->
+  <Import Project="$(MSBuildThisFileDirectory)..\buildTransitive\HotChai.Bindings.IronSource.iOS.props" />
+</Project>
+

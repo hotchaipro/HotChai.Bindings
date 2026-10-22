@@ -1,0 +1,195 @@
+{
+  "originHash" : "8875983f1e080aeaa88385882deb7e74ddc61626a9cbe4700c33f9b962414e0b",
+  "pins" : [
+    {
+      "identity" : "adsglobalpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bytedance/AdsGlobalPackage",
+      "state" : {
+        "revision" : "d7ec8fa99f19fd0e715c228322752541f8cb61f9",
+        "version" : "8.3.0-release.9"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package",
+      "state" : {
+        "revision" : "02544c3400d228cce5718e22f71f8d02787ba91e",
+        "version" : "13.6.4"
+      }
+    },
+    {
+      "identity" : "dtexchangesdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/inner-active/DTExchangeSDK-iOS-SPM",
+      "state" : {
+        "revision" : "27f75bc8ce1909cba59849647e589d8dd05b8c91",
+        "version" : "8.5.1"
+      }
+    },
+    {
+      "identity" : "fbaudiencenetwork",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/FBAudienceNetwork",
+      "state" : {
+        "revision" : "4a7051592f50bb276c7346d5751967cdbbd64ac6",
+        "version" : "6.22.1"
+      }
+    },
+    {
+      "identity" : "inmobisdk-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/InMobi/InMobiSDK-Swift-Package",
+      "state" : {
+        "revision" : "5f05204ee19eb85625727cba50f47d9bd48f376e",
+        "version" : "11.5.0"
+      }
+    },
+    {
+      "identity" : "levelplay-admob-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-AdMob-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "520a2499f7747ece3c037490d3a223ffa0848607",
+        "version" : "5.17.0"
+      }
+    },
+    {
+      "identity" : "levelplay-applovin-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-AppLovin-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "ba562fd11fbb94b09e153d777254b1222e48c70c",
+        "version" : "5.9.0"
+      }
+    },
+    {
+      "identity" : "levelplay-facebook-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-Facebook-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "ae4c492c3632fde75574925ab0280556893908b5",
+        "version" : "5.6.0"
+      }
+    },
+    {
+      "identity" : "levelplay-fyber-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-Fyber-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "ff645fd9257f02b29fdbad16e547ebd3a19e8527",
+        "version" : "5.14.0"
+      }
+    },
+    {
+      "identity" : "levelplay-inmobi-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-InMobi-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "28c95744ba22a0959c7c01b6f82358c1e8beab83",
+        "version" : "5.10.0"
+      }
+    },
+    {
+      "identity" : "levelplay-mintegral-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-Mintegral-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "0f0ee4440276031f430573896fc74533dc476d7c",
+        "version" : "5.22.0"
+      }
+    },
+    {
+      "identity" : "levelplay-pangle-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-Pangle-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "20abe9de420869cb930684e169f1c5ba3447bb38",
+        "version" : "5.37.0"
+      }
+    },
+    {
+      "identity" : "levelplay-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-Swift-Package",
+      "state" : {
+        "revision" : "5ecbe0051b514eb1ddcaeec4a98b57212d820bd9",
+        "version" : "9.7.0"
+      }
+    },
+    {
+      "identity" : "levelplay-unityads-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-UnityAds-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "db9bc9af75e8eb39c3566642df349198cbaf9716",
+        "version" : "5.13.0"
+      }
+    },
+    {
+      "identity" : "levelplay-vungle-adapter-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/LevelPlay-Vungle-Adapter-Swift-Package",
+      "state" : {
+        "revision" : "ed47d20aab244785ef4ea3df66cd8254ac7ddcb5",
+        "version" : "5.16.0"
+      }
+    },
+    {
+      "identity" : "mintegraladsdk-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package",
+      "state" : {
+        "revision" : "ecc695794847e1ca44ee25f6cacb4d167177a915",
+        "version" : "8.1.8"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads",
+      "state" : {
+        "revision" : "d1fa1f5c1dfe3b43d56c73f4de388ad3316618bc",
+        "version" : "13.11.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
+        "version" : "3.1.0"
+      }
+    },
+    {
+      "identity" : "unity-ad-quality-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/Unity-Ad-Quality-Swift-Package",
+      "state" : {
+        "revision" : "a81df68cf80e989d1d9a2c15a75070488ce123b3",
+        "version" : "9.10.0"
+      }
+    },
+    {
+      "identity" : "unity-ads-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Unity-Technologies/Unity-Ads-Swift-Package",
+      "state" : {
+        "revision" : "09bdf0e27186667f381196f57ceece714c8917a2",
+        "version" : "4.21.0"
+      }
+    },
+    {
+      "identity" : "vungleadssdk-swiftpackagemanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager",
+      "state" : {
+        "revision" : "5db4a9115ab3d8353c1143cb67a4b76122b415b7",
+        "version" : "7.7.8"
+      }
+    }
+  ],
+  "version" : 3
+}

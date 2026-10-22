@@ -1,0 +1,5 @@
+.build/
+.swiftpm/
+# Downloaded by update.sh
+Frameworks/
+Resources/

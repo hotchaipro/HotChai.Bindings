@@ -1,0 +1,32 @@
+<Project>
+  <!--
+    HotChai.Bindings.IronSource.iOS
+
+    This file is automatically imported into any project that references the
+    HotChai.Bindings.IronSource.iOS NuGet package (directly or transitively).
+
+    The package links several Swift static frameworks (Google Mobile Ads /
+    AdMob, Unity Ads, Vungle, AppLovin, etc.). The consuming app MUST link the
+    Swift system libraries, otherwise the Swift runtime aborts at launch while
+    resolving type metadata. The .NET for iOS SDK enables this automatically in
+    recent versions, but we force it on here so the package is safe on every
+    SDK version. A consumer can still opt out explicitly by setting the
+    property to a non-empty value before this import runs.
+  -->
+  <PropertyGroup Condition="'$(LinkWithSwiftSystemLibraries)' == ''">
+    <LinkWithSwiftSystemLibraries>true</LinkWithSwiftSystemLibraries>
+  </PropertyGroup>
+
+  <!--
+    Default the deployment target to iOS 15.0 when the consumer hasn't chosen
+    one. The .NET for iOS SDK otherwise defaults to 12.2, which crashes at
+    startup with this package (the Swift Concurrency back-deployment runtime
+    conflicts with the OS runtime on iOS 15+ devices). Consumers may still set
+    a higher value; setting a lower one is rejected by the package targets.
+  -->
+  <PropertyGroup Condition="'$(SupportedOSPlatformVersion)' == ''">
+    <SupportedOSPlatformVersion>15.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+</Project>
+
+
