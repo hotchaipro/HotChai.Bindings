@@ -36,7 +36,7 @@
     </ItemGroup>
 
     <PropertyGroup>
-        <Version>9.7.0.0-Alpha1</Version>
+        <Version>9.7.0.0</Version>
         <Title>$(AssemblyName)</Title>
         <RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
         <Authors>David Taylor</Authors>
