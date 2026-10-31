@@ -44,9 +44,11 @@ dependencies
     implementation 'com.unity3d.ads-mediation:admob-adapter:5.18.0'
     implementation 'com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.5.0'
     // InMobi Network
-    implementation 'com.unity3d.ads-mediation:inmobi-adapter:+'
-    // NOTE: Gradle is unable to resolve Guava dependency for InMobi, so manually download it for now.
-    // implementation 'com.inmobi.monetization:inmobi-ads-kotlin:+'
+    // The adapter needs the InMobi SDK in the app: without it, LevelPlay's init stops at
+    // InMobiAdapter.getNetworkSDKVersion (NoClassDefFoundError) and no network gets ads.
+    // Pinned to the SDK version the adapter's changelog names.
+    implementation 'com.unity3d.ads-mediation:inmobi-adapter:5.10.0'
+    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:11.5.0'
     // Liftoff/Vungle Network
     implementation 'com.unity3d.ads-mediation:vungle-adapter:+'
     implementation 'com.vungle:vungle-ads:+'
