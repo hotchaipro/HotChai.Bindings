@@ -5,7 +5,7 @@
 		<Nullable>disable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<IsTrimmable>false</IsTrimmable>
-		<Version>9.6.1-alpha1</Version>
+		<Version>9.6.1-alpha2</Version>
 		<Title>$(AssemblyName)</Title>
 		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
 		<Authors>David Taylor</Authors>
@@ -67,84 +67,19 @@
 	</ItemGroup>
 
 	<!--
-		Strip native .so entries from the binding AAR after it is built.
+		Keep imported native libraries out of the binding AAR.
 
-		The Android binding toolchain merges .so files from companion AARs in
-		NativeDependencies into the binding AAR (HotChai.Bindings.IronSource.Android.aar).
-		Those same companion AARs are also shipped alongside the binding AAR in the NuGet
-		package so that the consuming app project receives the native libraries. Without
-		this step, both the binding AAR and each companion AAR contribute the same .so to
-		the final APK/AAB, which triggers XA4301 "APK already contains the item" warnings.
-
-		Removing the .so entries from the binding AAR here — before dotnet pack reads it —
-		eliminates the duplicates while keeping the companion AARs as the sole source of
-		every native library.
+		In a library project, the Android SDK adds every .so it extracts from referenced AARs
+		(the NativeDependencies companions and AARs from NuGet dependencies such as AndroidX
+		DataStore) to @(AndroidNativeLibrary), which becomes @(EmbeddedNativeLibrary) and is
+		packed into HotChai.Bindings.IronSource.Android.aar. The consuming app also receives
+		each of those AARs, so every .so would reach the APK twice and trigger XA4301 "APK
+		already contains the item" warnings. Removing the imported libraries here leaves the
+		AAR that owns each .so as its only source.
 	-->
-	<!--
-	<Target Name="_StripNativeLibsFromBindingAar" BeforeTargets="GenerateNuspec" AfterTargets="CopyFilesToOutputDirectory">
-		<PropertyGroup>
-			<_BindingAarPath>$(OutputPath)$(AssemblyName).aar</_BindingAarPath>
-		</PropertyGroup>
-		<Message Text="Stripping .so entries from $(_BindingAarPath)" Importance="normal" />
-		<_StripNativeLibsFromBindingAar AarPath="$(_BindingAarPath)" />
+	<Target Name="_RemoveImportedNativeLibrariesFromAar" BeforeTargets="_CreateAarCache">
+		<ItemGroup>
+			<EmbeddedNativeLibrary Remove="@(ExtractedNativeLibraryImports)" />
+		</ItemGroup>
 	</Target>
-
-	<UsingTask TaskName="_StripNativeLibsFromBindingAar" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
-		<ParameterGroup>
-			<AarPath ParameterType="System.String" Required="true" />
-		</ParameterGroup>
-		<Task>
-			<Using Namespace="System.IO" />
-			<Using Namespace="System.IO.Compression" />
-			<Code Type="Fragment" Language="cs">
-<![CDATA[
-				if (!File.Exists(AarPath))
-				{
-					Log.LogMessage(MessageImportance.Normal, "Binding AAR not found, skipping .so stripping: " + AarPath);
-					return true;
-				}
-
-				string tempPath = AarPath + ".tmp";
-				bool modified = false;
-
-				using (FileStream inStream = new FileStream(AarPath, FileMode.Open, FileAccess.Read))
-				using (ZipArchive inZip = new ZipArchive(inStream, ZipArchiveMode.Read))
-				using (FileStream outStream = new FileStream(tempPath, FileMode.Create, FileAccess.Write))
-				using (ZipArchive outZip = new ZipArchive(outStream, ZipArchiveMode.Create))
-				{
-					foreach (ZipArchiveEntry entry in inZip.Entries)
-					{
-						bool isSo = entry.FullName.StartsWith("jni/", StringComparison.OrdinalIgnoreCase)
-							&& entry.Name.EndsWith(".so", StringComparison.OrdinalIgnoreCase);
-						if (isSo)
-						{
-							Log.LogMessage(MessageImportance.Normal, "  removing: " + entry.FullName);
-							modified = true;
-							continue;
-						}
-						ZipArchiveEntry outEntry = outZip.CreateEntry(entry.FullName, CompressionLevel.Optimal);
-						using (Stream src = entry.Open())
-						using (Stream dst = outEntry.Open())
-						{
-							src.CopyTo(dst);
-						}
-					}
-				}
-
-				if (modified)
-				{
-					File.Delete(AarPath);
-					File.Move(tempPath, AarPath);
-					Log.LogMessage(MessageImportance.Normal, "Updated binding AAR: " + AarPath);
-				}
-				else
-				{
-					File.Delete(tempPath);
-					Log.LogMessage(MessageImportance.Normal, "No .so entries found in binding AAR.");
-				}
-]]>
-			</Code>
-		</Task>
-	</UsingTask>
-	-->
 </Project>
