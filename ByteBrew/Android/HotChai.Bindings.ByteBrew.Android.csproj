@@ -20,7 +20,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="HotChai.Bindings.Android.Tools.DesugarJdkLibs" Version="2.1.5" />
-		<PackageReference Include="Xamarin.Firebase.Messaging" Version="125.0.1" />
 		<PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.5" />
 		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0.4" />
 	</ItemGroup>
