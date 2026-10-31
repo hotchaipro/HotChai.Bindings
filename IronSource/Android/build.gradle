@@ -37,9 +37,12 @@ dependencies
     // DT Exchange/Fyber Network
     implementation 'com.unity3d.ads-mediation:fyber-adapter:+'
     implementation 'com.fyber:marketplace-sdk:+'
-    // AdMob Network
-    implementation 'com.unity3d.ads-mediation:admob-adapter:+'
-    implementation 'com.google.android.gms:play-services-ads:+'
+    // AdMob Network: the adapter is built on GMA Next-Gen (ads-mobile-sdk), not the classic
+    // play-services-ads, so pin it to the release that matches the Next-Gen binding in the csproj
+    // (Xamarin.Google.Android.Libraries.Ads.Mobile.Sdk). The adapter's changelog names the SDK
+    // version each release supports; update both together.
+    implementation 'com.unity3d.ads-mediation:admob-adapter:5.18.0'
+    implementation 'com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.5.0'
     // InMobi Network
     implementation 'com.unity3d.ads-mediation:inmobi-adapter:+'
     // NOTE: Gradle is unable to resolve Guava dependency for InMobi, so manually download it for now.
