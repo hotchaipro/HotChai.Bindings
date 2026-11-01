@@ -27,6 +27,8 @@
   * [Mintegral Mediation](https://developers.is.com/ironsource-mobile/ios/mintegral-integration-guide/)
   * [Pangle Mediation](https://developers.is.com/ironsource-mobile/ios/pangle-integration-guide/)
   * [Unity Ads Mediation](https://developers.is.com/ironsource-mobile/ios/unityads-mediation-guide/)
+* [Tenjin for Android](https://github.com/tenjin/tenjin-android-sdk) (2.0.2, the AAR from Maven Central)
+* [Tenjin for iOS](https://github.com/tenjin/tenjin-ios-sdk) (1.20.1, the xcframework from its GitHub release, without its dSYMs)
 * [Singular Analytics for Android](https://support.singular.net/hc/en-us/articles/360037581952-Android-SDK-Basic-Integration)
 * [Singular Analytics for iOS](https://support.singular.net/hc/en-us/articles/12054824479387-iOS-SDK-Basic-Integration)
 * [ByteBrew for Android](https://github.com/ByteBrewIO/ByteBrewAndroidSDK)

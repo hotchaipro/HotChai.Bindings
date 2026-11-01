@@ -1,0 +1,25 @@
+﻿<metadata>
+
+	<!-- Remove generated events from all interfaces -->
+	<attr path="/api/package/interface/method" name="eventName"></attr>
+
+	<!-- The SDK is minified (2.0): bind only its documented API (TenjinSDK, its AppStoreType and
+		 callbacks), not the internals R8 left public -->
+	<remove-node path="/api/package[@name!='com.tenjin.android']" />
+	<remove-node path="/api/package[@name='com.tenjin.android']/class[@name!='TenjinSDK' and @name!='TenjinSDK.AppStoreType']" />
+	<remove-node path="/api/package[@name='com.tenjin.android']/interface[@name!='AttributionInfoCallback' and @name!='Callback' and @name!='BasicCallback']" />
+
+	<!-- TenjinSDK's minified members (one-letter fields and methods) -->
+	<remove-node path="/api/package[@name='com.tenjin.android']/class[@name='TenjinSDK']/field[@name!='DEEPLINK_URL']" />
+	<remove-node path="/api/package[@name='com.tenjin.android']/class[@name='TenjinSDK']/method[string-length(@name)=1]" />
+	<remove-node path="/api/package[@name='com.tenjin.android']/class[@name='TenjinSDK']/constructor" />
+
+	<!-- Members whose types are internal (removed above) -->
+	<remove-node path="/api/package[@name='com.tenjin.android']/class[@name='TenjinSDK']/method[@name='getUserProfile']" />
+	<remove-node path="/api/package[@name='com.tenjin.android']/class[@name='TenjinSDK']/method[@name='transactionAmazon' and count(parameter)=1]" />
+
+	<!-- The static getAppStore and the instance setAppStore aren't one property -->
+	<attr path="/api/package[@name='com.tenjin.android']/class[@name='TenjinSDK']/method[@name='getAppStore']" name="propertyName"></attr>
+	<attr path="/api/package[@name='com.tenjin.android']/class[@name='TenjinSDK']/method[@name='setAppStore']" name="propertyName"></attr>
+
+</metadata>

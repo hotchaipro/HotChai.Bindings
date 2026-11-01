@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-android36.0</TargetFramework>
+		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<IsTrimmable>false</IsTrimmable>
+		<!-- The minified internals reference Play Billing, which the app brings; they aren't bound -->
+		<NoWarn>$(NoWarn);BG8605;BG8606</NoWarn>
+		<Version>2.0.2</Version>
+		<Title>$(AssemblyName)</Title>
+		<RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
+		<Authors>David Taylor</Authors>
+		<Company>Hot Chai Games</Company>
+		<Description>.NET for Android bindings for the Tenjin MMP SDK</Description>
+		<PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageOutputPath>$(MSBuildThisFileDirectory)..\..\..\LocalPackages\</PackageOutputPath>
+	</PropertyGroup>
+	<!-- Tenjin's POM: installreferrer 2.2, Room runtime 2.5.1, Gson 2.13.1, Kotlin stdlib 1.9.24; its
+		 docs add Play Services Ads Identifier and AppSet. The versions match the IronSource binding's. -->
+	<ItemGroup>
+		<PackageReference Include="GoogleGson" Version="2.14.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Room.Runtime" Version="2.8.4.3" />
+		<PackageReference Include="Xamarin.Google.Android.InstallReferrer" Version="2.2.0.7" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.3.0.3" />
+		<PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.11" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.4.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="build.gradle" />
+		<ProguardConfiguration Include="proguard.cfg" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidLibrary Update="NativeDependencies\**" Bind="false" />
+		<AndroidLibrary Update="NativeDependencies\tenjin-android-sdk-*.aar" Bind="true" />
+	</ItemGroup>
+</Project>

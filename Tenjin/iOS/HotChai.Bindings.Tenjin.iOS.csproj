@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0-ios</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <IsBindingProject>true</IsBindingProject>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>1.20.1</Version>
+        <Title>$(AssemblyName)</Title>
+        <RepositoryUrl>https://github.com/hotchaipro/HotChai.Bindings</RepositoryUrl>
+        <Authors>David Taylor</Authors>
+        <Company>Hot Chai Games</Company>
+        <Description>.NET for iOS bindings for the Tenjin MMP SDK</Description>
+        <PackageProjectUrl>https://github.com/hotchaipro/HotChai.Bindings</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageOutputPath>../../../LocalPackages</PackageOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    </ItemGroup>
+
+    <!-- TenjinSDK 1.20.1 from its GitHub release, without its dSYMs; a dynamic framework, so it's
+         embedded in the app, and it has Swift parts, which use the system's Swift runtime -->
+    <ItemGroup>
+        <NativeReference Include="Native\TenjinSDK.xcframework">
+            <Kind>Framework</Kind>
+            <SmartLink>true</SmartLink>
+            <LinkerFlags>-ObjC</LinkerFlags>
+            <Frameworks>AdSupport AppTrackingTransparency Foundation Security StoreKit SystemConfiguration</Frameworks>
+            <WeakFrameworks>AdServices</WeakFrameworks>
+        </NativeReference>
+    </ItemGroup>
+</Project>
